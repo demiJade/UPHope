@@ -10,7 +10,13 @@
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
  */
-get_header(); ?>
+if (is_user_logged_in() ){
+	get_header('user');
+}
+else {
+	get_header();
+}
+ ?>
 
 <!-- Blog -->
 <div id="search_temp" class="skt-serach-page"> 

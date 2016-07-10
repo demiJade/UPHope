@@ -13,6 +13,18 @@ Tags: blue, gray, orange, pink, purple, dark, light, two-columns, right-sidebar,
 .modal-open .modal {
     padding-top: 100px;
 }
+#header-image {
+    position: relative;
+    width: 100%;        
+}
+#header-text {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    color: white;
+    font-size: 5em;
+}
+
 .clear {clear:both;}
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {background: transparent;border: 0;margin: 0;padding: 0;vertical-align: baseline;}
 body { color: #293136;  font-family: 'Montserrat' ,sans-serif; font-size:16px;  line-height: 22px;font-weight:400; overflow-x: hidden;}

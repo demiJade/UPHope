@@ -21,6 +21,7 @@
 <![endif]-->
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
+	<link rel="stylesheet" type="text/css" href="<?php echo bloginfo('template_url'); ?>/css/bootstrap.min.css">
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?> >
@@ -30,28 +31,40 @@
 			<div id="header" class="skehead-headernav clearfix">
 				<!-- top-head-secwrap -->
 				<div id="head">
+					<nav class="navbar">
 					<!-- container -->
 					<div class="container">
 						<!-- row-fluid -->
 						<div class="row-fluid">
 							<!-- #logo -->
-							<div id="logo" class="col-md-3 col-sm-3 col-xs-6">
-								<?php if( get_theme_mod('radiance_lite_logo_img', '') != '' ) { ?>
-									<a href="<?php echo esc_url(home_url('/')); ?>" title="<?php bloginfo('name'); ?>" ><img class="logo" src="<?php echo esc_url( get_theme_mod('radiance_lite_logo_img') ); ?>" alt="<?php bloginfo('name'); ?>" /></a>
-								<?php } elseif ( display_header_text() ) { ?>
-								<!-- #description -->
-								<div id="site-title" class="logo_desp">
-									<a href="<?php echo esc_url(home_url('/')); ?>" title="<?php bloginfo('name') ?>" ><?php bloginfo('name'); ?></a> 
-									<div id="site-description"><?php bloginfo( 'description' ); ?></div>
+							<div class="navbar-header">
+								<div id="logo" class="col-md-3 col-sm-3 col-xs-6">
+									<?php if( get_theme_mod('radiance_lite_logo_img', '') != '' ) { ?>
+										<a href="<?php echo esc_url(home_url('/')); ?>" title="<?php bloginfo('name'); ?>" ><img class="logo" src="<?php echo esc_url( get_theme_mod('radiance_lite_logo_img') ); ?>" alt="<?php bloginfo('name'); ?>" /></a>
+									<?php } elseif ( display_header_text() ) { ?>
+									<!-- #description -->
+									<div id="site-title" class="logo_desp">
+										<a href="<?php echo esc_url(home_url('/')); ?>" title="<?php bloginfo('name') ?>" ><?php bloginfo('name'); ?></a> 
+										<div id="site-description"><?php bloginfo( 'description' ); ?></div>
+									</div>
+									<!-- #description -->
+									
+									<?php } ?>
+									
 								</div>
-								<!-- #description -->
-								<?php } ?>
+								<button type="button" class="btn btn-default navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-home" aria-expanded="false">
+							        <span class="sr-only">Toggle navigation</span>
+							        <span class="icon-bar"></span>
+							        <span class="icon-bar"></span>
+							        <span class="icon-bar"></span>
+							    </button>
 							</div>
+							
 							<!-- #logo -->
 							
 
 							<!-- top-nav-menu -->
-							<div class="top-nav-menu col-md-9 col-sm-9 col-xs-6">
+							<div class="top-nav-menu col-md-9 col-sm-9 col-xs-6 collapse navbar-collapse" id="navbar-home">
 								<!-- Header Search Icon// -->
 			<!-- 					<div class="top-search col-md-1 col-sm-1 col-xs-3">						
 									<a href="javascript:void(0);" class="strip-icon search-strip" title="search"><i class="fa fa-search"></i></a>
@@ -61,7 +74,7 @@
 								<?php if( has_nav_menu( 'Header' ) ) {
 									wp_nav_menu( array('theme_location' => 'Header', 'menu_id' => 'menu', 'menu_class' => 'max-menu') );
 								} else { ?>
-									<ul id="menu-main" class="max-menu">
+									<ul id="menu-main nav navbar-nav" class="max-menu">
 <!-- 									<li class="gohome"><a href="<?php if( is_front_page() ){ echo '#wrapper'; } else { echo esc_url(home_url('/')); } ?>" title="<?php bloginfo('name') ?>" ><?php _e('Home', 'radiance-lite'); ?></a></li> -->										
 										<li class="home-nav"><a href=""><?php _e('ABOUT US', 'radiance-lite') ?></a></li>
 										<li class="home-nav"><a href="#section1"><?php _e('INSTITUTIONS', 'radiance-lite'); ?></a></li>
@@ -94,6 +107,7 @@
 					<!-- row-fluid -->
 				</div>
 				<!-- container -->
+				</nav>
 			</div>
 			<!-- top-head-secwrap -->
 		</div>

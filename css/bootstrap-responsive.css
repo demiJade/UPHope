@@ -4289,7 +4289,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-static-top {
-  z-index: 1000;
+  z-index: 150;
   border-width: 0 0 1px;
 }
 @media (min-width: 768px) {
@@ -4302,7 +4302,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   position: fixed;
   right: 0;
   left: 0;
-  z-index: 1030;
+  z-index: 150;
 }
 @media (min-width: 768px) {
   .navbar-fixed-top,
@@ -5966,7 +5966,7 @@ button.close {
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 1040;
+  z-index: 0;
   background-color: #000;
 }
 .modal-backdrop.fade {
@@ -6035,7 +6035,7 @@ button.close {
 }
 .tooltip {
   position: absolute;
-  z-index: 1070;
+  z-index: 150;
   display: block;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 12px;

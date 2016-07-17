@@ -15,7 +15,7 @@ if( $_first_landing_page_ID != '' && $_first_landing_page_ID != '0' ) {
 			<div class="post">
 				<div class="skepost clearfix">
 					<div class="page-section">
-						<?php echo do_shortcode(wp_kses_post($_first_landing_page_content)); ?>
+						<?php get_template_part('institution') ?>
 					</div>
 				</div>
 			</div>

@@ -15,42 +15,40 @@ else {
 	get_header();
 }
 
-$posts = query_posts($query_string.'&cat=5'); ?>
-
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-<div class="institution" >
-	<p></p>
-	<a href="" data-toggle="modal" data-target="#post">hi</a>
+$posts = query_posts($query_string.'&cat=6'); ?>
+<div class="container">
+	<div class="row">
+		
+		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+			<div class="col-md-4">
+				<div class="institution" data-toggle="modal" data-target="#post<?php echo get_the_ID();  ?>">
+					<a class="box-title" href="" ><?php echo get_the_title(); ?></a>
+				</div>
+				<div class="modal fade" id="post<?php echo get_the_ID();  ?>" tabindex="-1" role="dialog" aria-labelledby="postLabel">
+					<div class="modal-dialog" role="document">
+					    <div class="modal-content">
+					      <div class="modal-header">
+					        <h4>Post</h4>
+					      </div>
+						      <div class="modal-body">
+						        
+						        	<?php echo get_the_content(); ?>
+						        
+						      </div>
+						      <div class="modal-footer">
+						        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						      </div>
+					    </div>
+					</div>
+				</div>
+			</div>
+			<?php endwhile; else : ?>
+			
+			<?php endif; ?>
+		
+		
+	</div>
 </div>
 
-<div class="modal fade" id="post" tabindex="-1" role="dialog" aria-labelledby="postLabel">
-		  <div class="modal-dialog" role="document">
-		    <div class="modal-content">
-		      <div class="modal-header">
-		        <h4>Post</h4>
-		      </div>
-		      <form>
-			      <div class="modal-body">
-			        
-			        	LoremIpsum
-			        
-			      </div>
-			      <div class="modal-footer">
-			        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-			        <button type="submit" class="btn btn-primary">Login</button>
-			      </div>
-		      </form>
-		    </div>
-		  </div>
-		</div>
-
-<?php endwhile; else : ?>
-	<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
-<?php endif; ?>
 
 
-HII!!!
-
-	<div ng-view></div>
-
-<?php get_footer(); ?>

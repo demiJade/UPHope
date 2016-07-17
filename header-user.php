@@ -21,6 +21,7 @@
 <![endif]-->
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
+	<link rel="stylesheet" type="text/css" href="<?php echo bloginfo('template_url'); ?>/css/bootstrap.min.css">
 	<base href="/">
 	<?php wp_head(); ?>
 </head>
@@ -68,8 +69,8 @@
 										<li><a href=""> <?php _e('SIGN UPS', 'radiance-lite'); ?> </a></li>
 										<li><a href=""> | </a></li>
 										<li> <a href=""><?php _e('WELCOME USER', 'radiance-lite') ?></a> </li>
-										<li><a href="<?php echo do_shortcode('[wppb-logout] ') ?>">Logout</a></li>
-									</ul>
+<!-- 										<li><a href="<?php echo do_shortcode('[wppb-logout] ') ?>">Logout</a></li>
+ -->									</ul>
 								<?php } ?>
 
 								</div>

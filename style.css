@@ -27,6 +27,12 @@ Tags: blue, gray, orange, pink, purple, dark, light, two-columns, right-sidebar,
     position:relative;
 }
 
+.institution-thumbnail {
+    height: 150px;
+    width: 150px;
+    background-color: blue;
+}
+
 .box-title {
     color:white;
     float: right;

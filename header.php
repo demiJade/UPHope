@@ -24,8 +24,33 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo bloginfo('template_url'); ?>/css/bootstrap.min.css">
 	<base href="/">
 	<?php wp_head(); ?>
+
+<script src="http://code.jquery.com/jquery-1.4.4.js">< / script>  
+</pre>  
+<h2>Step7: Adding jQuery’s ajax function</h2>  
+<pre name="code" class="javascript">  
+<script type="text/javascript">                           
+$("#submitbtn").click(function() {  
+  
+$('#result').html('<img src="<?php bloginfo('template_url'); ?>/images/loader.gif" class="loader" />').fadeIn();  
+var input_data = $('#wp_login_form').serialize();  
+$.ajax({  
+type: "POST",  
+url:  "< ?php echo "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>",  
+data: input_data,  
+success: function(msg){  
+$('.loader').remove();  
+$('<div>').html(msg).appendTo('div#result').hide().fadeIn('slow');  
+}  
+});  
+return false;  
+  
+});  
+</script>  
+
 </head>
 <body <?php body_class(); ?> >
+	<?php get_template_part('login'); ?>
 	<!-- wrapper -->
 	<div id="wrapper" class="skepage">
 		<div id="main-head-wrap" class="clearfix">
@@ -84,7 +109,7 @@
 										<li class="home-nav"><a href="/wordpress/#section3"><?php _e('CONTACT US', 'radiance-lite'); ?></a></li>
 <!-- 										<?php wp_list_pages('title_li=&depth=0'); ?> -->   <!-- page listing -->	
 										<li><a href=""><?php _e('|', 'radiance-lite') ?></a></li>									
-										<li class="home-nav"><a href="" data-toggle="modal" data-target="#login"><?php _e('LOGIN', 'radiance-lite') ?></a></li>
+										<li class="home-nav"><a href="#" data-toggle="modal" data-target="#login">LOGIN</a></li>
 									</ul>
 								<?php } ?>
 								</div>
@@ -113,35 +138,7 @@
 			<!-- top-head-secwrap -->
 		</div>
 		<!-- HEADER -->
-		<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="loginLabel">
-		  <div class="modal-dialog" role="document">
-		    <div class="modal-content">
-		      <div class="modal-header">
-		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-		        <h4 class="modal-title" id="loginLabel">Login</h4>
-		      </div>
-		      <form>
-			      <div class="modal-body">
-			        	
-<!-- 			        	<?php echo do_shortcode(' [wppb-login redirect_url="http://localhost/wordpress/"]') ?>
- -->			        	<div class="form-group">
-			        		<label for="username">Username</label>
-			        		<input type="text" class="form-control" id="username" placeholder="Username" />
-			        	</div>
-			        	<div class="form-group">
-			        		<label for="password">Password</label>
-			        		<input type="password" class="form-control" id="password" placeholder="Password" />
-			        	</div>
-			        
-			      </div>
-			      <div class="modal-footer">
-			        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-			        <button type="submit" class="btn btn-primary">Login</button>
-			      </div>
-		      </form>
-		    </div>
-		  </div>
-		</div>
+		
 		<?php $classes = get_body_class();
 	if( !(in_array('front-page',$classes)) && !is_home() ) { ?>
 		<!-- BreadCrumb Section // -->
@@ -210,3 +207,29 @@
   	get_template_part( 'includes/front', 'header-image-section' );
 } ?>
 
+<?php 
+if($_POST){  
+//We shall SQL escape all inputs  
+$username = $wpdb->escape($_REQUEST['username']);  
+$password = $wpdb->escape($_REQUEST['password']);  
+$remember = $wpdb->escape($_REQUEST['rememberme']);  
+      
+if($remember) $remember = "true";  
+else $remember = "false";  
+$login_data = array();  
+$login_data['user_login'] = $username;  
+$login_data['user_password'] = $password;  
+$login_data['remember'] = $remember;  
+$user_verify = wp_signon( $login_data, true );   
+          
+if ( is_wp_error($user_verify) )   
+{  
+echo "<span class='error'>Invalid username or password. Please try again!</span>";  
+exit();  
+} else   
+{     
+echo "<script type='text/javascript'>window.location=''. get_bloginfo('url') .''</script>";  
+exit();  
+}  
+
+ }?>

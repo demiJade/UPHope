@@ -25,7 +25,7 @@ $posts = query_posts($query_string.'&cat=6'); ?>
         <?php endif; ?>
 			<div class="col-md-4">
 				<div class="institution" data-toggle="modal" data-target="#post<?php echo get_the_ID();  ?>" style="background-image: url('<?php echo $image[0]; ?>')">
-					<a class="box-title" href="" ><?php echo get_the_title(); ?></a>
+					<a class="box-title"><?php echo get_the_title(); ?></a>
 				</div>
 				<div class="modal fade" id="post<?php echo get_the_ID();  ?>" tabindex="-1" role="dialog" aria-labelledby="postLabel">
 					<div class="modal-dialog" role="document">

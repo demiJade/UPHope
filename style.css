@@ -14,6 +14,11 @@ Tags: blue, gray, orange, pink, purple, dark, light, two-columns, right-sidebar,
     padding-top: 100px;
 }
 
+.news-heading {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 .institution {
     height:300px;
     width:300px;

@@ -15,15 +15,14 @@ else {
 	get_header();
 }
 
-$posts = query_posts($query_string.'&cat=7'); ?>
+$posts = query_posts($query_string.'&cat=7&posts_per_page=3'); ?>
 <div class="container">
 
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-			<div class="row">
+			<div class="row news-heading">
 				<div class="col-md-12 news">
 					
 						<a class="box-title" href="<?php the_permalink(); ?>" ><?php echo get_the_title(); ?></a>
-					
 				</div>
 			</div>
 			

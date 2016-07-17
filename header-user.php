@@ -10,7 +10,7 @@
 <html class="ie ie8" <?php language_attributes(); ?>>
 <![endif]-->
 <!--[if !(IE 7) | !(IE 8)  ]><!-->
-<html <?php language_attributes(); ?>>
+<html <?php language_attributes(); ?> ng-app="app">
 <!--<![endif]-->
 <head>
 	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
@@ -21,6 +21,7 @@
 <![endif]-->
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
+	<base href="/">
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?> >
@@ -67,6 +68,7 @@
 										<li><a href=""> <?php _e('SIGN UPS', 'radiance-lite'); ?> </a></li>
 										<li><a href=""> | </a></li>
 										<li> <a href=""><?php _e('WELCOME USER', 'radiance-lite') ?></a> </li>
+										<li><a href="<?php echo do_shortcode('[wppb-logout] ') ?>">Logout</a></li>
 									</ul>
 								<?php } ?>
 

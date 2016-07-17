@@ -182,6 +182,16 @@ function radiance_lite_customize_register( $wp_customize ) {
 		'type' => 'select',
 		'choices' => $pages_dropdown,
 	) );
+	$wp_customize->add_setting( 'radiance_lite_login', array(
+		'default'           => '',
+		'sanitize_callback' => 'radiance_lite_sanitize_pages',
+	) );
+	$wp_customize->add_control( 'radiance_lite_login', array(
+		'label' => __( 'Login', 'radiance-lite' ),
+		'section' => 'home_page_settings',
+		'type' => 'select',
+		'choices' => $pages_dropdown,
+	) );
 
 
 	// ====================================

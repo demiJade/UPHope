@@ -10,7 +10,13 @@
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
  */
-get_header(); ?>
+if (is_user_logged_in() ){
+	get_header('user');
+}
+else {
+	get_header();
+}
+ ?> 
 
 <div class="main-wrapper-item">
 	<?php if( get_theme_mod('radiance_lite_feature_box_sec', 'on') == 'on' ) { ?>

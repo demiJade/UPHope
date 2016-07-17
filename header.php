@@ -22,6 +22,7 @@
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<link rel="stylesheet" type="text/css" href="<?php echo bloginfo('template_url'); ?>/css/bootstrap.min.css">
+	<base href="/">
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?> >
@@ -77,10 +78,10 @@
 									<ul id="menu-main nav navbar-nav" class="max-menu">
 <!-- 									<li class="gohome"><a href="<?php if( is_front_page() ){ echo '#wrapper'; } else { echo esc_url(home_url('/')); } ?>" title="<?php bloginfo('name') ?>" ><?php _e('Home', 'radiance-lite'); ?></a></li> -->										
 										<li class="home-nav"><a href=""><?php _e('ABOUT US', 'radiance-lite') ?></a></li>
-										<li class="home-nav"><a href="#section1"><?php _e('INSTITUTIONS', 'radiance-lite'); ?></a></li>
-										<li class="home-nav"><a href="#section2"><?php _e('NEWS', 'radiance-lite'); ?></a></li>
+										<li class="home-nav"><a href="/wordpress/#section1"><?php _e('INSTITUTIONS', 'radiance-lite'); ?></a></li>
+										<li class="home-nav"><a href="/wordpress/#section2"><?php _e('NEWS', 'radiance-lite'); ?></a></li>
 										<li class="home-nav"><a href=""> <?php _e('DONATE', 'radiance_lite') ?> </a></li>
-										<li class="home-nav"><a href="#section3"><?php _e('CONTACT US', 'radiance-lite'); ?></a></li>
+										<li class="home-nav"><a href="/wordpress/#section3"><?php _e('CONTACT US', 'radiance-lite'); ?></a></li>
 <!-- 										<?php wp_list_pages('title_li=&depth=0'); ?> -->   <!-- page listing -->	
 										<li><a href=""><?php _e('|', 'radiance-lite') ?></a></li>									
 										<li class="home-nav"><a href="" data-toggle="modal" data-target="#login"><?php _e('LOGIN', 'radiance-lite') ?></a></li>
@@ -121,8 +122,9 @@
 		      </div>
 		      <form>
 			      <div class="modal-body">
-			        
-			        	<div class="form-group">
+			        	
+<!-- 			        	<?php echo do_shortcode(' [wppb-login redirect_url="http://localhost/wordpress/"]') ?>
+ -->			        	<div class="form-group">
 			        		<label for="username">Username</label>
 			        		<input type="text" class="form-control" id="username" placeholder="Username" />
 			        	</div>

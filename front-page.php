@@ -17,6 +17,8 @@
 	<!-- EDITOR CONTENT -->
 	<?php get_template_part( 'includes/front', 'editor-content' ); ?>
 
+	<?php get_template_part('includes/front','login'); ?>
+
 	<?php get_footer(); ?>
 
 <?php } else {

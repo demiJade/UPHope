@@ -32,6 +32,10 @@ Tags: blue, gray, orange, pink, purple, dark, light, two-columns, right-sidebar,
     font-size: 20px;
 }
 
+.news {
+    background-color: blue;
+}
+
 .modal-content {
     z-index:100;
 }

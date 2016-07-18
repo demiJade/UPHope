@@ -76,5 +76,4 @@ $radiance_lite_linkedin_url	= get_theme_mod('radiance_lite_linkedin_link', '#');
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.js"></script>
 	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri() . '/js/app.js' ?>"></script></body>
-	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri() . '/js/scripts.js' ?>"></script>
 </html>

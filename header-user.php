@@ -98,34 +98,7 @@
 			<!-- top-head-secwrap -->
 		</div>
 		<!-- HEADER -->
-		<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="loginLabel">
-		  <div class="modal-dialog" role="document">
-		    <div class="modal-content">
-		      <div class="modal-header">
-		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-		        <h4 class="modal-title" id="loginLabel">Login</h4>
-		      </div>
-		      <form>
-			      <div class="modal-body">
-			        
-			        	<div class="form-group">
-			        		<label for="username">Username</label>
-			        		<input type="text" class="form-control" id="username" placeholder="Username" />
-			        	</div>
-			        	<div class="form-group">
-			        		<label for="password">Password</label>
-			        		<input type="password" class="form-control" id="password" placeholder="Password" />
-			        	</div>
-			        
-			      </div>
-			      <div class="modal-footer">
-			        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-			        <button type="submit" class="btn btn-primary">Login</button>
-			      </div>
-		      </form>
-		    </div>
-		  </div>
-		</div>
+		
 		<?php $classes = get_body_class();
 	if( !(in_array('front-page',$classes)) && !is_home() ) { ?>
 		<!-- BreadCrumb Section // -->
@@ -191,6 +164,6 @@
 <?php if(!is_front_page()) { ?><div class="header-clone"></div><?php } ?>
 
 <?php if( is_front_page() ) {
-  	get_template_part( 'includes/front', 'header-image-section' );
+  	
 } ?>
 

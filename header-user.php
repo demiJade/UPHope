@@ -27,143 +27,36 @@
 </head>
 <body <?php body_class(); ?> >
 	<!-- wrapper -->
-	<div id="wrapper" class="skepage">
-		<div id="main-head-wrap" class="clearfix">
-			<div id="header" class="skehead-headernav clearfix">
-				<!-- top-head-secwrap -->
-				<div id="head">
-					<!-- container -->
-					<div class="container">
-						<!-- row-fluid -->
-						<div class="row-fluid">
-							<!-- #logo -->
-							<div id="logo" class="col-md-3 col-sm-3 col-xs-6">
-								<?php if( get_theme_mod('radiance_lite_logo_img', '') != '' ) { ?>
-									<a href="<?php echo esc_url(home_url('/')); ?>" title="<?php bloginfo('name'); ?>" ><img class="logo" src="<?php echo esc_url( get_theme_mod('radiance_lite_logo_img') ); ?>" alt="<?php bloginfo('name'); ?>" /></a>
-								<?php } elseif ( display_header_text() ) { ?>
-								<!-- #description -->
-								<div id="site-title" class="logo_desp">
-									<a href="<?php echo esc_url(home_url('/')); ?>" title="<?php bloginfo('name') ?>" ><?php bloginfo('name'); ?></a> 
-									<div id="site-description"><?php bloginfo( 'description' ); ?></div>
-								</div>
-								<!-- #description -->
-								<?php } ?>
-							</div>
-							<!-- #logo -->
-							
+	<div class="main">
+		<div id="navbar">
+			<!-- insert navbar -->
+			<nav class="navbar navbar-default">
+			  
+			    <!-- Brand and toggle get grouped for better mobile display -->
+			    <div class="navbar-header">
+			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </button>
+			      
+			    </div>
 
-							<!-- top-nav-menu -->
-							<div class="top-nav-menu col-md-9 col-sm-9 col-xs-6">
-								<!-- Header Search Icon// -->
-			<!-- 					<div class="top-search col-md-1 col-sm-1 col-xs-3">						
-									<a href="javascript:void(0);" class="strip-icon search-strip" title="search"><i class="fa fa-search"></i></a>
-								</div> -->
-								<!-- Header Search Icon -->
-								<div id="skenav" class="ske-menu col-md-11 col-sm-11 col-xs-6  collapse navbar-collapse" >
-								<?php if( has_nav_menu( 'Header' ) ) {
-									wp_nav_menu( array('theme_location' => 'Header', 'menu_id' => 'menu', 'menu_class' => 'max-menu') );
-								} else { ?>
-									<ul id="menu-main" class="max-menu">
-										<li class="gohome"><a href="<?php echo esc_url(home_url('/')); ?>"> <?php _e('HOME', 'radiance-lite'); ?></a></li>
-										<li><a href=""><?php _e('ANNOUNCEMENTS', 'radiance-lite'); ?></a></li>
-										<li><a href=""> <?php _e('SIGN UPS', 'radiance-lite'); ?> </a></li>
-										<li><a href=""> | </a></li>
-										<li> <a href=""><?php _e('WELCOME USER', 'radiance-lite') ?></a> </li>
-<!-- 										<li><a href="<?php echo do_shortcode('[wppb-logout] ') ?>">Logout</a></li>
- -->									</ul>
-								<?php } ?>
-
-								</div>
-							</div>
-							<!-- top-nav-menu -->
-
-							<!-- search-strip -->
-							<!-- <div class="hsearch col-md-12 col-sm-12 col-xs-12" >
-								<div class="container">
-									<div class="row-fluid">
-										<form method="get" id="header-searchform" action="<?php echo home_url('/'); ?>">
-											<fieldset>
-												<input type="text" value="" placeholder="<?php _e('Search Here ...', 'radiance-lite'); ?>" id="s" name="s">
-											</fieldset>
-										</form>
-									</div>
-								</div>
-							</div> -->
-							<!-- search-strip -->
-						</div>
-					<!-- row-fluid -->
-				</div>
-				<!-- container -->
-			</div>
-			<!-- top-head-secwrap -->
+			    <!-- Collect the nav links, forms, and other content for toggling -->
+			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			      <ul class="nav navbar-nav navbar-right">
+			        <li><a href="/wordpress/#" class="nav-list-item"><?php _e('HOME', 'radiance-lite'); ?></a></li>
+			        <li><a href="/wordpress/#" class="nav-list-item"><?php _e('ANNOUNCEMENTS', 'radiance-lite'); ?></a></li>
+			        <li><a href="/wordpress/#" class="nav-list-item"><?php _e('SIGN UPS', 'radiance-lite'); ?></a></li>
+			        <li><a href="/wordpress/#" class="nav-list-item"><?php _e('|', 'radiance-lite'); ?></a></li>
+			        <li><a href="/wordpress/#" class="nav-list-item"><?php _e('WELCOME USER', 'radiance-lite'); ?></a></li>
+			      </ul>
+			    </div><!-- /.navbar-collapse -->
+			  
+			</nav>
 		</div>
+
+	
 		<!-- HEADER -->
 		
-		<?php $classes = get_body_class();
-	if( !(in_array('front-page',$classes)) && !is_home() ) { ?>
-		<!-- BreadCrumb Section // -->
-		<div class="bread-title-holder">
-			<div class="container">
-				<div class="row-fluid">
-					<div class="container_inner clearfix">
-						<h1 class="title">
-
-							<?php if ( is_day() ) {
-										printf( __( 'Daily Archives : <span>%s</span>', 'radiance-lite' ), get_the_date() );
-								
-								} elseif ( is_month() ) {
-									printf( __( 'Monthly Archives : <span>%s</span>', 'radiance-lite' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'radiance-lite' ) ) );
-								} elseif ( is_year() ) {
-									printf( __( 'Yearly Archives : <span>%s</span>', 'radiance-lite' ), get_the_date( _x( 'Y', 'yearly archives date format', 'radiance-lite' ) ) );
-								} elseif (is_author()) {
-
-									$curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author));
-								    _e('Author Archives : ','radiance-lite'); echo $curauth->display_name;
-
-
-								} elseif (is_category()) {
-
-									printf( __( 'Category Archives : %s', 'radiance-lite' ), '<span>' . single_cat_title( '', false ) . '</span>' );
-
-								} elseif (is_search()) {
-
-									printf( __( 'Search Results for : %s', 'radiance-lite' ), '<span>' . get_search_query() . '</span>' );
-
-								} elseif (is_tag()) {
-
-									printf( __( 'Tag Archives : %s', 'radiance-lite' ), '<span>' . single_tag_title( '', false ) . '</span>' );
-
-								} elseif ( is_home() ) {
-
-									echo esc_attr( get_theme_mod('radiance_lite_blogpage_heading', __('Blog', 'radiance-lite') ) );
-
-								} elseif (is_404()) {
-
-									_e('404', 'radiance-lite');
-
-								} else {
-
-									the_title();
-
-								}
-							?>
-						<span class="horizontal-style"></span>
-						</h1>
-						<?php if ( ( !is_home() || !is_404() ) && (class_exists('radiance_lite_breadcumb_class') ) ) {
-							$radiance_lite_breadcumb = new radiance_lite_breadcumb_class();
-							$radiance_lite_breadcumb->radiance_lite_custom_breadcrumb();
-						} ?>
-					</div>
-				</div>
-			</div>
-		</div>
-	<?php } ?>
-		<!-- \\ BreadCrumb Section -->
-	</div>
-
-<?php if(!is_front_page()) { ?><div class="header-clone"></div><?php } ?>
-
-<?php if( is_front_page() ) {
-  	
-} ?>
-

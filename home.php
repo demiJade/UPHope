@@ -10,11 +10,24 @@
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
  */
-if (is_user_logged_in() ){
-	get_header('user');
-	get_template_part('home-user');
+if (is_user_logged_in() ){ ?>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-3 side">
+				<?php get_template_part('usersidebar'); ?>
+			</div>
+			<div class="col-md-9 main">
+				<?php get_header('user'); ?>
+				<?php get_template_part('home-user'); ?>
+			</div>
+		</div>
+	</div>
+<?php 
 }
 else {
+
+
+	
 	get_header();
 	get_template_part('home-front');
 }

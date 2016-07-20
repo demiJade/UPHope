@@ -10,8 +10,64 @@ License URI: http://www.gnu.org/licenses/gpl.html
 Text Domain: radiance-lite
 Tags: blue, gray, orange, pink, purple, dark, light, two-columns, right-sidebar, fixed-layout, fluid-layout, responsive-layout, custom-header, custom-background, custom-colors, custom-menu, featured-images, full-width-template, post-formats, sticky-post, theme-options, threaded-comments, translation-ready
 -------------------------------------------------------------- */
+ul.side-nav.fixed {
+    overflow: hidden;
+    left:0;
+    height:100%;
+    padding-left: 20px;
+    padding-top: 50px;
+    color:#ffffff;
+}
+
+
+nav.navbar, div#navbar {
+    background-color: #35829c;
+    border-color:#35829c;
+
+}
+
+div.container-fluid {
+    padding-left:0px;
+    padding-right: 0px;
+}
+
+div.side-list-item {
+    padding:0px;
+    background-color: #35829c;
+    border-color: #35829c !important;
+}
+div.side-list {
+    background-color: #35829c !important;
+    border-color: #35829c !important;
+    color:#ffffff !important;
+}
+
+a.nav-list-item {
+    color:#ffffff !important;
+}
+
+.sidebar {
+    width:100%;
+    background-color: #35829c;
+    bottom:0;
+    margin:0;
+    height:calc(100%+60px);
+    padding-bottom:60px;
+    z-index:999;
+}
+
+div.col-md-3.side,div.col-md-9.main {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+
 .modal-open .modal {
     padding-top: 100px;
+}
+
+div#header {
+    background-color: black;
 }
 
 .news-heading {
@@ -53,6 +109,11 @@ Tags: blue, gray, orange, pink, purple, dark, light, two-columns, right-sidebar,
 #header-image {
     position: relative;
     width: 100%;        
+}
+
+div.container.main {
+    margin-left: 0px;
+    padding-left: 0px;
 }
 #header-text {
     position: absolute;

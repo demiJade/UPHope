@@ -11,14 +11,14 @@
 		<!-- LANDING PAGE SECTION SECTION -->
 		<?php get_template_part( 'includes/front', 'second-landing-section' ); ?>
 	<?php } ?>
-	<?php if( get_theme_mod('radiance_lite_third_landing_sec', 'on') == 'on' ) { ?>
+<!-- 	<?php if( get_theme_mod('radiance_lite_third_landing_sec', 'on') == 'on' ) { ?> -->
 		<!-- LANDING PAGE SECTION SECTION -->
-		<?php get_template_part( 'includes/front', 'third-landing-section' ); ?>
+<!-- 		<?php get_template_part( 'includes/front', 'third-landing-section' ); ?>
 	<?php } ?>
 
 	<div class="skt-default-page"><div class="skt-page-overlay"></div>
-		<!-- Container-->
-		<div class="container post-wrap rpage_wrap">
+ -->		<!-- Container-->
+<!-- 		<div class="container post-wrap rpage_wrap">
 			<div class="row-fluid">
 				<div class="title"><h2><?php echo esc_attr( get_theme_mod('radiance_lite_blogpage_heading', __('Blog', 'radiance-lite') ) ); ?></h2><span class="horizontal-style"></span></div>
 			<?php if(have_posts()) : ?>
@@ -26,8 +26,8 @@
 				<?php while(have_posts()) : the_post(); ?>
 					<div class="front-team-wrapper col-md-6 col-sm-6 col-xs-12">
 						<div class="news_blog">
-							<!-- skt_blog_middle-->
-							<div class="skt_blog_middle">
+ -->							<!-- skt_blog_middle-->
+<!-- 							<div class="skt_blog_middle">
 								<h2 class="skt_blog_title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 								<div class="blogtext">
 									<?php $post_content = get_the_excerpt();
@@ -36,19 +36,19 @@
 								</div>
 								<a class="btn_readmore" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php _e('readmore','radiance-lite'); ?></a>
 				    		</div>
-							<!--/skt_blog_middle-->	
+ -->							<!--/skt_blog_middle-->	
 
 							<!-- skt_blog_bottom-->
-							<div class="skt_blog_bottom">
-								<!-- Post Details-->
-								<div class="news-details clearfix">
+<!-- 							<div class="skt_blog_bottom">
+ -->								<!-- Post Details-->
+<!-- 								<div class="news-details clearfix">
 									<p class="post-admin front-post-admin col-md-6 col-sm-6 col-xs-12"><?php _e('by : ','radiance-lite'); ?><a href="<?php echo get_author_posts_url(get_the_author_meta( 'ID' )); ?>" style="text-transform:capitalize;"><?php echo get_the_author_meta('display_name',$post->post_author); ?></a></p>
 									<p class="post-commentss front-post-commentss col-md-6 col-sm-6 col-xs-12"><span class="skt_blog_commt"><i class="fa fa-comments-o"></i> <?php comments_popup_link('No Comments ', '1 Comment ', '% Comments ') ; ?></span></p>
 								</div>
-								<!-- /Post Details-->
-							</div>
-							<!--/skt_blog_bottom-->
-						</div>
+ -->								<!-- /Post Details-->
+<!-- 							</div>
+ -->							<!--/skt_blog_bottom-->
+<!-- 						</div>
 					</div>
 					<?php endwhile; ?>
 					<div class="clearfix"></div>
@@ -61,5 +61,5 @@
 			</div>
 		</div>
 	</div>
-
+ -->
 </div>

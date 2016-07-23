@@ -30,7 +30,7 @@
 										<div class="panel-collapse collapse in" role="tabpanel" id="collapse-advocacy" aria-labelledby="heading-advocacy">
 											<div class="panel-body side-list-item">
 												<ul>
-													<li>event evaluation</li>
+													<li><a class="side-nav-link" href="http://uphopedev.misa.org.ph/wp-content/uploads/2016/07/1-Practicum-Orientation-2016.pdf">event evaluation</a></li>
 												</ul>
 											</div>
 										</div>

@@ -30,7 +30,7 @@
 	<div class="main">
 		<div id="navbar">
 			<!-- insert navbar -->
-			<nav class="navbar navbar-default">
+			<nav class="navbar navbar-default user-navbar">
 			  
 			    <!-- Brand and toggle get grouped for better mobile display -->
 			    <div class="navbar-header">

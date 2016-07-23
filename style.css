@@ -19,8 +19,12 @@ ul.side-nav.fixed {
     color:#ffffff;
 }
 
+a.side-nav-link,a.side-nav-link:hover {
+    color:#ffffff;
+    text-decoration: #ffffff;
+}
 
-nav.navbar, div#navbar {
+nav.user-navbar {
     background-color: #35829c;
     border-color:#35829c;
 

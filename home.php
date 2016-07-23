@@ -25,9 +25,6 @@ if (is_user_logged_in() ){ ?>
 <?php 
 }
 else {
-
-
-	
 	get_header();
 	get_template_part('home-front');
 }

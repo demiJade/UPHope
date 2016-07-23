@@ -14,7 +14,7 @@ if (is_user_logged_in() ){
 else {
 	get_header();
 }
-
+// change category id to the category of institution
 $posts = query_posts($query_string.'&cat=7&posts_per_page=3'); ?>
 <div class="container">
 

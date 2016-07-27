@@ -2,7 +2,7 @@
 /**
 * The template for displaying institutions.
 *
-* Template Name: Institutions
+* Template Name: News
 * 
 * 
 *

@@ -47,7 +47,7 @@ return false;
   
 });  
 </script>  
-
+<?php $home_url = home_url(); ?>
 </head>
 <body <?php body_class(); ?> >
 	<?php get_template_part('login'); ?>
@@ -103,10 +103,10 @@ return false;
 									<ul id="menu-main nav navbar-nav" class="max-menu">
 <!-- 									<li class="gohome"><a href="<?php if( is_front_page() ){ echo '#wrapper'; } else { echo esc_url(home_url('/')); } ?>" title="<?php bloginfo('name') ?>" ><?php _e('Home', 'radiance-lite'); ?></a></li> -->										
 										<li class="home-nav"><a href=""><?php _e('ABOUT US', 'radiance-lite') ?></a></li>
-										<li class="home-nav"><a href="/wordpress/#section1"><?php _e('INSTITUTIONS', 'radiance-lite'); ?></a></li>
-										<li class="home-nav"><a href="/wordpress/#section2"><?php _e('NEWS', 'radiance-lite'); ?></a></li>
+										<li class="home-nav"><a href="<?php echo $home_url ?>/#section1"><?php _e('INSTITUTIONS', 'radiance-lite'); ?></a></li>
+										<li class="home-nav"><a href="<?php echo $home_url ?>/#section2"><?php _e('NEWS', 'radiance-lite'); ?></a></li>
 										<li class="home-nav"><a href=""> <?php _e('DONATE', 'radiance_lite') ?> </a></li>
-										<li class="home-nav"><a href="/wordpress/#section3"><?php _e('CONTACT US', 'radiance-lite'); ?></a></li>
+										<li class="home-nav"><a href="<?php echo $home_url ?>/#section3"><?php _e('CONTACT US', 'radiance-lite'); ?></a></li>
 <!-- 										<?php wp_list_pages('title_li=&depth=0'); ?> -->   <!-- page listing -->	
 										<li><a href=""><?php _e('|', 'radiance-lite') ?></a></li>									
 										<li class="home-nav"><a href="#" data-toggle="modal" data-target="#login">LOGIN</a></li>

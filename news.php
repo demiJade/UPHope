@@ -15,7 +15,10 @@ else {
 	get_header();
 }
 // change category id to the category of institution
-$posts = query_posts($query_string.'&cat=7&posts_per_page=3'); ?>
+$category_id = get_cat_ID('News');
+$category_link = get_category_link($category_id);
+$category_query_string = 'cat=' .$category_id.'&posts_per_page=3';
+$posts = query_posts($category_query_string); ?>
 <div class="container">
 
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -27,9 +30,11 @@ $posts = query_posts($query_string.'&cat=7&posts_per_page=3'); ?>
 			</div>
 			
 			<?php endwhile; else : ?>
-			
+
 			<?php endif; ?>
-		
+		<div>
+			<a href="<?php echo $category_link ?>">more...</a>
+		</div>
 		
 	
 </div>

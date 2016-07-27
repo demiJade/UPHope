@@ -142,11 +142,9 @@ require get_template_directory() . '/includes/customizer.php';
  */
 require_once(get_template_directory() . '/SketchBoard/functions/admin-init.php');
 
-// function my_scripts(){
-// 	wp_register_script('angularjs', get_stylesheet_directory_uri() . '/js/angular.min.js');
-// 	wp_register_script('angularjs-route', get_stylesheet_directory_uri() . '/js/angular-route.min.js');
-// 	wp_enqueue_script('app', get_stylesheet_directory_uri(). '/js/app.js', array('angularjs', 'angularjs-route'));
-// 	wp_localize_script('app', 'localized', array('partials' => trailingslashit(get_template_directory_uri()) . 'partials'));
-// }
 
-// add_action('wp_enqueue_scripts','my_scripts');
+function add_stylesheet() {
+wp_register_style('style',get_template_directory_uri() . '/style.css');
+wp_enqueue_style( 'style' );
+}
+add_action( 'wp_enqueue_scripts', 'add_stylesheet' );

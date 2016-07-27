@@ -14,8 +14,8 @@ Template Name: Login Template
 		      </div>
 		      <form action="<?php echo site_url(); ?>/wp-login.php" method="post">
 			      <div class="modal-body">
-			        	
- 			        	<?php echo do_shortcode(' [wppb-login redirect_url="http://localhost/wordpress/"]') ?>
+			        	<?php $home = get_home_url(); ?>
+ 			        	<?php echo do_shortcode(' [wppb-login redirect_url="$home"]') ?>
 
 			      </div>
 

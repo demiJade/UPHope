@@ -15,7 +15,10 @@ else {
 	get_header();
 }
 // change category id to the category of institution
-$posts = query_posts($query_string.'&cat=6'); ?>  
+$category_id = get_cat_ID('Institutions');
+$category_link = get_category_link($category_id);
+$category_query_string = 'cat=' .$category_id;
+$posts = query_posts($category_query_string); ?>
 <div class="container">
 	<div class="row">
 		

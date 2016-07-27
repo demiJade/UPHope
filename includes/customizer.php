@@ -197,19 +197,36 @@ function radiance_lite_customize_register( $wp_customize ) {
 	// ====================================
 	// = Home Featured Box Sections
 	// ====================================
-	$wp_customize->add_setting( 'radiance_lite_feature_title', array(
+	$wp_customize->add_setting( 'radiance_lite_vision_title', array(
 		'default'        => __('What\'s Special', 'radiance-lite'),
 		'sanitize_callback' => 'radiance_lite_sanitize_textarea',
 	));
-	$wp_customize->add_control('radiance_lite_feature_title', array(
+	$wp_customize->add_control('radiance_lite_vision_title', array(
 		'label' => __('Featured Section Heading','radiance-lite'),
 		'section' => 'home_feature_settings',
 	));
-	$wp_customize->add_setting( 'radiance_lite_feature_content', array(
+	$wp_customize->add_setting( 'radiance_lite_vision_content', array(
 		'default'        => __('Our media agency is fuelled with the elements to speed up your business marketing, PR & Promotional campaigns, Media Marketing, Internet Marketing, Email Marketing.', 'radiance-lite'),
 		'sanitize_callback' => 'radiance_lite_sanitize_textarea',
 	));
-	$wp_customize->add_control('radiance_lite_feature_content', array(
+	$wp_customize->add_control('radiance_lite_vision_content', array(
+		'type' => 'textarea',
+		'label' => __('Featured Section Description','radiance-lite'),
+		'section' => 'home_feature_settings',
+	));
+	$wp_customize->add_setting( 'radiance_lite_mission_title', array(
+		'default'        => __('What\'s Special', 'radiance-lite'),
+		'sanitize_callback' => 'radiance_lite_sanitize_textarea',
+	));
+	$wp_customize->add_control('radiance_lite_mission_title', array(
+		'label' => __('Featured Section Heading','radiance-lite'),
+		'section' => 'home_feature_settings',
+	));
+	$wp_customize->add_setting( 'radiance_lite_mission_content', array(
+		'default'        => __('Our media agency is fuelled with the elements to speed up your business marketing, PR & Promotional campaigns, Media Marketing, Internet Marketing, Email Marketing.', 'radiance-lite'),
+		'sanitize_callback' => 'radiance_lite_sanitize_textarea',
+	));
+	$wp_customize->add_control('radiance_lite_mission_content', array(
 		'type' => 'textarea',
 		'label' => __('Featured Section Description','radiance-lite'),
 		'section' => 'home_feature_settings',

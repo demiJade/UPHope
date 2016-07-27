@@ -10,12 +10,15 @@
 
 if (is_user_logged_in() ){
 	get_header('user');
+	$category_id = get_cat_ID('Announcements');
 }
 else {
 	get_header();
+	$category_id = get_cat_ID('News');
 }
 // change category id to the category of institution
-$category_id = get_cat_ID('News');
+
+
 $category_link = get_category_link($category_id);
 $category_query_string = 'cat=' .$category_id.'&posts_per_page=3';
 $posts = query_posts($category_query_string); ?>

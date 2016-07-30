@@ -29,7 +29,8 @@ $posts = query_posts($category_query_string); ?>
 
         <?php endif; ?>
 			<div class="col-md-4">
-				<div class="institution" data-toggle="modal" data-target="#post<?php echo get_the_ID();  ?>" style="background-image: url('<?php echo $image[0] ; ?>')">
+				<div class="institution" data-toggle="modal" data-target="#post<?php echo get_the_ID();  ?>">
+					<?php the_post_thumbnail('institution-thumbnail') ?>
 					<a class="box-title"><?php echo get_the_title(); ?></a>
 				</div>
 				<div class="modal fade" id="post<?php echo get_the_ID();  ?>" tabindex="-1" role="dialog" aria-labelledby="postLabel">

@@ -151,4 +151,9 @@ add_action( 'wp_enqueue_scripts', 'add_stylesheet' );
 
 
 add_image_size('modal-photo', 300, 300, false);
-add_image_size('institution-thumbnail', 150, 150, false);
+add_image_size('institution-thumbnail', 300, 300, true);
+
+// show admin bar only for admins and editors
+if (!current_user_can('edit_posts')) {
+	add_filter('show_admin_bar', '__return_false');
+}

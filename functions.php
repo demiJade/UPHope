@@ -148,3 +148,7 @@ wp_register_style('style',get_template_directory_uri() . '/style.css');
 wp_enqueue_style( 'style' );
 }
 add_action( 'wp_enqueue_scripts', 'add_stylesheet' );
+
+
+add_image_size('modal-photo', 300, 300, false);
+add_image_size('institution-thumbnail', 150, 150, false);

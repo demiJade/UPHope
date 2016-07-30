@@ -41,7 +41,8 @@ $posts = query_posts($category_query_string); ?>
 						        	<div class="col-md-4">
 						        		<?php the_post_thumbnail('modal-photo'); ?>
 						        		<h2><?php echo get_the_title(); ?></h2>
-						        		<p>Contact Number: <span><?php echo get_post_meta($post->ID, "Contact Number", true); ?></span></p>
+						        		<p>Contact Information </p>
+						        		<p><?php echo get_post_meta($post->ID, "Contact Number", true); ?></p>
 						        	</div>
 						        	<div class="col-md-8">
 						        		<?php echo get_the_content(); ?>

@@ -24,6 +24,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo bloginfo('template_url'); ?>/css/bootstrap.min.css">
 	<base href="/">
 	<?php wp_head(); ?>
+	<?php $home_url = home_url(); ?>
 </head>
 <body <?php body_class(); ?> >
 	<!-- wrapper -->
@@ -46,11 +47,11 @@
 			    <!-- Collect the nav links, forms, and other content for toggling -->
 			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			      <ul class="nav navbar-nav navbar-right">
-			        <li><a href="/wordpress/#" class="nav-list-item"><?php _e('HOME', 'radiance-lite'); ?></a></li>
-			        <li><a href="/wordpress/#" class="nav-list-item"><?php _e('ANNOUNCEMENTS', 'radiance-lite'); ?></a></li>
-			        <li><a href="/wordpress/#" class="nav-list-item"><?php _e('SIGN UPS', 'radiance-lite'); ?></a></li>
-			        <li><a href="/wordpress/#" class="nav-list-item"><?php _e('|', 'radiance-lite'); ?></a></li>
-			        <li><a href="/wordpress/#" class="nav-list-item"><?php _e('WELCOME USER', 'radiance-lite'); ?></a></li>
+			        <li><a href="<?php echo $home_url ?>/#" class="nav-list-item"><?php _e('HOME', 'radiance-lite'); ?></a></li>
+			        <li><a href="<?php echo $home_url ?>/#" class="nav-list-item"><?php _e('ANNOUNCEMENTS', 'radiance-lite'); ?></a></li>
+			        <li><a href="<?php echo $home_url ?>/#" class="nav-list-item"><?php _e('SIGN UPS', 'radiance-lite'); ?></a></li>
+			        <li><a href="<?php echo $home_url ?>/#" class="nav-list-item"><?php _e('|', 'radiance-lite'); ?></a></li>
+			        <li><a href="<?php echo $home_url ?>/#" class="nav-list-item"><?php _e('WELCOME USER', 'radiance-lite'); ?></a></li>
 			      </ul>
 			    </div><!-- /.navbar-collapse -->
 			  

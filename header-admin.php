@@ -1,6 +1,6 @@
 <?php
 /**
-* The Header for logged-in user.
+* The Header for admin.
 */
 ?><!DOCTYPE html>
 <!--[if IE 7]>
@@ -47,11 +47,11 @@
 			    <!-- Collect the nav links, forms, and other content for toggling -->
 			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			      <ul class="nav navbar-nav navbar-right">
-			        <li><a href="<?php echo $home_url ?>/#" class="nav-list-item"><?php _e('HOME', 'radiance-lite'); ?></a></li>
+<!-- 			        <li><a href="<?php echo $home_url ?>/#" class="nav-list-item"><?php _e('HOME', 'radiance-lite'); ?></a></li>
 			        <li><a href="<?php echo $home_url ?>/#" class="nav-list-item"><?php _e('ANNOUNCEMENTS', 'radiance-lite'); ?></a></li>
-			        <li><a href="<?php echo $home_url ?>/sign-ups" class="nav-list-item"><?php _e('SIGN UPS', 'radiance-lite'); ?></a></li>
+			        <li><a href="<?php echo $home_url ?>/#" class="nav-list-item"><?php _e('SIGN UPS', 'radiance-lite'); ?></a></li>
 			        <li><a href="<?php echo $home_url ?>/#" class="nav-list-item"><?php _e('|', 'radiance-lite'); ?></a></li>
-			        <li><a href="<?php echo $home_url ?>/#" class="nav-list-item"><?php _e('WELCOME USER', 'radiance-lite'); ?></a></li>
+			        <li><a href="<?php echo $home_url ?>/#" class="nav-list-item"><?php _e('WELCOME USER', 'radiance-lite'); ?></a></li> -->
 			      </ul>
 			    </div><!-- /.navbar-collapse -->
 			  

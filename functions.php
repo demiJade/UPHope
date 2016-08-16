@@ -151,9 +151,112 @@ add_action( 'wp_enqueue_scripts', 'add_stylesheet' );
 
 
 add_image_size('modal-photo', 300, 300, false);
-add_image_size('institution-thumbnail', 300, 300, true);
+add_image_size('institution-thumbnail', 300, 300, false);
 
 // show admin bar only for admins and editors
 if (!current_user_can('edit_posts')) {
 	add_filter('show_admin_bar', '__return_false');
 }
+
+
+if ($_POST["post"]) {
+		update_post_meta($_POST["post"], 'Project Date', 'September 20, 2016');
+		exit();
+	}
+
+//Renames events to projects
+add_filter( 'tribe_event_label_singular', 'event_display_name' );
+function event_display_name() {
+	return 'Project';
+}
+add_filter( 'tribe_event_label_singular_lowercase', 'event_display_name_lowercase' );
+function event_display_name_lowercase() {
+	return 'project';
+}
+// Plural
+add_filter( 'tribe_event_label_plural', 'event_display_name_plural' );
+function event_display_name_plural() {
+	return 'Projects';
+}
+add_filter( 'tribe_event_label_plural_lowercase', 'event_display_name_plural_lowercase' );
+function event_display_name_plural_lowercase() {
+	return 'projects';
+}
+
+/**
+* Move RSVP Tickets form in events template
+*/
+if (class_exists('Tribe__Tickets__RSVP')) {
+
+/* Remove the form from the current location */
+remove_action( 'tribe_events_single_event_after_the_meta', array( Tribe__Tickets__RSVP::get_instance(), 'front_end_tickets_form' ), 5 );
+
+/* Place the form in the new location */
+/* possible options: 'tribe_events_single_event_before_the_content', 'tribe_events_single_event_after_the_content' & 'tribe_events_single_event_before_the_meta' */
+add_action( 'tribe_events_single_event_before_the_meta', array( Tribe__Tickets__RSVP::get_instance(), 'front_end_tickets_form' ), 5 );
+}
+
+// function add_participant(){
+// 	if ($_POST){
+// 	update_post_meta(149, 'Project Date', 'September 30, 2016');
+// 	}
+// }
+
+
+
+// add_action('admin_init','add_participant');
+
+// function enqueue_scripts_styles_init(){
+
+// 	// embed the javascript file that makes the AJAX request
+// 	wp_enqueue_script( 'my-ajax-request', get_stylesheet_directory_uri(). '/js/ajax.js');
+	 
+// 	// declare the URL to the file that handles the AJAX request (wp-admin/admin-ajax.php)
+// 	wp_localize_script( 'my-ajax-request', 'MyAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
+
+// }
+
+
+// add_action('init', 'enqueue_scripts_styles_init');
+
+// function sign_up(){
+// 	update_post_meta(154, 'Project Date', 'September 30, 2016');
+// 	die();
+// }
+// do_action("wp_ajax_sign_up", "sign_up");
+
+add_action('wp_head','my_ajaxurl');
+function my_ajaxurl() {
+$html = '<script type="text/javascript">';
+$html .= 'var ajaxurl = "' . admin_url( 'admin-ajax.php' ) . '"';
+$html .= '</script>';
+echo $html;
+}
+
+add_action('wp_ajax_signup', 'signup_ajax');
+function signup_ajax() {
+    $post_id = $_POST['id'];
+    $user = $_POST['user'];
+    $fields = get_post_custom($post_id);
+    $user_exists = false;
+    foreach($fields as $key => $value){
+    	if ($value[0] == $user) {
+    		$user_exists = true;
+    	}
+    }
+    if ($user_exists == false) {
+    	$participant_number = get_post_meta($post_id, 'Participants', true);
+	    if ($participant_number != "") {
+	    	$participant_number = $participant_number + 1;
+	    	update_post_meta($post_id, 'Participants', $participant_number);
+	    } else {
+	    	$participant_number = 1;
+	    	add_post_meta($post_id, 'Participants', $participant_number);
+	    }
+	    
+	    add_post_meta($post_id,'Participant'.$participant_number,$user,true);
+    }
+    
+    die();
+}
+?>

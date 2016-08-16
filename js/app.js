@@ -1,13 +1,20 @@
-angular.module('app',['ngRoute'])
-.config(function($routeProvider, $locationProvider){
-	$locationProvider.html5Mode(true);
+angular.module('app',[])
 
-	$routeProvider.when('/institution',{
-		templateUrl: 'wordpress/wp-content/themes/radiance-lite/institution.php',
-		controller: 'Main'
-	});
-})
-
-.controller('Main', function(){
+.controller('Main',['$http','$scope', function($http,$scope){
 	console.log('Main File loaded.');
-})
+	$scope.sendPost = function(postID, requestUrl){
+		$http({
+			method: 'POST',
+			url: requestUrl
+		}).then(function successCallback(response){
+			console.log("success");
+		})
+
+	}
+}])
+
+
+
+
+;
+

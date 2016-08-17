@@ -90,8 +90,7 @@ jQuery('button[type=submit]').click(function(e) {
 	});
 })
 </script>
-	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri() . '/js/angular.min.js' ?>"></script>
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri() . '/js/app.js' ?>"></script></body>
+
+</body>
 
 

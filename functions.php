@@ -149,6 +149,17 @@ wp_enqueue_style( 'style' );
 }
 add_action( 'wp_enqueue_scripts', 'add_stylesheet' );
 
+function add_angular(){
+	wp_register_script('angularJS',get_stylesheet_directory_uri() . '/js/angular.min.js');
+	wp_register_script('jquery','https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js');
+	wp_register_script('appJS',get_stylesheet_directory_uri() . '/js/app.js');
+	wp_enqueue_script('angularJS');
+	wp_enqueue_script('jquery');
+	wp_enqueue_script('appJS');
+}
+
+add_action('wp_enqueue_scripts','add_angular');
+
 
 add_image_size('modal-photo', 300, 300, false);
 add_image_size('institution-thumbnail', 300, 300, false);

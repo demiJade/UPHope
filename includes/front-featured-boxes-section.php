@@ -2,7 +2,7 @@
 	<!-- Container-->
 	<div class="container post-wrap rpage_wrap" style="">
 		<div class="row-fluid">
-			<div class="title"><h2><?php echo esc_attr( get_theme_mod('radiance_lite_vision_title', __('Vision', 'radiance-lite') ) ); ?></h2></div>
+			<div class="title"><h2 class="text-center"><?php echo esc_attr( get_theme_mod('radiance_lite_vision_title', __('Vision', 'radiance-lite') ) ); ?></h2></div>
 			<div class="post">
 				<div class="skepost clearfix">
 					<div class="page-section text-center">
@@ -46,7 +46,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="title"><h2><?php echo esc_attr( get_theme_mod('radiance_lite_mission_title', __('Mission', 'radiance-lite') ) ); ?></h2></div>
+			<div class="title"><h2 class="text-center"><?php echo esc_attr( get_theme_mod('radiance_lite_mission_title', __('Mission', 'radiance-lite') ) ); ?></h2></div>
 			<div class="post">
 				<div class="skepost clearfix">
 					<div class="page-section text-center">

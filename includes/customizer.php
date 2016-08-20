@@ -53,6 +53,7 @@ function radiance_lite_customize_register( $wp_customize ) {
 		'title' => __('Footer Settings','radiance-lite'),
 	) );
 
+
 	// ====================================
 	// = General Settings Sections
 	// ====================================
@@ -192,6 +193,7 @@ function radiance_lite_customize_register( $wp_customize ) {
 		'type' => 'select',
 		'choices' => $pages_dropdown,
 	) );
+
 
 
 	// ====================================

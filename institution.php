@@ -39,13 +39,13 @@ $posts = query_posts($category_query_string); ?>
 						    <div class="modal-body">
 						    	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 						        <div class="row">
-						        	<div class="col-md-4">
+						        	<div class="col-md-4 modal-photo">
 						        		<?php the_post_thumbnail('modal-photo'); ?>
 						        		<h2><?php echo get_the_title(); ?></h2>
 						        		<p>Contact Information </p>
 						        		<p><?php echo get_post_meta($post->ID, "Contact Number", true); ?></p>
 						        	</div>
-						        	<div class="col-md-8">
+						        	<div class="col-md-8 modal-description">
 						        		<?php echo get_the_content(); ?>
 						        	</div>
 						        </div>

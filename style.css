@@ -12,14 +12,54 @@ Tags: blue, gray, orange, pink, purple, dark, light, two-columns, right-sidebar,
 -------------------------------------------------------------- */
 html {
     margin-top: 0px !important;
+    font-family: 'Quicksand', sans-serif !important;
+}
+label.select-label{
+    float:left;
+}
+.project-form{
+    margin-left:30%;
+
+}
+.project-wrapper{
+    text-align: center;
+}
+
+.sign-up-button{
+    margin:auto;
+}
+.project-name,.slots{
+    color:#000;
+    font-size:20px;
+}
+
+select.select{
+    width:50%;
+}
+
+div.sponsor {
+    padding-top:30px;
+    padding-bottom: 30px;
+}
+
+.modal-description {
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: justify;
+}
+
+.header-center {
+    text-align: center;
 }
 
 .project-box {
-    background-color: blue;
+    background-color: #0b72ba;
     padding-left: 20px;
     padding-right: 20px;
     margin-left:50px;
     margin-right:50px;
+    width:200px;
+    height:150px;
 }
 
 .attachment-institution-thumbnail {
@@ -118,6 +158,11 @@ div#header {
     font-size: 20px;
 }
 
+.slot-number {
+    font-size:30px;
+    color:#000;
+}
+
 .news {
     background-color: blue;
 }
@@ -158,7 +203,7 @@ li.home-nav{
 
 .clear {clear:both;}
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {background: transparent;border: 0;margin: 0;padding: 0;vertical-align: baseline;}
-body { color: #293136;  font-family: 'Montserrat' ,sans-serif; font-size:16px;  line-height: 22px;font-weight:400; overflow-x: hidden;}
+body { color: #293136;  font-family: 'Quicksand' ,sans-serif; font-size:16px;  line-height: 22px;font-weight:400; overflow-x: hidden;}
 p, dl, hr, h1, h2, h3, h4, h5, h6, ol, ul, pre, table, address, fieldset, figure {font-weight: 400;  margin-bottom: 20px;  line-height: 22px;}
 h1, h2, h3, h4, h5, h6{ color: #293136;font-weight: 600;letter-spacing: -0.5px;}
 pre {  overflow: auto;  width: 98%;}
@@ -169,7 +214,7 @@ li{margin-left: 30px;}
 dl {margin: 0 0 24px;float: left;}
 dt {font-weight: 400;}
 dd {margin-bottom: 18px;}
-blockquote {font-size: 26px;  font-style: italic;  color: #FFFFFF;quotes:none;font-family: 'Montserrat', sans-serif;line-height: 55px;text-align: center;}
+blockquote {font-size: 26px;  font-style: italic;  color: #FFFFFF;quotes:none;font-family: 'Quicksand', sans-serif;line-height: 55px;text-align: center;}
 cite{font-weight: 400;}
 blockquote cite a{color: #FFFFFF;}
 iframe { max-width: 100%; width:100%;outline: none;border:none;overflow:hidden;border:none;}
@@ -183,16 +228,16 @@ a img {border: none;}
 a {text-decoration: none;}
 a, img, a img, input[type="text"],
 input[type="password"], 
-input, textarea {outline:none;font-family: 'Montserrat', sans-serif;}
+input, textarea {outline:none;font-family: 'Quicksand', sans-serif;}
 a:hover{ color: #ffdd24; }
 #searchform input[type="text"] {height: 40px;}
 
 
-.text-center{text-align: center;}
+.text-center{text-align: center !important;}
 .display-block{display: block;}
 .display-inline{display: inline-block;}
 .transition-smooth{transition: all 0.3s ease 0s; -webkit-transition: all 0.3s ease 0s; -moz-transition: all 0.3s ease 0s; -o-transition: all 0.3s ease 0s; }
-.font-primary{font-family:"Montserrat","sans-serif";}
+.font-primary{font-family:"Quicksand","sans-serif";}
 .font-secondary{font-family: "Open Sans";}
 .font-color{color:#ffffff;}
 
@@ -229,7 +274,7 @@ a:hover{ color: #ffdd24; }
     position: absolute;
 }
 
-#site-title a {color: #fff; display: inline-block; font-family: 'Montserrat', sans-serif; font-size: 35px; font-weight: 500; line-height: 1; margin-top: 0px; text-decoration: none; }
+#site-title a {color: #fff; display: inline-block; font-family: 'Quicksand', sans-serif; font-size: 35px; font-weight: 500; line-height: 1; margin-top: 0px; text-decoration: none; }
 #site-description {margin-top: 5px; color: #fff; font-size: 15px; line-height: 1; position: relative; left: 1px; }
 .hsearch .row-fluid {display: none;}
 #front-content-box{padding-bottom: 100px;}
@@ -248,7 +293,7 @@ a:hover{ color: #ffdd24; }
 #skenav .ske-menu, ul.max-menu {width: 100%; font-size: 13px; margin: 0px;  display:inline-block;  width:auto;  float:right;  }
 #skenav .ske-menu ul.max-menu {  list-style: none;  margin: 0;  }
 #skenav .ske-menu .max-menu li, ul.max-menu li {  float: left;  position: relative;  margin-left: 0px;  list-style: none outside none;  }
-#skenav a {font-family: 'Montserrat', sans-serif; border-radius: 5px; color: #ffffff; font-size: 16px; display: inline; line-height: 98px; margin-left: 5px;padding: 5px 15px; text-decoration: none; text-transform: capitalize; } 
+#skenav a {font-family: 'Quicksand', sans-serif; border-radius: 5px; color: #ffffff; font-size: 16px; display: inline; line-height: 98px; margin-left: 5px;padding: 5px 15px; text-decoration: none; text-transform: capitalize; } 
 #header.skehead-headernav-shrink #skenav a{ line-height: 98px;font-weight: 400; }
 #skenav ul ul {display:none;border-radius: 0 0 3px 3px; position: absolute;top: 100%;  left: 5px;  float: left;  width: 260px;  z-index: 90;  }
 #skenav ul .sub-menu li ,#skenav ul ul li {  display: block; width:100%;  }
@@ -430,7 +475,7 @@ a:hover{ color: #ffdd24; }
     border-width: 1px;
 }
 .iconbox-icon h4 a {
-    font-family: 'Montserrat';
+    font-family: 'Quicksand';
     font-size: 22px;
     font-weight: 700;
     color: #5f5f5f;
@@ -471,7 +516,7 @@ ul.mid-box-wrap {margin: 0; }
     margin-bottom: 43px;
 }
 .title{
-    font-family: "Montserrat Subrayada",sans-serif;
+    font-family: "Quicksand Subrayada",sans-serif;
     font-size: 30px;
     font-weight: 700;
     margin: 0 0 34px;
@@ -495,7 +540,7 @@ ul.mid-box-wrap {margin: 0; }
 .serve-inner-content {float: left; width: 81%;}
 .serve-inner-content h2 {
     color: #ffdd24;
-    font-family: "Montserrat Subrayada","sans-serif";
+    font-family: "Quicksand Subrayada","sans-serif";
     font-weight: 700;
     line-height: normal;
     margin-bottom: 22px;
@@ -532,7 +577,7 @@ input[type="submit"]:focus
 .contact-form-fields {width: 1170px; margin: 0 auto;}
 .contact-form-fields h2 {
     color: #fff;
-    font-family: "Montserrat Subrayada";
+    font-family: "Quicksand Subrayada";
     font-size: 20px;
     font-weight: 700;
     margin-bottom:8px;
@@ -573,7 +618,7 @@ input[type="submit"]:focus{
     width: 100%; 
     font-size: 18px;
     font-weight: 500;
-    font-family: 'Montserrat', sans-serif; 
+    font-family: 'Quicksand', sans-serif; 
     margin-bottom: 0; 
     text-transform: uppercase; 
     border-radius: 3px;
@@ -661,7 +706,7 @@ textarea:focus{
 .container { position: relative; z-index: 1; }
 .skt-default-page { padding: 100px 0 70px 0; position: relative;}
 .skt-default-page .title { position: relative; }
-.skt-default-page .title h2 {text-align: center;font-size: 36px; font-weight: bold; letter-spacing: 1px; margin: 0 0 30px; text-transform: uppercase; } 
+.skt-default-page .title h2 {text-align: left;font-size: 36px; font-weight: bold; letter-spacing: 1px; margin: 0 0 30px; text-transform: uppercase; } 
 .skt-page-overlay { bottom: 0; left: 0; position: absolute; right: 0; top: 0;}
 
 /* =Services
@@ -672,7 +717,7 @@ textarea:focus{
 .item.landing_holder { display: none;}
 .left_icon i {display: inline-block;height: 116px; width: 97px; border-radius: 3px; word-spacing: -10px;font-size: 45px; text-align: center; line-height: 2.85; }
 .right_text h4 {color: #fff; font-size: 19px; font-weight: 600; letter-spacing: 1px; margin: 6px 0 8px; letter-spacing: 1px; text-transform: uppercase; }
-.right_text p {color: #fff; font-family: 'Montserrat', sans-serif; font-size: 16px; line-height: 24px; margin: 0; }
+.right_text p {color: #fff; font-family: 'Quicksand', sans-serif; font-size: 16px; line-height: 24px; margin: 0; }
 .row-fluid .right_text.span8 {margin: 0;}
 
 /* =Contact
@@ -694,7 +739,7 @@ div.wpcf7-mail-sent-ok  { border: 1px solid #2AD94A;  color: #2AD94A; }
 .blog_wrapper {margin-top: 47px; }
 .btn_readmore{text-transform: uppercase;font-weight: 700;padding: 20px 38px;display: inline-block;}
 .skt_blog_title {
-    font-family: "Montserrat";
+    font-family: "Quicksand";
     font-size: 20px;
     font-weight: 700;
     margin-bottom: 24px;
@@ -877,7 +922,7 @@ blockquote.skt-quote { padding: 62px 58px 66px 170px !important;border-radius: 3
 .play_button_overlay a i.fa.fa-play {display: inline-block; font-size: 38px; height: 85px; line-height: 85px; padding-left: 8px; text-align: center; width: 77px; transition: all 0.3s ease-in-out 0s; -webkit-transition: all 0.3s ease-in-out 0s; -moz-transition: all 0.3s ease-in-out 0s; -o-transition: all 0.3s ease-in-out 0s; }
 .paly_text {letter-spacing: 0.5px; padding-right: 15px; position: relative; top: -5px; }
 .paly_text.play_right {padding-left: 15px; padding-right: 0; }
-.play_button_overlay {bottom: 0; color: #ffffff; display: block; font-family: 'Montserrat', sans-serif;font-size: 25px; height: 85px; left: 0; margin: auto; position: absolute; text-align: center; top: 0; width: 100%; z-index: 1; }
+.play_button_overlay {bottom: 0; color: #ffffff; display: block; font-family: 'Quicksand', sans-serif;font-size: 25px; height: 85px; left: 0; margin: auto; position: absolute; text-align: center; top: 0; width: 100%; z-index: 1; }
 .play_btn {background-color: #FFFFFF; display: inline-block;border-radius: 2px; transition: all 0.3s ease-in-out 0s; -webkit-transition: all 0.3s ease-in-out 0s; -moz-transition: all 0.3s ease-in-out 0s; -o-transition: all 0.3s ease-in-out 0s; }
 
 /* =Comments
@@ -967,7 +1012,7 @@ h3#reply-title {  margin: 18px 0;  }
 #respond label {  float: left;font-size: 15px; margin-top: 5px;color:#666;}
 #respond input[type="submit"] {background: none repeat scroll 0 0 rgba(0, 0, 0, 0); cursor: pointer;display: inline-block;height: 45px;font-size: 14px;margin-bottom: 0;padding: 0;position: relative;transition: all 0.3s linear 0s;-webkit-transition: all 0.3s linear 0s;-moz-transition: all 0.3s linear 0s;-o-transition: all 0.3s linear 0s;  }
 #respond input[type="submit"]:hover {color: #FFFFFF;transition: all 0.3s linear 0s;-webkit-transition: all 0.3s linear 0s;-moz-transition: all 0.3s linear 0s;-o-transition: all 0.3s linear 0s;  }
-#respond input, #respond textarea {  border: 1px solid #e1e1e1;background:none repeat scroll 0 0 #F9F9F9;float: right; font-family: 'Montserrat', sans-serif;font-size: 14px; font-weight: 300; height: 40px; margin: 0 0 22px; padding: 4px 10px; width: 78%; }  
+#respond input, #respond textarea {  border: 1px solid #e1e1e1;background:none repeat scroll 0 0 #F9F9F9;float: right; font-family: 'Quicksand', sans-serif;font-size: 14px; font-weight: 300; height: 40px; margin: 0 0 22px; padding: 4px 10px; width: 78%; }  
 #respond .comment-form-comment {height: 102px;}
 #commentform .submit {float: right;width: 175px;}
 #respond textarea {height: 182px;overflow:auto;border-radius: 3px;padding-top: 10px;}
@@ -1006,7 +1051,7 @@ h3#reply-title {  margin: 18px 0;  }
 .author-comment-section ul.author_social { margin-bottom: 0; margin-top: 20px; } 
 .author-comment-section .author_name { font-size: 20px; font-weight: 700; text-transform: capitalize; } 
 .author-comment-section .black.mb {
-    font-family: "Montserrat";
+    font-family: "Quicksand";
     font-size: 20px;
      margin-top: 46px;
       font-weight: 700;
@@ -1042,7 +1087,7 @@ h3#reply-title {  margin: 18px 0;  }
 /*COMMON CLASSES FOR SIDEBAR WIDGETS*/
 #searchform input[type="text"],
 #searchform input[type="submit"]{
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     height:40px;
     font-weight:300;
 
@@ -1263,7 +1308,7 @@ li.ske-container > div, li.ske-container > ul {  padding: 4px 0 17px 30px; }
 
 
 
-h3.ske-title {font-size: 20px;font-family: "Montserrat";letter-spacing: 0.5px;margin: 0 0 4px;background: none repeat scroll 0 0 transparent; padding: 0 0 0 20px; text-transform: uppercase; }
+h3.ske-title {font-size: 20px;font-family: "Quicksand";letter-spacing: 0.5px;margin: 0 0 4px;background: none repeat scroll 0 0 transparent; padding: 0 0 0 20px; text-transform: uppercase; }
 #sidebar .skeside .ske-container {margin-bottom: 30px;}
 
 #sidebar li.ske-container > div a,
@@ -1300,4 +1345,4 @@ h3.ske-title {font-size: 20px;font-family: "Montserrat";letter-spacing: 0.5px;ma
 #skenav .skt-mob-menu li:hover > ul {display: block;}
 /*---------------------------------------------------*/
 
-#section2 {color: #fff; background-color: #000; }
+#section2 {color: #fff; background-color: #fff; }

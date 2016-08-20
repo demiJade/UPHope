@@ -13,11 +13,11 @@
 	<?php } ?>
 <!-- 	<?php if( get_theme_mod('radiance_lite_third_landing_sec', 'on') == 'on' ) { ?> -->
 		<!-- LANDING PAGE SECTION SECTION -->
-<!-- 		<?php get_template_part( 'includes/front', 'third-landing-section' ); ?>
+		<?php get_template_part( 'includes/front', 'third-landing-section' ); ?>
 	<?php } ?>
 
 	<div class="skt-default-page"><div class="skt-page-overlay"></div>
- -->		<!-- Container-->
+		<!-- Container-->
 <!-- 		<div class="container post-wrap rpage_wrap">
 			<div class="row-fluid">
 				<div class="title"><h2><?php echo esc_attr( get_theme_mod('radiance_lite_blogpage_heading', __('Blog', 'radiance-lite') ) ); ?></h2><span class="horizontal-style"></span></div>

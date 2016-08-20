@@ -17,6 +17,7 @@ html {
 label.select-label{
     float:left;
 }
+
 .project-form{
     margin-left:30%;
 
@@ -257,7 +258,7 @@ a:hover{ color: #ffdd24; }
 
 #header{display: block; left: 0; padding: 0; position: relative; top:0; z-index: 90;width:100%;}
 
-#header.skehead-headernav-shrink{box-sizing: border-box; padding-top: 0; position: fixed;background:rgba(0,0,0,0.75);} 
+#header.skehead-headernav-shrink{box-sizing: border-box; padding-top: 0; position: fixed;background:rgba(0,0,0,0.75); height:90px;} 
 
 #logo {transition: height 0.3s ease 0s, line-height 0.3s ease 0s; margin-bottom: 5px;margin-top: 25px;position: relative;max-height: 62px;}
 

@@ -4,7 +4,7 @@
 	<div class="radiance-image-post">
 		
 		<img alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" class="ad-slider-image header-image"  src="<?php header_image(); ?>" />
-		<h1 id="header-text"><span>THE <u>HOPE</u> <br> PROJECT </span></h1>
+		
 	</div>
 </div>
 <?php } ?>

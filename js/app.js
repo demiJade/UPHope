@@ -11,6 +11,16 @@ angular.module('app',[])
 		})
 
 	}
+	$scope.getData = function(){
+		jQuery.ajax({
+	       type: "GET",
+	       url: ajaxurl, 
+	       success: function(data){
+	            jQuery('.vehicle-value-box').html(msg+",00€");
+	            console.log("Data retrieved");
+	       }
+		});
+	}
 }])
 
 

@@ -622,6 +622,7 @@ input[type="submit"]:focus{
     margin-bottom: 0; 
     text-transform: uppercase; 
     border-radius: 3px;
+    background-color:white !important;
 }
 input:focus,
 textarea:focus{ 

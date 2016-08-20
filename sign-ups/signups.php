@@ -76,7 +76,7 @@ if (is_user_logged_in() ){ ?>
 									
 									<span class="project-name"><?php echo get_the_title(); ?></span><br>
 									<span class="slots">Slots left:</span><br>
-									<span class="slot-number"><?php echo get_post_meta($post->ID, 'Slots', true); ?></span>
+									<span class="slot-number"><?php echo get_post_meta($post->ID, 'Slots', true) - get_post_meta($post->ID, 'Participants',true); ?></span>
 								</div>
 							</div>
 						<?php endwhile; else : ?>
@@ -110,6 +110,7 @@ jQuery('button[type=submit]').click(function(e) {
 	       success: function(msg){
 	            jQuery('.vehicle-value-box').html(msg+",00€");
 	            alert("Updated");
+	            location.reload();
 	       }
 	});
 })

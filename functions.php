@@ -169,54 +169,9 @@ add_image_size('sponsor-thumbnail', 150, 150, true);
 
 
 // show admin bar only for admins and editors
-if (!current_user_can('edit_posts')) {
-	add_filter('show_admin_bar', '__return_false');
-}
-
-
-if ($_POST["post"]) {
-		update_post_meta($_POST["post"], 'Project Date', 'September 20, 2016');
-		exit();
-	}
-
-//Renames events to projects
-add_filter( 'tribe_event_label_singular', 'event_display_name' );
-function event_display_name() {
-	return 'Project';
-}
-add_filter( 'tribe_event_label_singular_lowercase', 'event_display_name_lowercase' );
-function event_display_name_lowercase() {
-	return 'project';
-}
-// Plural
-add_filter( 'tribe_event_label_plural', 'event_display_name_plural' );
-function event_display_name_plural() {
-	return 'Projects';
-}
-add_filter( 'tribe_event_label_plural_lowercase', 'event_display_name_plural_lowercase' );
-function event_display_name_plural_lowercase() {
-	return 'projects';
-}
-
-/**
-* Move RSVP Tickets form in events template
-*/
-if (class_exists('Tribe__Tickets__RSVP')) {
-
-/* Remove the form from the current location */
-remove_action( 'tribe_events_single_event_after_the_meta', array( Tribe__Tickets__RSVP::get_instance(), 'front_end_tickets_form' ), 5 );
-
-/* Place the form in the new location */
-/* possible options: 'tribe_events_single_event_before_the_content', 'tribe_events_single_event_after_the_content' & 'tribe_events_single_event_before_the_meta' */
-add_action( 'tribe_events_single_event_before_the_meta', array( Tribe__Tickets__RSVP::get_instance(), 'front_end_tickets_form' ), 5 );
-}
-
-// function add_participant(){
-// 	if ($_POST){
-// 	update_post_meta(149, 'Project Date', 'September 30, 2016');
-// 	}
+// if (!current_user_can('edit_posts')) {
+// 	add_filter('show_admin_bar', '__return_false');
 // }
-
 
 
 // add_action('admin_init','add_participant');
@@ -273,5 +228,11 @@ function signup_ajax() {
     }
     
     die();
+}
+add_action('wp_ajax_delete_user', 'delete_user_ajax');
+function delete_user_ajax(){
+	$user_id = $_POST['id'];
+	wp_delete_user($user_id);
+	die();
 }
 ?>

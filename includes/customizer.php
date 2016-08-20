@@ -52,7 +52,40 @@ function radiance_lite_customize_register( $wp_customize ) {
 		'priority' => 4,
 		'title' => __('Footer Settings','radiance-lite'),
 	) );
+	$wp_customize->add_section('contact_us_settings' , array(
+		'priority' => 5,
+		'title' => __('Contact Us Settings', 'radiance-lite'),
+	) );
 
+	// ====================================
+	// = Contact Us Settings Sections
+	// ====================================
+	$wp_customize->add_setting( 'contact_us_background_img', array(
+		'default'           => '',
+		'sanitize_callback' => 'esc_url_raw',
+	) );
+	$wp_customize->add_control(  new WP_Customize_Image_Control( $wp_customize, 'contact_us_background_img', array(
+		'priority' => 1,
+		'label' => __( 'Background Image', 'radiance-lite' ),
+		'section' => 'contact_us_settings',
+		'mime_type' => 'image',
+	) ) );
+	$wp_customize->add_setting('contact_us_email', array(
+		'default'           => 'thehopeprojectupm@gmail.com',
+		'sanitize_callback' => 'radiance_lite_sanitize_textarea',
+	) );
+	$wp_customize->add_control('contact_us_email', array(
+		'label' => __('Email Address','radiance-lite'),
+		'section' => 'contact_us_settings',
+	) );
+	$wp_customize->add_setting('contact_us_fb_link', array(
+		'default'           => 'fb.com/thehopeprojectupm',
+		'sanitize_callback' => 'radiance_lite_sanitize_textarea',
+	) );
+	$wp_customize->add_control('contact_us_fb_link', array(
+		'label' => __('Facebook','radiance-lite'),
+		'section' => 'contact_us_settings',
+	) );
 
 	// ====================================
 	// = General Settings Sections

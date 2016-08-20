@@ -9,16 +9,16 @@ if( $_third_landing_page_ID != '' && $_third_landing_page_ID != '0' ) {
 } ?>
 <div id="section3" class="skt-default-page"><div class="skt-page-overlay"></div>
 	<!-- Container-->
-<!-- 	<div class="container post-wrap rpage_wrap" style="">
+	<div class="container post-wrap rpage_wrap" style="">
 		<div class="row-fluid">
-			<div class="title"><h2><?php echo esc_attr($_third_landing_page_title); ?></h2><span class="horizontal-style"></span></div>
-			<div class="post">
+<!-- 			<div class="title"><h2><?php echo esc_attr($_third_landing_page_title); ?></h2><span class="horizontal-style"></span></div>
+ -->			<div class="post">
 				<div class="skepost clearfix">
 					<div class="page-section">
-						<?php echo do_shortcode(wp_kses_post($_third_landing_page_content)); ?>
+						<?php get_template_part('contact-us') ?>
 					</div>
 				</div>
-			</div> -->
+			</div>
 			<!-- /end blog post -->
 		</div>
 	</div>

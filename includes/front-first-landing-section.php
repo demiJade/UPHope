@@ -16,6 +16,7 @@ if( $_first_landing_page_ID != '' && $_first_landing_page_ID != '0' ) {
 				<div class="skepost clearfix">
 					<div class="page-section">
 						<?php get_template_part('institution') ?>
+						
 					</div>
 				</div>
 			</div>

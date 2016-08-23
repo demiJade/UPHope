@@ -56,6 +56,10 @@ function radiance_lite_customize_register( $wp_customize ) {
 		'priority' => 5,
 		'title' => __('Contact Us Settings', 'radiance-lite'),
 	) );
+	$wp_customize->add_section('video_background_settings' , array(
+		'priority' => 6,
+		'title' => __('Video Background Settings', 'radiance-lite'),
+	) );
 
 	// ====================================
 	// = Contact Us Settings Sections
@@ -85,6 +89,19 @@ function radiance_lite_customize_register( $wp_customize ) {
 	$wp_customize->add_control('contact_us_fb_link', array(
 		'label' => __('Facebook','radiance-lite'),
 		'section' => 'contact_us_settings',
+	) );
+		// ====================================
+	// = Video Background Settings Sections
+	// ====================================
+	$wp_customize->add_setting( 'video_background_link', array(
+		'default'           => '',
+		'sanitize_callback' => 'esc_url_raw',
+	) );
+	$wp_customize->add_control(  'video_background_link', array(
+		'priority' => 1,
+		'label' => __( 'Video Background Link', 'radiance-lite' ),
+		'section' => 'video_background_settings',
+
 	) );
 
 	// ====================================

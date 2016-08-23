@@ -94,7 +94,7 @@ function radiance_lite_customize_register( $wp_customize ) {
 	// = Video Background Settings Sections
 	// ====================================
 	$wp_customize->add_setting( 'video_background_link', array(
-		'default'           => '',
+		'default'           => 'https://www.youtube.com/embed/6v2L2UGZJAM',
 		'sanitize_callback' => 'esc_url_raw',
 	) );
 	$wp_customize->add_control(  'video_background_link', array(

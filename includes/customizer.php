@@ -61,6 +61,56 @@ function radiance_lite_customize_register( $wp_customize ) {
 		'title' => __('Video Background Settings', 'radiance-lite'),
 	) );
 
+	$wp_customize->add_section('menu_bar_settings' , array(
+		'priority' => 7,
+		'title' => __('Menu Bar Settings', 'radiance-lite'),
+	) );
+	$wp_customize->add_section('about_us_settings' , array(
+		'priority' => 8,
+		'title' => __('About Us Settings', 'radiance-lite'),
+	) );
+	$wp_customize->add_section('donate_settings' , array(
+		'priority' => 9,
+		'title' => __('Donate Page Settings', 'radiance-lite'),
+	) );
+
+	// ====================================
+	// = Menu Bar Settings Sections
+	// ====================================
+	$wp_customize->add_setting( 'menu_bar_logo_img', array(
+		'default'           => '',
+		'sanitize_callback' => 'esc_url_raw',
+	) );
+	$wp_customize->add_control(  new WP_Customize_Image_Control( $wp_customize, 'menu_bar_logo_img', array(
+		'priority' => 1,
+		'label' => __( 'Logo Image', 'radiance-lite' ),
+		'section' => 'menu_bar_settings',
+		'mime_type' => 'image',
+	) ) );
+
+	// ====================================
+	// = About Us Settings Sections
+	// ====================================
+	$wp_customize->add_setting( 'about_us_content', array(
+		'default'        => __('Lorem ipsum dolor sit amet, consecteturLorem ipsum dolor sit amet, consecteturadipiscing elit.Aliquam porta dignissim estadipiscing elit.', 'radiance-lite'),
+		'sanitize_callback' => 'radiance_lite_sanitize_textarea',
+	));
+	$wp_customize->add_control('about_us_content', array(
+		'type' => 'textarea',
+		'label' => __('About Us Content','radiance-lite'),
+		'section' => 'about_us_settings',
+	));
+	$wp_customize->add_setting( 'about_us_img', array(
+		'default'           => '',
+		'sanitize_callback' => 'esc_url_raw',
+	) );
+	$wp_customize->add_control(  new WP_Customize_Image_Control( $wp_customize, 'about_us_img', array(
+		'priority' => 1,
+		'label' => __( 'About Us Image', 'radiance-lite' ),
+		'section' => 'about_us_settings',
+		'mime_type' => 'image',
+	) ) );
+
 	// ====================================
 	// = Contact Us Settings Sections
 	// ====================================
@@ -186,6 +236,23 @@ function radiance_lite_customize_register( $wp_customize ) {
 	));
 	$wp_customize->add_control('radiance_lite_linkedin_link', array(
 		'label' => __('Linked In Link', 'radiance-lite'),
+		'section' => 'social_settings',
+	));
+
+	$wp_customize->add_setting( 'radiance_lite_when_in_manila_link', array(
+		'default'        => '#',
+		'sanitize_callback' => 'esc_url_raw',
+	));
+	$wp_customize->add_control('radiance_lite_when_in_manila_link', array(
+		'label' => __('WhenInManila Link', 'radiance-lite'),
+		'section' => 'social_settings',
+	));
+	$wp_customize->add_setting( 'radiance_lite_rappler_link', array(
+		'default'        => '#',
+		'sanitize_callback' => 'esc_url_raw',
+	));
+	$wp_customize->add_control('radiance_lite_rappler_link', array(
+		'label' => __('Rappler Link', 'radiance-lite'),
 		'section' => 'social_settings',
 	));
 	

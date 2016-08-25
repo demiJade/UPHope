@@ -13,6 +13,8 @@ get_header('admin');
 	'role' => 'Subscriber',
 ); ?>
 <?php $users = get_users($args); ?>
+<input type="file" id="fileinput">
+<button class="btn" id="update">Update</button>
 <table>
 	<tr>
 		<th>Name</th>
@@ -25,13 +27,21 @@ get_header('admin');
 	<?php foreach ($users as $user) { ?>
 		<tr>
 			<td><?php echo $user->user_firstname; ?> <?php echo $user->user_lastname; ?></td>
-			<td><?php if ($user->project_involvement != '') {echo $user->project_involvement;} else {echo 0;} ?></td>
-			<td><?php if ($user->hospital_visits != '') {echo $user->project_involvement;} else {echo 0;} ?></td>
-			<td><?php if ($user->formations_seminar != '') {echo $user->project_involvement;} else {echo 0;} ?></td>
-			<td><?php if ($user->child_life_party != '') {echo $user->project_involvement;} else {echo 0;} ?></td>
+			<td>
+				<?php $project_involvement =  get_user_meta($user->ID,'project_involvement',true);
+				if ($project_involvement == '') {
+					echo 0;
+				} else {
+					echo $project_involvement;
+				}
+				?>
+			</td>
+			<td><?php if ($user->hospital_visits != '') {echo $user->hospital_visits;} else {echo 0;} ?></td>
+			<td><?php if ($user->formations_seminar != '') {echo $user->formations_seminar;} else {echo 0;} ?></td>
+			<td><?php if ($user->child_life_party != '') {echo $user->child_life_party;} else {echo 0;} ?></td>
 			<td>
 				<button>Edit</button>
-				<?php if ($user->project_involvement == '' && $user->hospital_visits == '' && $user->formations_seminar == '') {?><button id="delete" onclick="deleteUser(<?php echo $user->ID ?>)">Delete</button><?php } ?>
+				<?php if ($user->project_involvement == '' && $user->hospital_visits == '' && $user->formations_seminar == '') {?><button id="delete" onclick="if (confirm('Are you sure you want to delete '+ '<?php echo $user->user_firstname ?>')){deleteUser(<?php echo $user->ID ?>)}">Delete</button><?php } ?>
 			</td>
 		</tr>
 	<?php } ?>
@@ -66,5 +76,74 @@ jQuery('button[type=submit]').click(function(e) {
 	            location.reload();
 	       }
 	});
+})
+</script>
+
+<script>
+var users = [];
+jQuery(document).ready(function() {
+  document.getElementById('fileinput').addEventListener('change', readSingleFile, false);
+
+});
+
+
+function readSingleFile(evt){
+	users = [];
+	var f = evt.target.files[0];
+	if (f) {
+		var r = new FileReader();
+		r.onload = function(e) {
+			var contents = e.target.result;
+			
+			var lines = contents.split('\n');
+			
+			var headers = lines[0].split(",");
+			console.log(headers);
+			for (var i = 1; i < lines.length-1; i++) {
+				var obj = {};
+				var currentline = lines[i].split(",");
+
+				for (var j = 0; j < headers.length+1; j++) {
+					if (j == headers.length-1){
+						console.log(headers[j]);
+					}
+					var column = headers[j];
+					obj[column] = currentline[j];
+				}
+				users.push(obj);
+			}
+			console.log("file loaded");
+			console.log(users);
+		}
+		var text = r.readAsText(f);
+	}
+}
+</script>
+
+<script>
+jQuery('button[id=update]').click(function(e) {
+	e.preventDefault();
+	console.log(users);
+	for (user in users){
+		var query = "action=update_user&user=" + users[user]['Username'] + "&project_involvement=" + 
+	        users[user]["Project Involvement"] + "&hospital_visits=" +  users[user]["Hospital Visits"] +
+	       "&formations_seminar=" +  users[user]["Formations Seminar"] + "&child_life_party=" + 
+	        users[user]["Child Life Party"] + "&email=" +  users[user]["E-mail"] + "&first_name=" +
+	        users[user]["First Name"] + "&last_name=" + users[user]["Last Name"];
+	        console.log(query);
+		jQuery.ajax({
+	       type: "POST",
+	       url: ajaxurl,
+	       data: query,
+
+	       success: function(msg){
+	            jQuery('.vehicle-value-box').html(msg+",00€");
+	            
+	            alert("Updated");
+	            location.reload();
+	       }
+	});
+	}
+	
 })
 </script>

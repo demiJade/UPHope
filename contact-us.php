@@ -15,7 +15,8 @@ else {
 	get_header();
 }?>
 
-<div style="background-image: url(<?php echo get_theme_mod('contact_us_background_img'); ?>)">
+<div class="contact-us" style="background-image: url(<?php echo get_theme_mod('contact_us_background_img'); ?>)">
+
 	<h3>CONTACT US</h3>
 	<h2><?php echo get_theme_mod('contact_us_email','thehopeprojectupm@gmail.com'); ?></h2>
 	<h2><?php echo get_theme_mod('contact_us_fb_link','fb.com/thehopeprojectupm'); ?></h2>

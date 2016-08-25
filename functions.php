@@ -235,4 +235,46 @@ function delete_user_ajax(){
 	wp_delete_user($user_id);
 	die();
 }
+
+add_action('wp_ajax_update_user', 'update_user_ajax');
+function update_user_ajax(){
+	$user_name = $_POST['user'];
+	$project_involvement = $_POST['project_involvement'];
+	$hospital_visits = $_POST['hospital_visits'];
+	$formations_seminar = $_POST['formations_seminar'];
+	$child_life_party = $_POST['child_life_party'];
+	$email = $_POST['email'];
+	$first_name = $_POST['first_name'];
+	$last_name = $_POST['last_name'];
+	$user = get_user_by('login', $user_name);
+	if ($user == false){
+		wp_create_user($user_name, '12341234', $email);
+		$new_user = get_uesr_by('login', $user_name);
+		update_user_meta('user_firstname', $first_name);
+		update_user_meta('user_lastname', $last_name);
+
+	} else {
+		if (get_user_meta($user->ID, 'project_involvement', true) == ''){
+			add_user_meta($user->ID, 'project_involvement', $project_involvement, true);
+		} else {
+			update_user_meta($user->ID, 'project_involvement', $project_involvement);
+		}
+		if (get_user_meta($user->ID, 'hospital_visits', true) == ''){
+			add_user_meta($user->ID, 'hospital_visits', $hospital_visits, true);
+		} else {
+			update_user_meta($user->ID, 'hospital_visits', $hospital_visits);
+		}
+		if (get_user_meta($user->ID, 'formations_seminar', true) == ''){
+			add_user_meta($user->ID, 'formations_seminar', $formations_seminar, true);
+		} else {
+			update_user_meta($user->ID, 'formations_seminar', $formations_seminar);
+		}
+		if (get_user_meta($user->ID, 'child_life_party', true) == ''){
+			add_user_meta($user->ID, 'child_life_party', $child_life_party, true);
+		} else {
+			update_user_meta($user->ID, 'child_life_party', $child_life_party);
+		}
+	}
+	die();
+}
 ?>

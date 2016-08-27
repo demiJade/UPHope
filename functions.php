@@ -172,33 +172,6 @@ add_image_size('institution-thumbnail', 300, 300, false);
 add_image_size('sponsor-thumbnail', 150, 150, true);
 
 
-// show admin bar only for admins and editors
-// if (!current_user_can('edit_posts')) {
-// 	add_filter('show_admin_bar', '__return_false');
-// }
-
-
-// add_action('admin_init','add_participant');
-
-// function enqueue_scripts_styles_init(){
-
-// 	// embed the javascript file that makes the AJAX request
-// 	wp_enqueue_script( 'my-ajax-request', get_stylesheet_directory_uri(). '/js/ajax.js');
-	 
-// 	// declare the URL to the file that handles the AJAX request (wp-admin/admin-ajax.php)
-// 	wp_localize_script( 'my-ajax-request', 'MyAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
-
-// }
-
-
-// add_action('init', 'enqueue_scripts_styles_init');
-
-// function sign_up(){
-// 	update_post_meta(154, 'Project Date', 'September 30, 2016');
-// 	die();
-// }
-// do_action("wp_ajax_sign_up", "sign_up");
-
 add_action('wp_head','my_ajaxurl');
 function my_ajaxurl() {
 $html = '<script type="text/javascript">';
@@ -237,6 +210,48 @@ add_action('wp_ajax_delete_user', 'delete_user_ajax');
 function delete_user_ajax(){
 	$user_id = $_POST['id'];
 	wp_delete_user($user_id);
+	die();
+}
+
+add_action('wp_ajax_update_user', 'update_user_ajax');
+function update_user_ajax(){
+	$user_name = $_POST['user'];
+	$project_involvement = $_POST['project_involvement'];
+	$hospital_visits = $_POST['hospital_visits'];
+	$formations_seminar = $_POST['formations_seminar'];
+	$child_life_party = $_POST['child_life_party'];
+	$email = $_POST['email'];
+	$first_name = $_POST['first_name'];
+	$last_name = $_POST['last_name'];
+	$user = get_user_by('login', $user_name);
+	if ($user == false){
+		wp_create_user($user_name, '12341234', $email);
+		$new_user = get_uesr_by('login', $user_name);
+		update_user_meta('user_firstname', $first_name);
+		update_user_meta('user_lastname', $last_name);
+
+	} else {
+		if (get_user_meta($user->ID, 'project_involvement', true) == ''){
+			add_user_meta($user->ID, 'project_involvement', $project_involvement, true);
+		} else {
+			update_user_meta($user->ID, 'project_involvement', $project_involvement);
+		}
+		if (get_user_meta($user->ID, 'hospital_visits', true) == ''){
+			add_user_meta($user->ID, 'hospital_visits', $hospital_visits, true);
+		} else {
+			update_user_meta($user->ID, 'hospital_visits', $hospital_visits);
+		}
+		if (get_user_meta($user->ID, 'formations_seminar', true) == ''){
+			add_user_meta($user->ID, 'formations_seminar', $formations_seminar, true);
+		} else {
+			update_user_meta($user->ID, 'formations_seminar', $formations_seminar);
+		}
+		if (get_user_meta($user->ID, 'child_life_party', true) == ''){
+			add_user_meta($user->ID, 'child_life_party', $child_life_party, true);
+		} else {
+			update_user_meta($user->ID, 'child_life_party', $child_life_party);
+		}
+	}
 	die();
 }
 ?>

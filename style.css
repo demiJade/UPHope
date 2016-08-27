@@ -10,6 +10,10 @@ License URI: http://www.gnu.org/licenses/gpl.html
 Text Domain: radiance-lite
 Tags: blue, gray, orange, pink, purple, dark, light, two-columns, right-sidebar, fixed-layout, fluid-layout, responsive-layout, custom-header, custom-background, custom-colors, custom-menu, featured-images, full-width-template, post-formats, sticky-post, theme-options, threaded-comments, translation-ready
 -------------------------------------------------------------- */
+.contact-us{
+    color:#fff;
+    text-align:right; 
+}
 html {
     margin-top: 0px !important;
     font-family: 'Quicksand', sans-serif !important;
@@ -289,7 +293,7 @@ a:hover{ color: #ffdd24; }
 }
 
 #site-title a {color: #fff; display: inline-block; font-family: 'Quicksand', sans-serif; font-size: 35px; font-weight: 500; line-height: 1; margin-top: 0px; text-decoration: none; }
-#site-description {margin-top: 5px; color: #fff; font-size: 15px; line-height: 1; position: relative; left: 1px; }
+#site-description {     display:none !important; }
 .hsearch .row-fluid {display: none;}
 #front-content-box{padding-bottom: 100px;}
 

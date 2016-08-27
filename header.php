@@ -21,33 +21,11 @@
 <![endif]-->
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
-	<link rel="stylesheet" type="text/css" href="<?php echo bloginfo('template_url'); ?>/css/bootstrap.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+<!-- 	<link rel="stylesheet" type="text/css" href="<?php echo bloginfo('template_url'); ?>/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet"> -->
 	<base href="/">
 	<?php wp_head(); ?>
-
-<script src="http://code.jquery.com/jquery-1.4.4.js">< / script>  
-</pre>  
-<h2>Step7: Adding jQuery’s ajax function</h2>  
-<pre name="code" class="javascript">  
-<script type="text/javascript">                           
-$("#submitbtn").click(function() {  
-  
-$('#result').html('<img src="<?php bloginfo('template_url'); ?>/images/loader.gif" class="loader" />').fadeIn();  
-var input_data = $('#wp_login_form').serialize();  
-$.ajax({  
-type: "POST",  
-url:  "< ?php echo "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>",  
-data: input_data,  
-success: function(msg){  
-$('.loader').remove();  
-$('<div>').html(msg).appendTo('div#result').hide().fadeIn('slow');  
-}  
-});  
-return false;  
-  
-});  
-</script>  
+ 
 <?php $home_url = home_url(); ?>
 </head>
 <body <?php body_class(); ?> >

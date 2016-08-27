@@ -18,6 +18,19 @@ label.select-label{
     float:left;
 }
 
+div.circle{
+    border-radius:100px;
+    width:150px;
+    height:150px;
+    border:20px solid #bc4b34;
+    text-align:center;
+    margin:auto;
+}
+div.circles {
+    text-align:center;
+    margin:auto;
+}
+
 .project-form{
     margin-left:30%;
 

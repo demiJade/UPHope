@@ -14,6 +14,16 @@ Tags: blue, gray, orange, pink, purple, dark, light, two-columns, right-sidebar,
     color:#fff;
     text-align:right; 
 }
+
+.container.clearfix.skt-blog-page {
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.article-title {
+    color: #293936;
+}
+
 html {
     margin-top: 0px !important;
     font-family: 'Quicksand', sans-serif !important;
@@ -763,6 +773,7 @@ div.wpcf7-mail-sent-ok  { border: 1px solid #2AD94A;  color: #2AD94A; }
     font-weight: 700;
     margin-bottom: 24px;
 }
+.blogtext > p {line-height:40px;}
 .blogtext{font-family: "Quicksand", sans-serif;  margin-bottom: 25px; color:#293136;}
 .skt_blog_top { position: relative; line-height: 0;}
 .post-calendar {bottom: 0;height: 132px;position:absolute;text-align: center;width: 130px;border-radius: 3px;margin-left: 30px; }
@@ -863,8 +874,8 @@ div.wpcf7-mail-sent-ok  { border: 1px solid #2AD94A;  color: #2AD94A; }
 .tags{margin: 0;}
 .news_full_blog .full-post-calendar {float: right; margin-left: 28px; }
 .news_full_blog .skt_blog_middle .blogtext,
-.news_full_blog .skt_blog_bottom p {font-size: 16px; line-height: 23px; margin-bottom:18px; }
-.fullblog.clearfix {margin-top: 100px;}
+.news_full_blog .skt_blog_bottom .blogtext p {font-size: 20px; line-height: 40px; margin-bottom:18px; text-align: justify;}
+.fullblog.clearfix {margin-top: 10px;}
 blockquote.skt-quote { padding: 62px 58px 66px 170px !important;border-radius: 3px; }
 .inner_blog .skt-quote{margin:0; line-height: 32px;}
 .skt-quote .quoteauthor > a { color: #FFFFFF;}
@@ -885,7 +896,9 @@ blockquote.skt-quote { padding: 62px 58px 66px 170px !important;border-radius: 3
 /* =Breadcrumb
 ---------------------------------------------------------------*/
 .bread-title-holder {display: block;position: relative;}
-.container_inner {text-align: center;margin-top: 70px;}
+.container_inner {    text-align: center;
+    margin-top: 50px;
+    margin-left: 20px;}
 .bread-title-holder h1.title {
     color: #ffffff;
     display: inline-block;

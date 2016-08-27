@@ -32,7 +32,7 @@
 	<?php get_template_part('login'); ?>
 	<!-- wrapper -->
 	<div id="wrapper" class="skepage">
-		<div id="main-head-wrap" class="clearfix">
+		<div class="clearfix">
 			<div id="header" class="skehead-headernav clearfix">
 				<!-- top-head-secwrap -->
 				<div id="head">
@@ -44,17 +44,17 @@
 							<!-- #logo -->
 							<div class="navbar-header">
 								<div id="logo" class="col-md-3 col-sm-3 col-xs-6">
-									<?php if( get_theme_mod('radiance_lite_logo_img', '') != '' ) { ?>
+<!-- 									<?php if( get_theme_mod('radiance_lite_logo_img', '') != '' ) { ?>
 										<a href="<?php echo esc_url(home_url('/')); ?>" title="<?php bloginfo('name'); ?>" ><img class="logo" src="<?php echo esc_url( get_theme_mod('radiance_lite_logo_img') ); ?>" alt="<?php bloginfo('name'); ?>" /></a>
-									<?php } elseif ( display_header_text() ) { ?>
+									<?php } elseif ( display_header_text() ) { ?> -->
 									<!-- #description -->
-									<div id="site-title" class="logo_desp">
+<!-- 									<div id="site-title" class="logo_desp">
 										<a href="<?php echo esc_url(home_url('/')); ?>" title="<?php bloginfo('name') ?>" ><?php bloginfo('name'); ?></a> 
 										<div id="site-description"><?php bloginfo( 'description' ); ?></div>
-									</div>
+									</div> -->
 									<!-- #description -->
 									
-									<?php } ?>
+							<!-- 		<?php } ?> -->
 
 								</div>
 								<button type="button" class="btn btn-default navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-home" aria-expanded="false">
@@ -158,18 +158,20 @@
 
 									_e('404', 'radiance-lite');
 
-								} else {
+								} else { ?>
+									<div class="article-title">
+										<?php	the_title(); ?>
+									</div>
+								
 
-									the_title();
-
-								}
+								<?php }
 							?>
-						<span class="horizontal-style"></span>
+<!-- 						<span class="horizontal-style"></span> -->
 						</h1>
-						<?php if ( ( !is_home() || !is_404() ) && (class_exists('radiance_lite_breadcumb_class') ) ) {
+			<!-- 			<?php if ( ( !is_home() || !is_404() ) && (class_exists('radiance_lite_breadcumb_class') ) ) {
 							$radiance_lite_breadcumb = new radiance_lite_breadcumb_class();
 							$radiance_lite_breadcumb->radiance_lite_custom_breadcrumb();
-						} ?>
+						} ?> -->
 					</div>
 				</div>
 			</div>

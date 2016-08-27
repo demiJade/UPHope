@@ -128,7 +128,7 @@ jQuery('button[id=update]').click(function(e) {
 		var query = "action=update_user&user=" + users[user]['Username'] + "&project_involvement=" + 
 	        users[user]["Project Involvement"] + "&hospital_visits=" +  users[user]["Hospital Visits"] +
 	       "&formations_seminar=" +  users[user]["Formations Seminar"] + "&child_life_party=" + 
-	        users[user]["Child Life Party"] + "&email=" +  users[user]["E-mail"] + "&first_name=" +
+	        users[user]["Child Life Party"] + "&email=" +  users[user]["Email"] + "&first_name=" +
 	        users[user]["First Name"] + "&last_name=" + users[user]["Last Name"];
 	        console.log(query);
 		jQuery.ajax({

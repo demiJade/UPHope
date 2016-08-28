@@ -26,17 +26,22 @@ $posts = query_posts($category_query_string); ?>
 
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			<div class="row news-heading">
-				<div class="col-md-12 news">
-					
-						<a class="box-title" href="<?php the_permalink(); ?>" ><?php echo get_the_title(); ?></a>
-				</div>
+				<a href="<?php the_permalink(); ?>" >
+					<div class="col-md-12 news"  style="background-image: url(<?php echo wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' )[0]; ?>)">
+						<span class="news-label">
+							<?php $categories = get_the_category(); ?>
+							<?php echo $categories[0]->name; ?>
+						</span>
+						<span class="news-box-title"><?php echo get_the_title(); ?></span>
+					</div>
+				</a>
 			</div>
 			
 			<?php endwhile; else : ?>
 
 			<?php endif; ?>
 		<div>
-			<a href="<?php echo $category_link ?>">more...</a>
+			<a class="more-link" href="<?php echo $category_link ?>">more...</a>
 		</div>
 		
 	

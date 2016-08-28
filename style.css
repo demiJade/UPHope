@@ -160,6 +160,7 @@ div#header {
 .news-heading {
     margin-top: 10px;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 .institution {
@@ -177,13 +178,14 @@ div#header {
 }
 
 .box-title {
-    color:white;
     float: right;
-    position: relative;
-    padding-top:250px;
-    padding-right: 20px;
-    text-decoration: none;
-    font-size: 20px;
+    position: absolute;
+    font-size: 40px;
+    bottom: 10px;
+    right: 5px;
+    color:white;
+    line-height: normal;
+   
 }
 
 .slot-number {
@@ -193,6 +195,36 @@ div#header {
 
 .news {
     background-color: blue;
+    text-align: center;
+    height:300px;
+}
+
+.news-box-title {
+
+    font-size: 40px;
+    margin-top: 120px;
+    color:white;
+    position:relative;
+    display:inline-block;
+    line-height: normal;
+    vertical-align: middle;
+}
+
+.more-link, .more-link:hover {
+    font-size: 25px;
+    float:right;
+    color: #bc4b34;
+}
+
+.news-label {
+    background-color: #bc4b34;
+    line-height: 40px;
+    display: inline-block;
+    padding-right: 30px;
+    padding-left: 30px;
+    position: absolute;
+    margin-top: 80px;
+    font-size: 30px;
 }
 
 .modal-content {
@@ -253,11 +285,11 @@ table {border-collapse: collapse;  border-spacing: 0;  }
 th{color:#000; text-align: center;font-weight: 600;  }
 th,td{ border: 1px solid #ebebeb;font-size: 16px;padding: 10px 15px; vertical-align: middle; text-align: center;}
 a img {border: none;}
-a {text-decoration: none;}
+a {text-decoration: none; color:#fff;}
 a, img, a img, input[type="text"],
 input[type="password"], 
 input, textarea {outline:none;font-family: 'Quicksand', sans-serif;}
-a:hover{ color: #ffdd24; }
+a:hover, a:focus{ text-decoration: none; color:#fff;}
 #searchform input[type="text"] {height: 40px;}
 
 

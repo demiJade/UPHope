@@ -1,9 +1,6 @@
 <div class="sidebar">
 	<ul class="side-nav fixed">
-		<li>
-			<div class="circular-image"><img src="http://www.101dogbreeds.com/wp-content/uploads/2015/05/Black-Shih-Poo-Puppies.jpg"></div>
-			<!-- must find a way to connect this to the user's image -->
-		<li>
+
 		<li>
 			<?php global $current_user;
 				get_currentuserinfo();

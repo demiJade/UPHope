@@ -120,10 +120,11 @@ jQuery('button[type=submit]').click(function(e) {
 	       data: "action=signup&id="+project_id+"&user="+'<?php echo $current_user->user_firstname ?>' + " " + '<?php echo $current_user->user_lastname ?>',  
 	       success: function(msg){
 	            jQuery('.vehicle-value-box').html(msg+",00€");
-	            alert("Updated");
+	            
 	            location.reload();
 	       }
 	});
+	alert("Updated");
 })
 </script>
 

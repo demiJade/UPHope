@@ -73,6 +73,50 @@ function radiance_lite_customize_register( $wp_customize ) {
 		'priority' => 9,
 		'title' => __('Donate Page Settings', 'radiance-lite'),
 	) );
+	$wp_customize->add_section('forms_settings' , array(
+		'priority' => 10,
+		'title' => __('Forms Settings', 'radiance-lite'),
+	) );
+	
+	// ====================================
+	// = Forms Settings Sections
+	// ====================================
+	$wp_customize->add_setting( 'advocacy_form', array(
+		'default'        => '',
+		'sanitize_callback' => 'esc_url_raw',
+	) );
+	$wp_customize->add_control( new WP_Customize_Upload_Control( $wp_customize, 'advocacy_form', array(
+		'label'      => __( 'Advocacy Form', 'radiance-lite' ),
+		'section'    => 'forms_settings',
+		'settings'   => 'advocacy_form',
+	) ) );
+	$wp_customize->add_setting( 'finance_form', array(
+		'default'        => '',
+		'sanitize_callback' => 'esc_url_raw',
+	) );
+	$wp_customize->add_control( new WP_Customize_Upload_Control( $wp_customize, 'finance_form', array(
+		'label'      => __( 'Finance Form', 'radiance-lite' ),
+		'section'    => 'forms_settings',
+		'settings'   => 'advocacy_form',
+	) ) );
+	$wp_customize->add_setting( 'formations_form', array(
+		'default'        => '',
+		'sanitize_callback' => 'esc_url_raw',
+	) );
+	$wp_customize->add_control( new WP_Customize_Upload_Control( $wp_customize, 'formations_form', array(
+		'label'      => __( 'Advocacy Form', 'radiance-lite' ),
+		'section'    => 'forms_settings',
+		'settings'   => 'formations_form',
+	) ) );
+	$wp_customize->add_setting( 'hospitals_form', array(
+		'default'        => '',
+		'sanitize_callback' => 'esc_url_raw',
+	) );
+	$wp_customize->add_control( new WP_Customize_Upload_Control( $wp_customize, 'hospitals_form', array(
+		'label'      => __( 'Advocacy Form', 'radiance-lite' ),
+		'section'    => 'forms_settings',
+		'settings'   => 'hospitals_form',
+	) ) );
 
 	// ====================================
 	// = Menu Bar Settings Sections

@@ -144,56 +144,33 @@ require_once(get_template_directory() . '/SketchBoard/functions/admin-init.php')
 
 
 function add_stylesheet() {
-wp_register_style('style',get_template_directory_uri() . '/style.css');
-wp_enqueue_style( 'style' );
+	wp_register_style('style',get_template_directory_uri() . '/style.css');
+	wp_register_style('bootstrapCSS',get_template_directory_uri() . 'css/bootstrap.min.css');
+	wp_register_style('quicksand', 'https://fonts.googleapis.com/css?family=Quicksand');
+	wp_enqueue_style( 'style' );
+	wp_enqueue_style('bootstrapCSS');
+	wp_enqueue_style('quicksand');
 }
 add_action( 'wp_enqueue_scripts', 'add_stylesheet' );
 
-function add_angular(){
+function add_scripts(){
 	wp_register_script('angularJS',get_stylesheet_directory_uri() . '/js/angular.min.js');
 	wp_register_script('jquery','https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js');
 	wp_register_script('appJS',get_stylesheet_directory_uri() . '/js/app.js');
-	wp_register_script('bootstrap',get_stylesheet_directory_uri() . '/js/bootstrap.min.js');
+	wp_register_script('bootstrapJS',get_stylesheet_directory_uri() . '/js/bootstrap.min.js');
 	wp_enqueue_script('angularJS');
 	wp_enqueue_script('jquery');
 	wp_enqueue_script('appJS');
-	wp_enqueue_script('bootstrap');
+	wp_enqueue_script('bootstrapJS');
 }
 
-add_action('wp_enqueue_scripts','add_angular');
+add_action('wp_enqueue_scripts','add_scripts');
 
 
 add_image_size('modal-photo', 300, 300, false);
 add_image_size('institution-thumbnail', 300, 300, false);
 add_image_size('sponsor-thumbnail', 150, 150, true);
 
-
-// show admin bar only for admins and editors
-// if (!current_user_can('edit_posts')) {
-// 	add_filter('show_admin_bar', '__return_false');
-// }
-
-
-// add_action('admin_init','add_participant');
-
-// function enqueue_scripts_styles_init(){
-
-// 	// embed the javascript file that makes the AJAX request
-// 	wp_enqueue_script( 'my-ajax-request', get_stylesheet_directory_uri(). '/js/ajax.js');
-	 
-// 	// declare the URL to the file that handles the AJAX request (wp-admin/admin-ajax.php)
-// 	wp_localize_script( 'my-ajax-request', 'MyAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
-
-// }
-
-
-// add_action('init', 'enqueue_scripts_styles_init');
-
-// function sign_up(){
-// 	update_post_meta(154, 'Project Date', 'September 30, 2016');
-// 	die();
-// }
-// do_action("wp_ajax_sign_up", "sign_up");
 
 add_action('wp_head','my_ajaxurl');
 function my_ajaxurl() {

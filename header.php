@@ -21,40 +21,18 @@
 <![endif]-->
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
-	<link rel="stylesheet" type="text/css" href="<?php echo bloginfo('template_url'); ?>/css/bootstrap.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+<!-- 	<link rel="stylesheet" type="text/css" href="<?php echo bloginfo('template_url'); ?>/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet"> -->
 	<base href="/">
 	<?php wp_head(); ?>
-
-<script src="http://code.jquery.com/jquery-1.4.4.js">< / script>  
-</pre>  
-<h2>Step7: Adding jQuery’s ajax function</h2>  
-<pre name="code" class="javascript">  
-<script type="text/javascript">                           
-$("#submitbtn").click(function() {  
-  
-$('#result').html('<img src="<?php bloginfo('template_url'); ?>/images/loader.gif" class="loader" />').fadeIn();  
-var input_data = $('#wp_login_form').serialize();  
-$.ajax({  
-type: "POST",  
-url:  "< ?php echo "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>",  
-data: input_data,  
-success: function(msg){  
-$('.loader').remove();  
-$('<div>').html(msg).appendTo('div#result').hide().fadeIn('slow');  
-}  
-});  
-return false;  
-  
-});  
-</script>  
+ 
 <?php $home_url = home_url(); ?>
 </head>
 <body <?php body_class(); ?> >
 	<?php get_template_part('login'); ?>
 	<!-- wrapper -->
 	<div id="wrapper" class="skepage">
-		<div id="main-head-wrap" class="clearfix">
+		<div class="clearfix">
 			<div id="header" class="skehead-headernav clearfix">
 				<!-- top-head-secwrap -->
 				<div id="head">
@@ -66,17 +44,17 @@ return false;
 							<!-- #logo -->
 							<div class="navbar-header">
 								<div id="logo" class="col-md-3 col-sm-3 col-xs-6">
-									<?php if( get_theme_mod('radiance_lite_logo_img', '') != '' ) { ?>
-										<a href="<?php echo esc_url(home_url('/')); ?>" title="<?php bloginfo('name'); ?>" ><img class="logo" src="<?php echo esc_url( get_theme_mod('radiance_lite_logo_img') ); ?>" alt="<?php bloginfo('name'); ?>" /></a>
-									<?php } elseif ( display_header_text() ) { ?>
+									
+										<a href="<?php echo esc_url(home_url('/')); ?>" title="<?php bloginfo('name'); ?>" ><img class="logo" src="<?php echo esc_url( get_theme_mod('menu_bar_logo_img') ); ?>" alt="<?php bloginfo('name'); ?>" /></a>
+				
 									<!-- #description -->
-									<div id="site-title" class="logo_desp">
+<!-- 									<div id="site-title" class="logo_desp">
 										<a href="<?php echo esc_url(home_url('/')); ?>" title="<?php bloginfo('name') ?>" ><?php bloginfo('name'); ?></a> 
 										<div id="site-description"><?php bloginfo( 'description' ); ?></div>
-									</div>
+									</div> -->
 									<!-- #description -->
 									
-									<?php } ?>
+						
 
 								</div>
 								<button type="button" class="btn btn-default navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-home" aria-expanded="false">
@@ -180,18 +158,17 @@ return false;
 
 									_e('404', 'radiance-lite');
 
-								} else {
+								} else { ?>
+									
 
-									the_title();
-
-								}
+								<?php }
 							?>
-						<span class="horizontal-style"></span>
+<!-- 						<span class="horizontal-style"></span> -->
 						</h1>
-						<?php if ( ( !is_home() || !is_404() ) && (class_exists('radiance_lite_breadcumb_class') ) ) {
+			<!-- 			<?php if ( ( !is_home() || !is_404() ) && (class_exists('radiance_lite_breadcumb_class') ) ) {
 							$radiance_lite_breadcumb = new radiance_lite_breadcumb_class();
 							$radiance_lite_breadcumb->radiance_lite_custom_breadcrumb();
-						} ?>
+						} ?> -->
 					</div>
 				</div>
 			</div>

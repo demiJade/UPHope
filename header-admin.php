@@ -21,8 +21,8 @@
 <![endif]-->
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
-	<link rel="stylesheet" type="text/css" href="<?php echo bloginfo('template_url'); ?>/css/bootstrap.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+<!-- 	<link rel="stylesheet" type="text/css" href="<?php echo bloginfo('template_url'); ?>/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet"> -->
 	<base href="/">
 	<?php wp_head(); ?>
 	<?php $home_url = home_url(); ?>

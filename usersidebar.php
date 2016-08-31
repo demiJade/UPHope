@@ -1,6 +1,10 @@
 <div class="sidebar">
 	<ul class="side-nav fixed">
 		<li>
+			<div class="circular-image"><img src="http://www.101dogbreeds.com/wp-content/uploads/2015/05/Black-Shih-Poo-Puppies.jpg"></div>
+			<!-- must find a way to connect this to the user's image -->
+		<li>
+		<li>
 			<?php global $current_user;
 				get_currentuserinfo();
 			      echo $current_user->user_firstname . " ";
@@ -8,7 +12,7 @@
 			 ?> <br>
 			 member
 		</li>
-		<li>Dashboard</li>
+		<li class="panel-title">Dashboard</li>
 		<li>
 			<div class="panel panel-default side-list">
 				<div class="panel-heading side-list" role="tab" id="formsHeading">
@@ -23,7 +27,7 @@
 										<div class="panel-heading side-list" role="tab" id="heading-advocacy">
 											<h5 class="panel-title">
 												<a href="#collapse-advocacy" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="collapse-advocacy">
-													Advocacy
+													ADVOCACY
 												</a>
 											</h5>
 										</div>
@@ -41,7 +45,7 @@
 										<div class="panel-heading side-list" role="tab" id="heading-finance">
 											<h5 class="panel-title">
 												<a href="#collapse-finance" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="collapse-finance">
-													Finance
+													FINANCE
 												</a>
 											</h5>
 										</div>
@@ -59,7 +63,7 @@
 										<div class="panel-heading side-list" role="tab" id="heading-formations">
 											<h5 class="panel-title">
 												<a href="#collapse-formations" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="collapse-formations">
-													Formations
+													FORMATIONS
 												</a>
 											</h5>
 										</div>
@@ -77,7 +81,7 @@
 										<div class="panel-heading side-list" role="tab" id="heading-hospitals">
 											<h5 class="panel-title">
 												<a href="#collapse-hospitals" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="collapse-hospitals">
-													Hospitals
+													HOSPITALS
 												</a>
 											</h5>
 										</div>

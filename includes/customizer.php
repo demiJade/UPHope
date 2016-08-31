@@ -132,14 +132,7 @@ function radiance_lite_customize_register( $wp_customize ) {
 		'label' => __('Email Address','radiance-lite'),
 		'section' => 'contact_us_settings',
 	) );
-	$wp_customize->add_setting('contact_us_fb_link', array(
-		'default'           => 'fb.com/thehopeprojectupm',
-		'sanitize_callback' => 'radiance_lite_sanitize_textarea',
-	) );
-	$wp_customize->add_control('contact_us_fb_link', array(
-		'label' => __('Facebook','radiance-lite'),
-		'section' => 'contact_us_settings',
-	) );
+
 		// ====================================
 	// = Video Background Settings Sections
 	// ====================================
@@ -227,7 +220,7 @@ function radiance_lite_customize_register( $wp_customize ) {
 		'sanitize_callback' => 'esc_url_raw',
 	));
 	$wp_customize->add_control('radiance_lite_gplus_link', array(
-		'label' => __('Goolge Plus Link', 'radiance-lite'),
+		'label' => __('Google Plus Link', 'radiance-lite'),
 		'section' => 'social_settings',
 	));
 	$wp_customize->add_setting( 'radiance_lite_linkedin_link', array(

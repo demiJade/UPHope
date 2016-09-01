@@ -14,7 +14,7 @@ Template Name: About Us
   <h1 class="col-md-8" id="about-us-text">ABOUT US</h1>
   <span class="horizontal-style"></span>
 <!-- <img id= class="size-medium wp-image-108 alignleft" src="<?php echo get_theme_mod('about_us_img', __('https://pixabay.com/static/uploads/photo/2016/02/19/15/46/dog-1210559_960_720.jpg')); ?>" alt="bluesquare" width="300" height="277" /> -->
-
+<div style="width: 150px; height: 2px; background-color: red;"></div>
  <img id="about-us-image" class="col-md-6" src="<?php echo get_theme_mod('about_us_img', __('https://pixabay.com/static/uploads/photo/2016/02/19/15/46/dog-1210559_960_720.jpg')); ?>" alt="bluesquare" width="300" height="277" />
 <p id = "about-us-description" class="col-md-6">Lorem ipsum dolor sit amet, consecteturLorem ipsum dolor sit amet, consecteturadipiscing elit.Aliquam porta dignissim estadipiscing elit. Aliquam porta dignissim esthendrerit tincidunt.Praesent tellus arcu,hendrerit tincidunt. Praesent tellus arcu,viverra nec orci sit amet, pretium laciniaviverra nec orci sit amet, pretium laciniaenim. Praesent sit amet mi sit amet nuncenim. Praesent sit amet mi sit amet nuncimperdiet rhoncus vel convallis justo. Ut nonimperdiet rhoncus vel convallis justo. Ut nonvestibulum urna. Ut quis faucibus ligula.vestibulum urna. Ut quis faucibus ligula.Nunc id nisi turpis. Nam eget interdum enim.Nunc id nisi turpis. Nam eget interdum enim.Curabitur sollicitudin felis eu massa portaCurabitur sollicitudin felis eu massa portaplacerat.placerat. </p>
 

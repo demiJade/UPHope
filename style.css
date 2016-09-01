@@ -44,6 +44,10 @@ a.social-link, a.social-link:hover,a.social-link:focus{
     color:#293136;
 }
 
+li.donate-list{
+    font-size: 20px;
+}
+
 span.red-banner{
     color:white;
     background-color:#bc4b34;

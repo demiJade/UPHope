@@ -33,17 +33,19 @@ Template Name: Donate Page
 	</div>
 	<div class="broken-lines">
 	</div>
+	<br>
 	<div class="row">
 		<div class="col-md-12">
 			<span class="red-banner">what to do after donating</span>
+			<br><br>
 			<ol>
-				<li>send us an email at thehopeprojectupm@gmail.com</li>
-				<li>attach a picture of your deposit slip/ proof of transaction</li>
+				<li class="donate-list">send us an email at thehopeprojectupm@gmail.com</li>
+				<li class="donate-list">attach a picture of your deposit slip/ proof of transaction</li>
 			</ol>	
 			<ol>
-				<li>message our fb page at fb.com/thehopeprojectupm</li>
-				<li>attach a picture of your deposit slip/ proof of transaction</li>
-				<li>send us your email adddress if you’re interested in receiving updates about The Hope Project</li>
+				<li class="donate-list">message our fb page at fb.com/thehopeprojectupm</li>
+				<li class="donate-list">attach a picture of your deposit slip/ proof of transaction</li>
+				<li class="donate-list">send us your email adddress if you’re interested in receiving updates about The Hope Project</li>
 			</ol>
 		</div>
 	</div>

@@ -77,6 +77,57 @@ function radiance_lite_customize_register( $wp_customize ) {
 		'priority' => 10,
 		'title' => __('Forms Settings', 'radiance-lite'),
 	) );
+	$wp_customize->add_section('donate_page_settings' , array(
+		'priority' => 11,
+		'title' => __('Donate Page Settings', 'radiance-lite'),
+	) );
+
+	// ====================================
+	// = Forms Settings Sections
+	// ====================================
+	$wp_customize->add_setting( 'donate_page_img', array(
+		'default'           => '',
+		'sanitize_callback' => 'esc_url_raw',
+	) );
+	$wp_customize->add_control(  new WP_Customize_Image_Control( $wp_customize, 'donate_page_img', array(
+		'priority' => 1,
+		'label' => __( 'Donate Page Image', 'radiance-lite' ),
+		'section' => 'donate_page_settings',
+		'mime_type' => 'image',
+	) ) );
+	$wp_customize->add_setting('bpi_account_name', array(
+		'default'           => 'Account Name',
+		'sanitize_callback' => 'radiance_lite_sanitize_textarea',
+	) );
+	$wp_customize->add_control('bpi_account_name', array(
+		'label' => __('BPI Account Name','radiance-lite'),
+		'section' => 'donate_page_settings',
+	) );
+	$wp_customize->add_setting('bpi_account_number', array(
+		'default'           => 'Account Number',
+		'sanitize_callback' => 'radiance_lite_sanitize_textarea',
+	) );
+	$wp_customize->add_control('bpi_account_number', array(
+		'label' => __('BPI Account Number','radiance-lite'),
+		'section' => 'donate_page_settings',
+	) );
+	$wp_customize->add_setting('bdo_account_name', array(
+		'default'           => 'Account Name',
+		'sanitize_callback' => 'radiance_lite_sanitize_textarea',
+	) );
+	$wp_customize->add_control('bdo_account_name', array(
+		'label' => __('BDO Account Name','radiance-lite'),
+		'section' => 'donate_page_settings',
+	) );
+	$wp_customize->add_setting('bdo_account_number', array(
+		'default'           => 'Account Number',
+		'sanitize_callback' => 'radiance_lite_sanitize_textarea',
+	) );
+	$wp_customize->add_control('bdo_account_number', array(
+		'label' => __('BDO Account Number','radiance-lite'),
+		'section' => 'donate_page_settings',
+	) );
+
 	
 	// ====================================
 	// = Forms Settings Sections

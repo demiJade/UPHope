@@ -18,6 +18,24 @@ Tags: blue, gray, orange, pink, purple, dark, light, two-columns, right-sidebar,
 div.circle span.text-center{
     margin-top:30px;
 }
+div.red-bottom-line{
+
+    bottom-border:10px solid #bc4b34;
+}
+
+img.align-left{
+    float:left;
+}
+
+span.red-banner{
+    color:white;
+    background-color:#bc4b34;
+    font-size:30px;
+    padding-right:100px;
+    padding-top:5px;
+    padding-bottom:5px;
+    padding-left:5px;
+}
 
 
 
@@ -194,7 +212,7 @@ a.nav-list-item {
     background-color: #35829c;
     bottom:0;
     margin:0;
-    height:calc(100%+60px);
+    height:calc(100%+1000px);
     padding-bottom:60px;
     z-index:999;
 }

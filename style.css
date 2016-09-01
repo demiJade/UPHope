@@ -35,6 +35,11 @@ p.about-me-social-media, p.about-me-press-features {
     font-size:30px;
 }
 
+p#about-us-description {
+    font-size:25px;
+    line-height: normal;
+}
+
 a.social-link{
     color:#293136;
 }

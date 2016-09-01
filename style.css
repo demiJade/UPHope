@@ -15,6 +15,9 @@ Tags: blue, gray, orange, pink, purple, dark, light, two-columns, right-sidebar,
     text-align:right; 
 }
 
+#logo img{
+    width:auto !important;
+}
 
 .container.clearfix.skt-blog-page {
     padding-left: 100px;

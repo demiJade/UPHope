@@ -40,7 +40,7 @@ p#about-us-description {
     line-height: normal;
 }
 
-a.social-link{
+a.social-link, a.social-link:hover,a.social-link:focus{
     color:#293136;
 }
 

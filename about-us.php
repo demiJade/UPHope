@@ -27,12 +27,12 @@ Template Name: About Us
 		</div>
 	</div>
 
-		<hr />
+	
 		<div class="broken-lines">
-		</div>
+		</div><br>
 	<div class="row">
 		<div class ="col-md-6">
-		<span class="red-banner"> Social Media </span> <br>
+		<span class="red-banner"> Social Media </span> <br><br>
 		<p id = "about-me-social-media"> Facebook | <a class="social-link" href="<?php echo get_theme_mod('radiance_lite_fbook_link',__('https://www.facebook.com')); ?>" target="_blank"><?php echo get_theme_mod('radiance_lite_fbook_link',__('https://www.facebook.com')); ?></a> </p>
 		<p id = "about-me-social-media">	  Youtube | <a class="social-link" href="<?php echo get_theme_mod('radiance_lite_youtube_link','https://www.youtube.com/') ?>" target="_blank"><?php echo get_theme_mod('radiance_lite_youtube_link','https://www.youtube.com/') ?></a>  </p>
 
@@ -42,7 +42,7 @@ Template Name: About Us
 
 		<div class = "col-md-6">
 
-		<span class="red-banner"> Press Features </span> <br>
+		<span class="red-banner"> Press Features </span> <br><br>
 		<p id = "about-me-press-features"> WhenInManila.com | <a class="social-link" href="<?php echo get_theme_mod('radiance_lite_when_in_manila_link',__('https://www.wheninmanila.com')); ?>" target="_blank"><?php echo get_theme_mod('radiance_lite_when_in_manila_link',__('https://www.wheninmanila.com')); ?></a></p>
 		<p id = "about-me-press-features">  Rappler | <a class="social-link" href="<?php echo get_theme_mod('radiance_lite_rappler_link','http://www.rappler.com/') ?>" target="_blank"><?php echo get_theme_mod('radiance_lite_rappler_link','http://www.rappler.com/') ?></a> </p>
 

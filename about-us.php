@@ -12,7 +12,7 @@ Template Name: About Us
 
 <div class="container">
 	<div class="row">
-		 <h1 class="title-with-border" id="about-us-text">ABOUT US
+		 <h1 class="title-with-border col-md-3" id="about-us-text">ABOUT US
 		  	<div class="red-bottom-line">
 		  	</div>
 		  </h1>

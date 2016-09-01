@@ -43,7 +43,7 @@
 						<div class="row-fluid">
 							<!-- #logo -->
 							<div class="navbar-header">
-								<div id="logo" class="col-md-3 col-sm-3 col-xs-6">
+								<div id="logo">
 									
 										<a href="<?php echo esc_url(home_url('/')); ?>" title="<?php bloginfo('name'); ?>" ><img class="logo" src="<?php echo esc_url( get_theme_mod('menu_bar_logo_img') ); ?>" alt="<?php bloginfo('name'); ?>" /></a>
 				

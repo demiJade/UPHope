@@ -15,6 +15,51 @@ Tags: blue, gray, orange, pink, purple, dark, light, two-columns, right-sidebar,
     text-align:right; 
 }
 
+div.circle span.text-center{
+    margin-top:30px;
+}
+div.broken-lines{
+    margin-top:20px;
+    margin-bottom:20px;
+    border-bottom: 2px dashed black;
+}
+
+div#announcements{
+    background-color: #0b72ba;
+    width:65%;
+    text-align: center;
+    margin-left:10%;
+}
+
+h3.announcement-title{
+    line-height: normal;
+    margin-top:15px;
+    margin-bottom:15px;
+    color:#fff;
+}
+
+span.member-name {
+    color:#fff;
+    font-size:40px;
+    line-height: normal;
+}
+span.member-member{
+    color:#fff;
+
+}
+
+nav.user-navbar {
+    border-radius: 0px !important;
+}
+
+div#bs-example-navbar-collapse-1 {
+    padding-right: 50px;
+}
+
+#logo img{
+    width:auto !important;
+}
+
 .container.clearfix.skt-blog-page {
     padding-left: 100px;
     padding-right: 100px;
@@ -39,6 +84,8 @@ div.circle{
     border:20px solid #bc4b34;
     text-align:center;
     margin:auto;
+    font-size: 40px;
+    line-height: normal
 }
 div.circles {
     text-align:center;
@@ -100,6 +147,7 @@ ul.side-nav.fixed {
     padding-left: 20px;
     padding-top: 50px;
     color:#ffffff;
+    list-style-type
 }
 
 a.side-nav-link,a.side-nav-link:hover {
@@ -258,7 +306,7 @@ div.container.main {
     line-height: 20px;
 }
 li.home-nav{
-    height: 30px;
+    height: 50px;
 }
 
 .clear {clear:both;}
@@ -315,27 +363,17 @@ a:hover, a:focus{ text-decoration: none; color:#fff;}
 }
 .home #header {display: block; left: 0; padding: 0; position: fixed; top:0; z-index: 90;width:100%;} 
 
-
-
 #header{display: block; left: 0; padding: 0; position: relative; top:0; z-index: 90;width:100%;}
 
 #header.skehead-headernav-shrink{box-sizing: border-box; padding-top: 0; position: fixed;background:rgba(0,0,0,0.75); height:90px;} 
 
-#logo {transition: height 0.3s ease 0s, line-height 0.3s ease 0s; margin-bottom: 5px;margin-top: 25px;position: relative;max-height: 62px;}
+#logo {transition: height 0.3s ease 0s, line-height 0.3s ease 0s; margin-bottom: 5px;margin-top: 25px;position: relative;max-height: 62px; width:300px;}
 
 .strip-icon{display: block;}
 
 .strip-icon i{font-size: 28px;}
 
-#head .top-search {margin-top: 45px;float:right;}
-
-/*NEW AUGUST 27, 2016*/
-#head .navbar { height: 20px !important;}
-/*this makes the header significantly smaller*/
-
-/*.home-nav {font-size: 10em !important;}*/
-
-
+#head .top-search {margin-top: 30px;float:right;}
 
 #wrapper .hsearch input[type="text"] {
     width: 92%;
@@ -344,22 +382,7 @@ a:hover, a:focus{ text-decoration: none; color:#fff;}
     position: absolute;
 }
 
-#site-title a {
-    color: #fff; 
-    display: inline-block; 
-    font-family: 'Quicksand', sans-serif; 
-    font-size: 35px; 
-    font-weight: 500; 
-    line-height: 1; 
-    margin-top: 0px; 
-    text-decoration: none;
-}
-
-#site-title .logo_desp {
-    width: 20px;
-    height: 30px;
-}
-
+#site-title a {color: #fff; display: inline-block; font-family: 'Quicksand', sans-serif; font-size: 35px; font-weight: 500; line-height: 1; margin-top: 0px; text-decoration: none; }
 #site-description {     display:none !important; }
 .hsearch .row-fluid {display: none;}
 #front-content-box{padding-bottom: 100px;}
@@ -375,7 +398,7 @@ a:hover, a:focus{ text-decoration: none; color:#fff;}
 #skenav a{color:#ffffff;}
 #skenav {background:none repeat scroll 0 0 transparent;  display:block;  margin-left:auto;  margin-right:auto;  border:medium none;  } 
 #skehead .sub-menu { display: none; } 
-#skenav .ske-menu, ul.max-menu {width: 100%; font-size: 40px !important; margin: 0px;  display:inline-block; width:auto;  float:right;  }
+#skenav .ske-menu, ul.max-menu {width: 100%; font-size: 13px; margin: 0px;  display:inline-block;  width:auto;  float:right;  }
 #skenav .ske-menu ul.max-menu {  list-style: none;  margin: 0;  }
 #skenav .ske-menu .max-menu li, ul.max-menu li {  float: left;  position: relative;  margin-left: 0px;  list-style: none outside none;  }
 #skenav a {font-family: 'Quicksand', sans-serif; border-radius: 5px; color: #ffffff; font-size: 16px; display: inline; line-height: 98px; margin-left: 5px;padding: 5px 15px; text-decoration: none; text-transform: capitalize; } 
@@ -392,7 +415,7 @@ a:hover, a:focus{ text-decoration: none; color:#fff;}
 #skenav ul ul li:last-child a {border-radius: 0 0 3px 3px; }
 .sf-menu li:hover > ul,
 .sf-menu li.sfHover > ul {
-	display: block;
+    display: block;
 }
 .home-nav{display: none;}
 .home .home-nav{display: block;}
@@ -489,44 +512,6 @@ a:hover, a:focus{ text-decoration: none; color:#fff;}
     list-style: outside none none;
 }
 
-/*USER SIDEBAR*/
-.circular-image img {                
-    width: 300px;                
-    height: 300px;                
-    -webkit-border-radius: 150px;                
-    -moz-border-radius: 150px;                
-    -ms-border-radius: 150px;                
-    -o-border-radius: 150px; 
-    border-radius: 150px;
-}
-
-.side-nav .fixed .circular-image{
-    list-style:none;
-}
-.panel-title {
-    font-size:2em !important;
-}
-
-#dashboard-text {
-    font-size:2.5em !important; 
-    font-style: bold;
-}
-#collapse-advocacy {
-    font-size: 1.5em !important;
-}
-
-#collapse-formations {
-    font-size: 1.5em !important;
-}
-
-#collapse-finance {
-    font-size: 1.5em !important;
-}
-
-#collapse-hospitals {
-    font-size: 1.5em !important;
-
-}
 /*                                                  END OF FOOTER WIDGEST
 *******************************************************************************************************************************************/
 
@@ -819,24 +804,43 @@ textarea:focus{
 
 /* =About Us
 ------------------------------------------------------*/
-.image-wrapper > img {height: auto; max-width: 100%; position: left !important;}
+.image-wrapper > img {height: auto; max-width: 100%; }
 .about-us{padding-bottom: 15px;}
-#about-us-image { margin-left: 70px; width:680px; height:550px; !important; }
-#about-us-text {margin-top: 50px !important; margin-left: 60px !important; font-size: 4em; font-style: bold;}
-#about-us-description{padding-top: 20px !important; margin-left:60px; padding-right: 80px !important; font-size: 1.5em; text-align: justify; text-align: center; line-height: 40px;}
-#about-me-social-media {font-size: 1.3em;}
-#about-me-press-features {font-size: 1.3em;}
-#bonus-size-heading {font-size: 2em; padding-top:10px; padding-bottom: 10px; padding-left: -50px; solid #CD4F39; background-color: #CD4F39; }
-.col-md-6 { padding-top: 20px;}
-#external-link-logo { height: 50px; width: 50px; display:inline-block; margin:auto;}
-.col-md-6 {text-align: center !important;}
 
 
 /* =Pages
 ------------------------------------------------------*/
 .innerpages p, .innerpages {font-size: 16px; }
 .page_fixed_width { width: 1170px; margin: 0 auto; }
-.container { position: relative; z-index: 1;}
+.container { position: relative; z-index: 1; }
+.skt-default-page { padding: 100px 0 70px 0; position: relative;}
+.skt-default-page .title { position: relative; }
+.skt-default-page .title h2 {text-align: left;font-size: 36px; font-weight: bold; letter-spacing: 1px; margin: 0 0 30px; text-transform: uppercase; } 
+.skt-page-overlay { bottom: 0; left: 0; position: absolute; right: 0; top: 0;}
+
+/* =Services
+---------------------------------------------------*/
+#services_section p {margin-bottom: 0; }
+.services_inner_sec {margin-top: 100px; }
+.services_inner_sec:first-child {margin-top: 0px; }
+.item.landing_holder { display: none;}
+.left_icon i {display: inline-block;height: 116px; width: 97px; border-radius: 3px; word-spacing: -10px;font-size: 45px; text-align: center; line-height: 2.85; }
+.right_text h4 {color: #fff; font-size: 19px; font-weight: 600; letter-spacing: 1px; margin: 6px 0 8px; letter-spacing: 1px; text-transform: uppercase; }
+.right_text p {color: #fff; font-family: 'Quicksand', sans-serif; font-size: 16px; line-height: 24px; margin: 0; }
+.row-fluid .right_text.span8 {margin: 0;}
+
+/* =Contact
+----------------------------------------------------*/
+.contact_wrap img.ajax-loader {position: absolute; margin-top: 15px; }
+
+div.wpcf7-validation-errors,div.wpcf7-mail-sent-ng,div.wpcf7-mail-sent-ok  { border: 1px solid #f7e700;  border-radius: 3px; box-sizing: border-box; margin: 30px 0 0; width: 100%; padding: 10px; color: #f7e700; font-size: 14px; } 
+div.wpcf7-mail-sent-ng{ border: 1px solid #dd3a00;  color: #dd3a00; } 
+div.wpcf7-mail-sent-ok  { border: 1px solid #2AD94A;  color: #2AD94A; } 
+
+/* =Blog
+----------------------------------------------------*/
+.blog_wrapper{}
+.news_blog{ margin-bottom: 30px;background-color: #fff;}
 .news-details .front-post-admin,.news-details .front-post-commentss {
     text-align: left;
 }
@@ -872,6 +876,7 @@ textarea:focus{
 }
 .featured-image-shadow-box {
     position: relative;
+    text-align: center;
 }
 .blog-meta {
     display: block;
@@ -1009,8 +1014,8 @@ blockquote.skt-quote { padding: 62px 58px 66px 170px !important;border-radius: 3
 .slider-attach {overflow: hidden;position: relative;}
 .postformat-gallerydirection-nav {list-style-type: none;position: absolute;right: 0;top: 3px;z-index: 90;}
 .postformat-gallerydirection-nav li {margin: 0;}
-.postformat-gallerydirection-nav li a {background-color:rgba(0, 0, 0, 0.5);display: block;font-style: normal;font-size: 20px;height: 20px;line-height: 16px;      margin: 0 3px;      padding: 10px;      text-align: center;      transition: all 0.5s linear 0s;  	-webkit-transition: all 0.5s linear 0s;  	-moz-transition: all 0.5s linear 0s;  	-o-transition: all 0.5s linear 0s;      width: 20px;  }
-.postformat-gallerydirection-nav li a:hover { background-color:rgba(245, 67, 54, 0.5);  transition: all 0.5s linear 0s;  	-webkit-transition: all 0.5s linear 0s;  	-moz-transition: all 0.5s linear 0s;  	-o-transition: all 0.5s linear 0s;  }
+.postformat-gallerydirection-nav li a {background-color:rgba(0, 0, 0, 0.5);display: block;font-style: normal;font-size: 20px;height: 20px;line-height: 16px;      margin: 0 3px;      padding: 10px;      text-align: center;      transition: all 0.5s linear 0s;      -webkit-transition: all 0.5s linear 0s;     -moz-transition: all 0.5s linear 0s;    -o-transition: all 0.5s linear 0s;      width: 20px;  }
+.postformat-gallerydirection-nav li a:hover { background-color:rgba(245, 67, 54, 0.5);  transition: all 0.5s linear 0s;     -webkit-transition: all 0.5s linear 0s;     -moz-transition: all 0.5s linear 0s;    -o-transition: all 0.5s linear 0s;  }
 .postformat-gallerydirection-nav .postformat-gallerynext{ background-image:url("images/plus.png");background-repeat:no-repeat;}
 .postformat-gallerydirection-nav .postformat-galleryprev{ background-image:url("images/minus.png");background-repeat:no-repeat;}
 .inner_blog .skt_blog_top img,
@@ -1225,7 +1230,7 @@ h3#reply-title {  margin: 18px 0;  }
     cursor:pointer;
     font-size: 14px;
     margin:0;
-} 	
+}   
 .search-icon{float:left;position: relative;}
 .search-icon i {
     left: 50%;
@@ -1366,7 +1371,7 @@ img.alignnone{margin: 15px auto;}
 .gallery_2columns li{  display: inline;  float: left;  width: 330px;  height: 220px;  margin: 0 0 20px 20px;  position: relative;  }
 .gallery a span{  z-index: 2;  position: absolute;  top: 0;  left: 0;  width: 100%;  height: 100%;  display: none;  cursor: pointer;  }
 .gallery a span.image_hover {  background: url("../images/hover_image_big.png") no-repeat scroll center center #000000;  } 
-.single .thumb-wrap span.image_hover{	background: url("../images/hover_image_big.png") no-repeat scroll center center #000000;}
+.single .thumb-wrap span.image_hover{   background: url("../images/hover_image_big.png") no-repeat scroll center center #000000;}
 .single .thumb-wrap a span { cursor: pointer;    display: none;    height: 100%;    left: 0;    position: absolute;    top: 0;    width: 100%;    z-index: 2;}
 .gallery a span.video_hover{  background: black url(images/hover_video_big.png) no-repeat center center;  }
 
@@ -1380,7 +1385,7 @@ img.alignnone{margin: 15px auto;}
 #radiance-paginate .radiance-next{border-radius: 0 3px 3px 0; color: #FFFFFF; margin: 0 0 6px 1px; position: relative; right: 0; width: 32px;}
 #radiance-paginate .radiance-page{margin:0 0 6px 1px;color: #FFFFFF;}
 #radiance-paginate .icon-angle-right,#radiance-paginate .icon-angle-left {font-size: 24px;line-height: 30px;}
-#radiance-paginate .radiance-current{background: none repeat scroll 0 0 #F54336;color: #FFFFFF;display:inline-block;height: 39px;line-height: 39px;padding: 0; width: 45px;transition: all 1s ease 0s;-webkit-transition: all 1s ease 0s;  	-moz-transition:all 1s ease 0s;-o-transition:all 1s ease 0s;}
+#radiance-paginate .radiance-current{background: none repeat scroll 0 0 #F54336;color: #FFFFFF;display:inline-block;height: 39px;line-height: 39px;padding: 0; width: 45px;transition: all 1s ease 0s;-webkit-transition: all 1s ease 0s;   -moz-transition:all 1s ease 0s;-o-transition:all 1s ease 0s;}
 .navigation {color: #888888;font-size: 14px;line-height: 18px; margin: 10px 0 0;  overflow: hidden;  }
 .navigation.blog-navigation{margin-top:30px;}
 .category .blog-navigation,.tag .blog-navigation, .archive  .blog-navigation, .search  .blog-navigation{margin-bottom:35px;}
@@ -1439,9 +1444,9 @@ h3.ske-title {font-size: 20px;font-family: "Quicksand";letter-spacing: 0.5px;mar
 } 
 .skt-mob-menu li{width:100% !important;margin: 0;}
 .skt-mob-menu li a{line-height: 36px !important; padding: 1px 15px !important; display: block !important; margin: 0 !important; border-radius: 0 !important} 
-.skt-mob-menu .sub-menu{ position:relative !important;	left:0 !important;}
+.skt-mob-menu .sub-menu{ position:relative !important;  left:0 !important;}
 .sktmenu-toggle:before{ color: #fff; content: "\f0c9";}
-.sktmenu-toggle{cursor: pointer;	float: right;	font-family: "FontAwesome";	font-size: 21px;	font-style: normal;	font-weight: normal;	height: 35px;	line-height: 37px;	margin-top: 18px;	right: -6px;	text-align: center;	vertical-align: middle;	width: 35px;}
+.sktmenu-toggle{cursor: pointer;    float: right;   font-family: "FontAwesome"; font-size: 21px;    font-style: normal; font-weight: normal;    height: 35px;   line-height: 37px;  margin-top: 18px;   right: -6px;    text-align: center; vertical-align: middle; width: 35px;}
 #header.skehead-headernav-shrink .skt-mob-menu {top:54px;}
 .skt-mob-menu li.has_child > a{ background-repeat:no-repeat; background-position: 98% center; -webkit-transition: all 0.5s ease 0s; -moz-transition: all 0.5s ease 0s; -o-transition: all 0.5s ease 0s; transition: all 0.5s ease 0s; } 
 #skenav.ske-menu {position: static !important;float: right;}

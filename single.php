@@ -17,6 +17,9 @@ get_header(); ?>
 			<div class="news_full_blog">
 				<?php if(have_posts()) : ?>
 				<?php while(have_posts()) : the_post(); ?>
+				<div class="text-center">
+					<h1><?php the_title(); ?></h1>
+				</div>
 				<div class="inner_blog">
 					<!--/skt_blog_top-->
 					<div class="skt_blog_top">

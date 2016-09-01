@@ -1,22 +1,21 @@
 <div class="sidebar">
-	<ul class="side-nav fixed">
-		<li>
-			<div class="circular-image"><img src="http://www.101dogbreeds.com/wp-content/uploads/2015/05/Black-Shih-Poo-Puppies.jpg"></div>
-			<!-- must find a way to connect this to the user's image -->
-		<li>
-		<li>
-			<?php global $current_user;
+	<br><br><br>
+	<div class="member-container text-center">
+		<span class="member-name"><?php global $current_user;
 				get_currentuserinfo();
 			      echo $current_user->user_firstname . " ";
 			      echo $current_user->user_lastname ;
-			 ?> <br>
-			 member
-		</li>
-		<li class="panel-title">Dashboard</li>
+			 ?>
+		</span> <br>
+		<span class="member-member">member</span>
+	</div>
+	
+	<ul class="side-nav fixed">
+		<li class="panel-title">DASHBOARD</li>
 		<li>
 			<div class="panel panel-default side-list">
 				<div class="panel-heading side-list" role="tab" id="formsHeading">
-					<h5 class="panel-title"><a href="#formscollapse" role="button" data-toggle="collapse" aria-expanded="true" aria-controls="formscollapse">Forms</a></h5>
+					<h4 class="panel-title"><a href="#formscollapse" role="button" data-toggle="collapse" aria-expanded="true" aria-controls="formscollapse">FORMS</a></h4>
 				</div>
 				<div id="formscollapse" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="formsHeading">
 					<div class="panel-body side-list-item">

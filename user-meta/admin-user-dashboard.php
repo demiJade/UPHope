@@ -109,23 +109,7 @@ get_header('admin');
 	}
 </script>
 
-<script>
-jQuery('button[type=submit]').click(function(e) {
-	e.preventDefault();
-	var name = document.getElementById("project-name");
-	var project_id = name.options[name.selectedIndex].value;
-	jQuery.ajax({
-	       type: "POST",
-	       url: ajaxurl,
-	       data: "action=signup&id="+project_id+"&user="+'<?php echo $current_user->user_firstname ?>' + " " + '<?php echo $current_user->user_lastname ?>',  
-	       success: function(msg){
-	            jQuery('.vehicle-value-box').html(msg+",00€");
-	            alert("Updated");
-	            location.reload();
-	       }
-	});
-})
-</script>
+
 
 <script>
 var users = [];
@@ -187,10 +171,11 @@ jQuery('button[id=update]').click(function(e) {
 	       success: function(msg){
 	            jQuery('.vehicle-value-box').html(msg+",00€");
 	            
-	            alert("Updated");
+	            
 	            location.reload();
 	       }
 	});
+		alert("Updated");
 	}
 	
 })

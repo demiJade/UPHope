@@ -19,6 +19,8 @@ Template Name: About Us
 <p id = "about-us-description" class="col-md-6">Lorem ipsum dolor sit amet, consecteturLorem ipsum dolor sit amet, consecteturadipiscing elit.Aliquam porta dignissim estadipiscing elit. Aliquam porta dignissim esthendrerit tincidunt.Praesent tellus arcu,hendrerit tincidunt. Praesent tellus arcu,viverra nec orci sit amet, pretium laciniaviverra nec orci sit amet, pretium laciniaenim. Praesent sit amet mi sit amet nuncenim. Praesent sit amet mi sit amet nuncimperdiet rhoncus vel convallis justo. Ut nonimperdiet rhoncus vel convallis justo. Ut nonvestibulum urna. Ut quis faucibus ligula.vestibulum urna. Ut quis faucibus ligula.Nunc id nisi turpis. Nam eget interdum enim.Nunc id nisi turpis. Nam eget interdum enim.Curabitur sollicitudin felis eu massa portaCurabitur sollicitudin felis eu massa portaplacerat.placerat. </p>
 
 <hr />
+<div class="broken-lines">
+</div>
 
 <div class ="col-md-2 col-md-offset-2">
 <p id="bonus-size-heading"> Social Media </p> <br>

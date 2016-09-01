@@ -15,11 +15,12 @@
 				<?php global $current_user;
 				get_currentuserinfo();?>
 				<?php if ($current_user->project_involvement != '') {
-					$project_involvement = $current_user->project_involvement;
+						$project_involvement = $current_user->project_involvement;
 				} else {
 					$project_involvement = 0;} ?>
 					
 				<span class="text-center"><?php echo $project_involvement ?></span>
+				
 			</div>
 			<span>project involvement</span>
 		</div>

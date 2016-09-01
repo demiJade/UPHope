@@ -15,6 +15,42 @@ Tags: blue, gray, orange, pink, purple, dark, light, two-columns, right-sidebar,
     text-align:right; 
 }
 
+div.circle span.text-center{
+    margin-top:30px;
+}
+
+div#announcements{
+    background-color: #0b72ba;
+    width:65%;
+    text-align: center;
+    margin-left:10%;
+}
+
+h3.announcement-title{
+    line-height: normal;
+    margin-top:15px;
+    margin-bottom:15px;
+    color:#fff;
+}
+
+span.member-name {
+    color:#fff;
+    font-size:40px;
+    line-height: normal;
+}
+span.member-member{
+    color:#fff;
+
+}
+
+nav.user-navbar {
+    border-radius: 0px !important;
+}
+
+div#bs-example-navbar-collapse-1 {
+    padding-right: 50px;
+}
+
 #logo img{
     width:auto !important;
 }
@@ -106,6 +142,7 @@ ul.side-nav.fixed {
     padding-left: 20px;
     padding-top: 50px;
     color:#ffffff;
+    list-style-type
 }
 
 a.side-nav-link,a.side-nav-link:hover {
@@ -834,6 +871,7 @@ div.wpcf7-mail-sent-ok  { border: 1px solid #2AD94A;  color: #2AD94A; }
 }
 .featured-image-shadow-box {
     position: relative;
+    text-align: center;
 }
 .blog-meta {
     display: block;

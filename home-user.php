@@ -4,10 +4,13 @@
 
 <div class="container">
 	<div class="row">
-		<h1 class="text-center">RETENTION PROGRESS</h1>
+		<div class="col-md-10">
+			<h1 class="text-center">RETENTION PROGRESS</h1>
+		</div>
+		
 	</div>
 	<div class="row circles">
-		<div class="col-md-2">
+		<div class="col-md-2 col-md-offset-1">
 			<div class="circle">
 				<?php global $current_user;
 				get_currentuserinfo();?>
@@ -15,6 +18,7 @@
 					$project_involvement = $current_user->project_involvement;
 				} else {
 					$project_involvement = 0;} ?>
+					
 				<span class="text-center"><?php echo $project_involvement ?></span>
 			</div>
 			<span>project involvement</span>
@@ -25,6 +29,7 @@
 					$hospital_visits = $current_user->hospital_visits;
 				} else {
 					$hospital_visits = 0;} ?>
+					
 				<span class="text-center"><?php echo $hospital_visits; ?></span>
 			</div>
 			<span>hospital visits</span>
@@ -35,6 +40,7 @@
 					$formations_seminar = $current_user->formations_seminar;
 				} else {
 					$formations_seminar = 0;} ?>
+					
 				<span class="text-center"><?php echo $formations_seminar; ?></span>
 			</div>
 			<span>formations seminar</span>
@@ -45,13 +51,14 @@
 					$child_life_party = $current_user->child_life_party;
 				} else {
 					$child_life_party = 0;} ?>
+
 				<span class="text-center"><?php echo $child_life_party; ?></span>
 			</div>
 			<span>child life party (CLP)</span>
 		</div>
 	</div>
 	<div class="row">
-		<div class="progress col-md-8">
+		<div class="progress col-md-6 col-md-offset-2">
 			<?php $progress = 0; ?>
 			<?php if ($project_involvement >= 1) {
 				$progress += 1; }

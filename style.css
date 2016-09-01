@@ -19,12 +19,24 @@ div.circle span.text-center{
     margin-top:30px;
 }
 div.red-bottom-line{
-
-    bottom-border:10px solid #bc4b34;
+    border-bottom:10px solid #bc4b34;
+    padding-top:20px;
+    width:70%;
+}
+.title-with-border{
+    display:inline-block;
 }
 
 img.align-left{
     float:left;
+}
+
+p.about-me-social-media, p.about-me-press-features {
+    font-size:30px;
+}
+
+a.social-link{
+    color:#293136;
 }
 
 span.red-banner{

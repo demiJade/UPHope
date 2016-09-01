@@ -7,26 +7,28 @@ Template Name: Donate Page
 <?php get_header(); ?>
 <div class="container">
 	<div class="row">
-		<h1 class = "col-md-8" id = "about-us-text"> DONATE <h1>
+		<h1 class = "col-md-3 title-with-border" id = "about-us-text"> DONATE 
+			<div class="red-bottom-line">
+			</div>
+		<h1>
 			
 	</div>
 	<div class="row">
-		<div class="red-bottom-line">
-			</div>
+		
 	</div>
 	<div class="row">
 		<div class="col-md-6">
-					<img class="donate-image" src="<?php echo esc_url(get_theme_mod('donate_page_img', __('https://s-media-cache-ak0.pinimg.com/236x/b3/e1/97/b3e19765b8e71866d2e11e765ac0469a.jpg'))); ?>" alt="bluesquare" width="300" height="277" />
+					<img class="donate-image" src="<?php echo esc_url(get_theme_mod('donate_page_img', __('https://s-media-cache-ak0.pinimg.com/236x/b3/e1/97/b3e19765b8e71866d2e11e765ac0469a.jpg'))); ?>" alt="bluesquare" width="500"  />
 
 		</div>
 		<div class="col-md-6">
-			<p>Bank of the Philippine Islands (BPI)</p>
-			<p><?php echo get_theme_mod('bpi_account_name', __('Account Name')); ?></p>
-			<p><?php echo get_theme_mod('bpi_account_number', __('Account Number')); ?></p>
+			<h2>Bank of the Philippine Islands (BPI)</h2>
+			<h3><?php echo get_theme_mod('bpi_account_name', __('Account Name')); ?></h3>
+			<h3><?php echo get_theme_mod('bpi_account_number', __('Account Number')); ?></h3>
 			<br>
-			<p>Banco de Oro (BDO)</p>
-			<p><?php echo get_theme_mod('bdo_account_name', __('Account Name')); ?></p>
-			<p><?php echo get_theme_mod('bdo_account_number', __('Account Number')); ?></p>
+			<h2>Banco de Oro (BDO)</h2>
+			<h3><?php echo get_theme_mod('bdo_account_name', __('Account Name')); ?></h3>
+			<h3><?php echo get_theme_mod('bdo_account_number', __('Account Number')); ?></h3>
 		</div>
 	</div>
 	<div class="broken-lines">

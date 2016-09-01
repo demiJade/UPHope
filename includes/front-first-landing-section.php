@@ -11,7 +11,7 @@ if( $_first_landing_page_ID != '' && $_first_landing_page_ID != '0' ) {
 	<!-- Container-->
 	<div class="container post-wrap rpage_wrap" style="">
 		<div class="row-fluid">
-			<div class="title"><h2><?php echo esc_attr($_first_landing_page_title); ?></h2></div>
+			<div class="title"><h2 class="title-with-border"><?php echo esc_attr($_first_landing_page_title); ?><div class="red-bottom-line"></div></h2></div>
 			<div class="post">
 				<div class="skepost clearfix">
 					<div class="page-section">

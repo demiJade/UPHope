@@ -343,6 +343,14 @@ function radiance_lite_customize_register( $wp_customize ) {
 		'label' => __('Rappler Link', 'radiance-lite'),
 		'section' => 'social_settings',
 	));
+	$wp_customize->add_setting( 'radiance_lite_youtube_link', array(
+		'default'        => '#',
+		'sanitize_callback' => 'esc_url_raw',
+	));
+	$wp_customize->add_control('radiance_lite_youtube_link', array(
+		'label' => __('Youtube Link', 'radiance-lite'),
+		'section' => 'social_settings',
+	));
 	
 	// ====================================
 	// = Home Page Settings Sections

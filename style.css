@@ -18,6 +18,9 @@ Tags: blue, gray, orange, pink, purple, dark, light, two-columns, right-sidebar,
 div.circle span.text-center{
     margin-top:30px;
 }
+div.broken-lines{
+    border-bottom: 2px dashed black;
+}
 
 div#announcements{
     background-color: #0b72ba;

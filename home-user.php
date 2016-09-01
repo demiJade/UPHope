@@ -87,3 +87,5 @@
 </div>
 <br>
 <?php get_template_part('announcements'); ?>
+<div class="broken-lines">
+</div>

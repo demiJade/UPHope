@@ -21,7 +21,7 @@ div.circle span.text-center{
 div.broken-lines{
     margin-top:20px;
     margin-bottom:20px;
-    border-bottom: 2px dashed black;
+    border-bottom: 10px dashed black;
 }
 
 div#announcements{

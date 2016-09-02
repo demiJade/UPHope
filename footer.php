@@ -63,12 +63,5 @@ $radiance_lite_linkedin_url	= get_theme_mod('radiance_lite_linkedin_link', '#');
 
 <!-- #wrapper -->
 <?php wp_footer(); ?>
-	<script type="text/javascript">
-		jQuery(document).ready(function($) {
-			  $('#login').on('shown.bs.modal', function () {
-			  $('#myInput').focus()
-			})
-		})
-		
-	</script>
+
 </html>

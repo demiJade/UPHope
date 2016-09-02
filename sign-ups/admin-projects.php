@@ -46,11 +46,3 @@ $home_url = home_url();
 	<?php endif; ?>
 </table>
 
-<?php 
-$fields = get_post_custom(149);
-foreach($fields as $key => $value){
-    	echo $key;
-    	echo $value;
-    }
-
- ?>

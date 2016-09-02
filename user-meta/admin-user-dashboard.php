@@ -13,87 +13,98 @@ get_header('admin');
 	'role' => 'Subscriber',
 ); ?>
 <?php $users = get_users($args); ?>
-<input type="file" id="fileinput">
-<button class="btn" id="update">Update</button>
-<table>
-	<tr>
-		<th>Name</th>
-		<th>Project Involvement</th>
-		<th>Hospital Visits</th>
-		<th>Formations Seminar</th>
-		<th>Child Life Party</th>
-		<th>Actions</th>
-	</tr>
-	<?php foreach ($users as $user) { ?>
+<div class="container">
+	<div class="row">
+		<div class="col-md-3">
+			<input type="file" id="fileinput">
+		</div>
+		<div class="col-md-3">
+			<button class="btn" id="update">Update</button>
+		</div>
+	</div>
+	
+	<br>
+	<table>
 		<tr>
-			<td><?php echo $user->user_firstname; ?> <?php echo $user->user_lastname; ?></td>
-			<td>
-				<?php $project_involvement =  get_user_meta($user->ID,'project_involvement',true);
-				if ($project_involvement == '') {
-					echo 0;
-				} else {
-					echo $project_involvement;
-				}
-				?>
-			</td>
-			<td><?php if ($user->hospital_visits != '') {echo $user->hospital_visits;} else {echo 0;} ?></td>
-			<td><?php if ($user->formations_seminar != '') {echo $user->formations_seminar;} else {echo 0;} ?></td>
-			<td><?php if ($user->child_life_party != '') {echo $user->child_life_party;} else {echo 0;} ?></td>
-			<td>
-
-				<button class="btn" data-toggle="modal" data-target="#editUser<?php echo $user->ID ?>">Edit</button>
-				<?php if ($user->project_involvement == '' && $user->hospital_visits == '' && $user->formations_seminar == '') {?><button id="delete" class="btn" onclick="if (confirm('Are you sure you want to delete <?php echo $user->user_firstname.' '.$user->user_lastname ?>?')){deleteUser(<?php echo $user->ID ?>)}">Delete</button><?php } ?>
-								<!-- Modal -->
-				<div class="modal fade" id="editUser<?php echo $user->ID ?>" tabindex="-1" role="dialog" aria-labelledby="User<?php echo $user->ID ?>">
-				  <div class="modal-dialog" role="document">
-				    <div class="modal-content">
-				      <div class="modal-header">
-				        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				        <h4 class="modal-title" id="myModalLabel">Edit User: <?php echo $user->user_firstname.' '.$user->user_lastname; ?></h4>
-				      </div>
-				      <div class="modal-body">
-				        <form class="form-horizontal">
-				        	<div class="form-group">
-				        		<label class="control-label col-sm-5" for="project-involvement">Projects Involvement: </label>
-				        		<div class="col-sm-5">
-				        			<input type="text" class="form-control" id="project-involvement">
-				        		</div>
-				        	</div>
-				        	<div class="form-group">
-				        		<label class="control-label col-sm-5" for="hospital-visits">Hospital Visits: </label>
-				        		<div class="col-sm-5">
-				        			<input type="text" class="form-control" id="hospital-visits">
-				        		</div>
-				        	</div>
-				        	<div class="form-group">
-				        		<label class="control-label col-sm-5">Formations Seminar: </label>
-				        		<div class="col-sm-5">
-				        			<input type="text" class="form-control" id="formations-seminar">
-				        		</div>
-				        	</div>
-				        	<div class="form-group">
-				        		<label class="control-label col-sm-5">Child Life Party: </label>
-				        		<div class="col-sm-5">
-				        			<input type="text" class="form-control" id="child-life-party">
-				        		</div>
-				        	</div>
-				        </form>
-				      </div>
-				      <div class="modal-footer">
-				        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				        <button type="button" class="btn btn-primary">Save changes</button>
-				      </div>
-				    </div>
-				  </div>
-				</div>
-
-
-				<?php if ($user->project_involvement == '' && $user->hospital_visits == '' && $user->formations_seminar == '') {?><button id="delete" onclick="if (confirm('Are you sure you want to delete '+ '<?php echo $user->user_firstname ?>')){deleteUser(<?php echo $user->ID ?>)}">Delete</button><?php } ?>
-
-			</td>
+			<th>Name</th>
+			<th>Project Involvement</th>
+			<th>Hospital Visits</th>
+			<th>Formations Seminar</th>
+			<th>Child Life Party</th>
+			<th>Actions</th>
 		</tr>
-	<?php } ?>
-</table>
+		<?php foreach ($users as $user) { ?>
+			<tr>
+				<td><?php echo $user->user_firstname; ?> <?php echo $user->user_lastname; ?></td>
+				<td>
+					<?php $project_involvement =  get_user_meta($user->ID,'project_involvement',true);
+					if ($project_involvement == '') {
+						echo 0;
+					} else {
+						echo $project_involvement;
+					}
+					?>
+				</td>
+				<td><?php if ($user->hospital_visits != '') {echo $user->hospital_visits;} else {echo 0;} ?></td>
+				<td><?php if ($user->formations_seminar != '') {echo $user->formations_seminar;} else {echo 0;} ?></td>
+				<td><?php if ($user->child_life_party != '') {echo $user->child_life_party;} else {echo 0;} ?></td>
+				<td>
+
+					<!-- <button class="btn" data-toggle="modal" data-target="#editUser<?php echo $user->ID ?>">Edit</button> -->
+					<?php if ($user->project_involvement < 1 || $user->project_involvement == '' || $user->hospital_visits < 3 || $user->hospital_visits == '' || $user->formations_seminar < 1 || $user->formations_seminar == '') {?><button id="delete" class="btn" onclick="if (confirm('Are you sure you want to delete <?php echo $user->user_firstname.' '.$user->user_lastname ?>?')){deleteUser(<?php echo $user->ID ?>)}">Delete</button><?php } ?>
+									<!-- Modal -->
+					<div class="modal fade" id="editUser<?php echo $user->ID ?>" tabindex="-1" role="dialog" aria-labelledby="User<?php echo $user->ID ?>">
+					  <div class="modal-dialog" role="document">
+					    <div class="modal-content">
+					      <div class="modal-header">
+					        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					        <h4 class="modal-title" id="myModalLabel">Edit User: <?php echo $user->user_firstname.' '.$user->user_lastname; ?></h4>
+					      </div>
+					      <div class="modal-body">
+					        <form class="form-horizontal">
+					        	<div class="form-group">
+					        		<label class="control-label col-sm-5" for="project-involvement">Projects Involvement: </label>
+					        		<div class="col-sm-5">
+					        			<input type="text" class="form-control" id="project-involvement">
+					        		</div>
+					        	</div>
+					        	<div class="form-group">
+					        		<label class="control-label col-sm-5" for="hospital-visits">Hospital Visits: </label>
+					        		<div class="col-sm-5">
+					        			<input type="text" class="form-control" id="hospital-visits">
+					        		</div>
+					        	</div>
+					        	<div class="form-group">
+					        		<label class="control-label col-sm-5">Formations Seminar: </label>
+					        		<div class="col-sm-5">
+					        			<input type="text" class="form-control" id="formations-seminar">
+					        		</div>
+					        	</div>
+					        	<div class="form-group">
+					        		<label class="control-label col-sm-5">Child Life Party: </label>
+					        		<div class="col-sm-5">
+					        			<input type="text" class="form-control" id="child-life-party">
+					        		</div>
+					        	</div>
+					        </form>
+					      </div>
+					      <div class="modal-footer">
+					        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					        <button type="button" class="btn btn-primary">Save changes</button>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+
+
+					<?php if ($user->project_involvement == '' && $user->hospital_visits == '' && $user->formations_seminar == '') {?><button id="delete" onclick="if (confirm('Are you sure you want to delete '+ '<?php echo $user->user_firstname ?>')){deleteUser(<?php echo $user->ID ?>)}">Delete</button><?php } ?>
+
+				</td>
+			</tr>
+		<?php } ?>
+	</table>
+</div>
+
 
 <script type="text/javascript">
 	function deleteUser(user_id){

@@ -421,7 +421,7 @@ function radiance_lite_customize_register( $wp_customize ) {
 		'section' => 'home_feature_settings',
 	));
 	$wp_customize->add_setting( 'radiance_lite_vision_content', array(
-		'default'        => __('Our media agency is fuelled with the elements to speed up your business marketing, PR & Promotional campaigns, Media Marketing, Internet Marketing, Email Marketing.', 'radiance-lite'),
+		'default'        => __('You can change your vision by logging in as Admin, clicking Appearance > Customizer > Home Page Settings > Featured Box Section.', 'radiance-lite'),
 		'sanitize_callback' => 'radiance_lite_sanitize_textarea',
 	));
 	$wp_customize->add_control('radiance_lite_vision_content', array(
@@ -438,7 +438,7 @@ function radiance_lite_customize_register( $wp_customize ) {
 		'section' => 'home_feature_settings',
 	));
 	$wp_customize->add_setting( 'radiance_lite_mission_content', array(
-		'default'        => __('Our media agency is fuelled with the elements to speed up your business marketing, PR & Promotional campaigns, Media Marketing, Internet Marketing, Email Marketing.', 'radiance-lite'),
+		'default'        => __('You can change your mission by logging in as Admin, clicking Appearance > Customizer > Home Page Settings > Featured Box Section.', 'radiance-lite'),
 		'sanitize_callback' => 'radiance_lite_sanitize_textarea',
 	));
 	$wp_customize->add_control('radiance_lite_mission_content', array(

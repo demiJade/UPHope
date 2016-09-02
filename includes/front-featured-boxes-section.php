@@ -6,7 +6,7 @@
 			<div class="post">
 				<div class="skepost clearfix">
 					<div class="page-section text-center">
-						<div class="top-content"><?php echo wp_kses_post( get_theme_mod('radiance_lite_vision_content', __('Our media agency is fuelled with the elements to speed up your business marketing, PR & Promotional campaigns, Media Marketing, Internet Marketing, Email Marketing.', 'radiance-lite') ) ); ?></div>
+						<div class="top-content"><?php echo wp_kses_post( get_theme_mod('radiance_lite_vision_content', __('You can change your vision by logging in as Admin, clicking Appearance > Customizer > Home Page Settings > Featured Box Section.', 'radiance-lite') ) ); ?></div>
 						
 <!-- 						<div id="featured-box" class="skt-section">
 							<ul class="mid-box-wrap">
@@ -51,7 +51,7 @@
 			<div class="post">
 				<div class="skepost clearfix">
 					<div class="page-section text-center">
-						<div class="top-content"><?php echo wp_kses_post( get_theme_mod('radiance_lite_mission_content', __('Our media agency is fuelled with the elements to speed up your business marketing, PR & Promotional campaigns, Media Marketing, Internet Marketing, Email Marketing.', 'radiance-lite') ) ); ?></div>
+						<div class="top-content"><?php echo wp_kses_post( get_theme_mod('radiance_lite_mission_content', __('You can change your mission by logging in as Admin, clicking Appearance > Customizer > Home Page Settings > Featured Box Section.', 'radiance-lite') ) ); ?></div>
 					</div>
 				</div>
 			</div>

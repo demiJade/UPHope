@@ -7,7 +7,7 @@ Template Name: Donate Page
 <?php get_header(); ?>
 <div class="container">
 	<div class="row">
-		<h1 class = "col-md-3 title-with-border" id = "about-us-text"> DONATE 
+		<h1 class = "title-with-border" id = "about-us-text"> DONATE 
 			<div class="red-bottom-line">
 			</div>
 		<h1>

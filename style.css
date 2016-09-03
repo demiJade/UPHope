@@ -40,6 +40,11 @@ img.align-left{
     float:left;
 }
 
+h1.text-center{
+    margin-top:20px;
+    margin-bottom:40px;
+}
+
 p.about-me-social-media, p.about-me-press-features {
     font-size:30px;
 }
@@ -72,6 +77,8 @@ span.red-banner{
 div.broken-lines{
     margin-top:20px;
     margin-bottom:20px;
+    margin-left: 2%;
+    margin-right:2%;
     border-bottom: 10px dashed black;
 }
 
@@ -79,7 +86,7 @@ div#announcements{
     background-color: #0b72ba;
     width:65%;
     text-align: center;
-    margin-left:10%;
+    margin-left:12%;
 }
 
 h3.announcement-title{
@@ -248,8 +255,16 @@ a.nav-list-item {
 }
 
 div.col-md-3.side,div.col-md-9.main {
-    padding-left: 0px;
+
     padding-right: 0px;
+}
+div.col-md-3.side {
+    padding-left: 0px;
+    position:fixed;
+}
+div.col-md-9.main{
+    margin-left: 24%;
+    padding-left: 0px;
 }
 
 

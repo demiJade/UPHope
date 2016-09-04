@@ -12,7 +12,7 @@ Template Name: About Us
 
 
   <h1 class="col-md-8" id="about-us-text">ABOUT US</h1>
-  <span class="horizontal-style"></span>
+  <!-- <span class="horizontal-style"></span> -->
 <!-- <img id= class="size-medium wp-image-108 alignleft" src="<?php echo get_theme_mod('about_us_img', __('https://pixabay.com/static/uploads/photo/2016/02/19/15/46/dog-1210559_960_720.jpg')); ?>" alt="bluesquare" width="300" height="277" /> -->
 <div style="width: 150px; height: 2px; background-color: red;"></div>
  <img id="about-us-image" class="col-md-6" src="<?php echo get_theme_mod('about_us_img', __('https://pixabay.com/static/uploads/photo/2016/02/19/15/46/dog-1210559_960_720.jpg')); ?>" alt="bluesquare" width="300" height="277" />

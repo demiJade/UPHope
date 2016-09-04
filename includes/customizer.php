@@ -187,7 +187,7 @@ function radiance_lite_customize_register( $wp_customize ) {
 	// = About Us Settings Sections
 	// ====================================
 	$wp_customize->add_setting( 'about_us_content', array(
-		'default'        => __('Lorem ipsum dolor sit amet, consecteturLorem ipsum dolor sit amet, consecteturadipiscing elit.Aliquam porta dignissim estadipiscing elit.', 'radiance-lite'),
+		'default'        => __('From 24 individuals who wanted to empower pediatric patients in a hospital setting, The Hope Project is now an accredited organization under the University of the Philippines Manila. Through play therapy, the hundred-strong volunteers of The Hope Project alleviate the conditions experienced by the kids, continuing to bring smiles and their brand of #InspireHope since 2014.', 'radiance-lite'),
 		'sanitize_callback' => 'radiance_lite_sanitize_textarea',
 	));
 	$wp_customize->add_control('about_us_content', array(
@@ -294,7 +294,7 @@ function radiance_lite_customize_register( $wp_customize ) {
 
 	
 	$wp_customize->add_setting( 'radiance_lite_fbook_link', array(
-		'default'        => '#',
+		'default'        => 'fb.com/thehopeprojectupm',
 		'sanitize_callback' => 'esc_url_raw',
 	));
 	$wp_customize->add_control('radiance_lite_fbook_link', array(
@@ -303,7 +303,7 @@ function radiance_lite_customize_register( $wp_customize ) {
 	));
 
 	$wp_customize->add_setting( 'radiance_lite_twitter_link', array(
-		'default'        => '#',
+		'default'        => 'twitter.com/hopeprojectupm',
 		'sanitize_callback' => 'esc_url_raw',
 	));
 	$wp_customize->add_control('radiance_lite_twitter_link', array(
@@ -336,15 +336,15 @@ function radiance_lite_customize_register( $wp_customize ) {
 		'section' => 'social_settings',
 	));
 	$wp_customize->add_setting( 'radiance_lite_rappler_link', array(
-		'default'        => '#',
+		'default'        => 'http://x.rappler.com/x/AjaNicdao/1472651857476-Discover-Hope-with-The-Hope-Project',
 		'sanitize_callback' => 'esc_url_raw',
 	));
 	$wp_customize->add_control('radiance_lite_rappler_link', array(
-		'label' => __('Rappler Link', 'radiance-lite'),
+		'label' => __('X Rappler Link', 'radiance-lite'),
 		'section' => 'social_settings',
 	));
 	$wp_customize->add_setting( 'radiance_lite_youtube_link', array(
-		'default'        => '#',
+		'default'        => 'youtube.com/channel/UCOcztDmOlu9lnmVG504-aIw',
 		'sanitize_callback' => 'esc_url_raw',
 	));
 	$wp_customize->add_control('radiance_lite_youtube_link', array(

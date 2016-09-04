@@ -15,8 +15,62 @@ Tags: blue, gray, orange, pink, purple, dark, light, two-columns, right-sidebar,
     text-align:right; 
 }
 
+
 div.circle span.text-center{
     margin-top:30px;
+}
+div.red-bottom-line{
+    border-bottom:10px solid #bc4b34;
+    padding-top:20px;
+    width:70%;
+}
+.title-with-border{
+    display:inline-block;
+}
+
+div.progress{
+    margin-top:20px;
+    height:30px;
+}
+.progress-bar{
+    font-size:20px;
+    line-height:normal;
+}
+
+img.align-left{
+    float:left;
+}
+
+h1.text-center{
+    margin-top:20px;
+    margin-bottom:40px;
+}
+
+p.about-me-social-media, p.about-me-press-features {
+    font-size:30px;
+}
+
+p#about-us-description {
+    font-size:25px;
+    line-height: normal;
+}
+
+a.social-link, a.social-link:hover,a.social-link:focus{
+    color:#293136;
+}
+
+li.donate-list{
+    font-size: 20px;
+}
+
+span.red-banner{
+    color:white;
+    background-color:#bc4b34;
+    font-size:30px;
+    padding-right:100px;
+    padding-top:5px;
+    padding-bottom:5px;
+    padding-left:5px;
 }
 
 
@@ -24,14 +78,16 @@ div.circle span.text-center{
 div.broken-lines{
     margin-top:20px;
     margin-bottom:20px;
-    border-bottom: 2px dashed black;
+    margin-left: 2%;
+    margin-right:2%;
+    border-bottom: 10px dashed black;
 }
 
 div#announcements{
     background-color: #0b72ba;
     width:65%;
     text-align: center;
-    margin-left:10%;
+    margin-left:12%;
 }
 
 h3.announcement-title{
@@ -176,12 +232,12 @@ div.container-fluid {
 
 div.side-list-item {
     padding:0px;
-    background-color: #35829c;
-    border-color: #35829c !important;
+    background:none;
+    border: none !important;
 }
 div.side-list {
-    background-color: #35829c !important;
-    border-color: #35829c !important;
+    background: none !important;
+    border: none !important;
     color:#ffffff !important;
 }
 
@@ -191,17 +247,27 @@ a.nav-list-item {
 
 .sidebar {
     width:100%;
-    background-color: #35829c;
+    background: none;
     bottom:0;
     margin:0;
-    height:calc(100%+60px);
+    height:calc(100%+1000px);
     padding-bottom:60px;
     z-index:999;
+    background-size:auto;
+
 }
 
 div.col-md-3.side,div.col-md-9.main {
-    padding-left: 0px;
+
     padding-right: 0px;
+}
+div.col-md-3.side {
+    padding-left: 0px;
+    position:fixed;
+}
+div.col-md-9.main{
+    margin-left: 24%;
+    padding-left: 0px;
 }
 
 

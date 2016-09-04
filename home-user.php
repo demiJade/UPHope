@@ -2,9 +2,8 @@
 
 	
 
-<div class="container">
 	<div class="row">
-		<div class="col-md-10">
+		<div class="col-md-9 col-md-offset-1">
 			<h1 class="text-center">RETENTION PROGRESS</h1>
 		</div>
 		
@@ -59,7 +58,7 @@
 		</div>
 	</div>
 	<div class="row">
-		<div class="progress col-md-6 col-md-offset-2">
+		<div class="progress col-md-7 col-md-offset-2">
 			<?php $progress = 0; ?>
 			<?php if ($project_involvement >= 1) {
 				$progress += 1; }
@@ -77,13 +76,13 @@
 				$percentage = ($progress / 6) * 100;
 				?>
 		  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $percentage ?>%;">
-		    <?php echo $percentage; ?>% Complete
+		    <?php echo round($percentage,2); ?>% Complete
 		  </div>
 		</div>
 	</div>
 	
 
-</div>
+
 <div class="broken-lines">
 </div>
 <br>

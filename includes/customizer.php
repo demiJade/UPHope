@@ -39,7 +39,7 @@ function radiance_lite_customize_register( $wp_customize ) {
 
 
 	$wp_customize->add_section( 'blog_page_settings' , array(
-		'priority' => 2,
+		'priority' => 12,
 		'title' => __('Blog Page Settings','radiance-lite'),
 	) );
 
@@ -49,7 +49,7 @@ function radiance_lite_customize_register( $wp_customize ) {
 
 	) );
 	$wp_customize->add_section( 'footer_settings' , array(
-		'priority' => 4,
+		'priority' => 11,
 		'title' => __('Footer Settings','radiance-lite'),
 	) );
 	$wp_customize->add_section('contact_us_settings' , array(
@@ -57,26 +57,77 @@ function radiance_lite_customize_register( $wp_customize ) {
 		'title' => __('Contact Us Settings', 'radiance-lite'),
 	) );
 	$wp_customize->add_section('video_background_settings' , array(
-		'priority' => 6,
+		'priority' => 2,
 		'title' => __('Video Background Settings', 'radiance-lite'),
 	) );
 
 	$wp_customize->add_section('menu_bar_settings' , array(
-		'priority' => 7,
+		'priority' => 4,
 		'title' => __('Menu Bar Settings', 'radiance-lite'),
 	) );
 	$wp_customize->add_section('about_us_settings' , array(
-		'priority' => 8,
+		'priority' => 6,
 		'title' => __('About Us Settings', 'radiance-lite'),
 	) );
 	$wp_customize->add_section('donate_settings' , array(
-		'priority' => 9,
+		'priority' => 7,
 		'title' => __('Donate Page Settings', 'radiance-lite'),
 	) );
 	$wp_customize->add_section('forms_settings' , array(
-		'priority' => 10,
+		'priority' => 8,
 		'title' => __('Forms Settings', 'radiance-lite'),
 	) );
+	$wp_customize->add_section('donate_page_settings' , array(
+		'priority' => 9,
+		'title' => __('Donate Page Settings', 'radiance-lite'),
+	) );
+
+	// ====================================
+	// = Forms Settings Sections
+	// ====================================
+	$wp_customize->add_setting( 'donate_page_img', array(
+		'default'           => '',
+		'sanitize_callback' => 'esc_url_raw',
+	) );
+	$wp_customize->add_control(  new WP_Customize_Image_Control( $wp_customize, 'donate_page_img', array(
+		'priority' => 1,
+		'label' => __( 'Donate Page Image', 'radiance-lite' ),
+		'section' => 'donate_page_settings',
+		'mime_type' => 'image',
+	) ) );
+	$wp_customize->add_setting('bpi_account_name', array(
+		'default'           => 'Account Name',
+		'sanitize_callback' => 'radiance_lite_sanitize_textarea',
+	) );
+	$wp_customize->add_control('bpi_account_name', array(
+		'label' => __('BPI Account Name','radiance-lite'),
+		'section' => 'donate_page_settings',
+	) );
+	$wp_customize->add_setting('bpi_account_number', array(
+		'default'           => 'Account Number',
+		'sanitize_callback' => 'radiance_lite_sanitize_textarea',
+	) );
+	$wp_customize->add_control('bpi_account_number', array(
+		'label' => __('BPI Account Number','radiance-lite'),
+		'section' => 'donate_page_settings',
+	) );
+	$wp_customize->add_setting('bdo_account_name', array(
+		'default'           => 'Account Name',
+		'sanitize_callback' => 'radiance_lite_sanitize_textarea',
+	) );
+	$wp_customize->add_control('bdo_account_name', array(
+		'label' => __('BDO Account Name','radiance-lite'),
+		'section' => 'donate_page_settings',
+	) );
+	$wp_customize->add_setting('bdo_account_number', array(
+		'default'           => 'Account Number',
+		'sanitize_callback' => 'radiance_lite_sanitize_textarea',
+	) );
+	$wp_customize->add_control('bdo_account_number', array(
+		'label' => __('BDO Account Number','radiance-lite'),
+		'section' => 'donate_page_settings',
+	) );
+
 	
 	// ====================================
 	// = Forms Settings Sections
@@ -136,7 +187,7 @@ function radiance_lite_customize_register( $wp_customize ) {
 	// = About Us Settings Sections
 	// ====================================
 	$wp_customize->add_setting( 'about_us_content', array(
-		'default'        => __('Lorem ipsum dolor sit amet, consecteturLorem ipsum dolor sit amet, consecteturadipiscing elit.Aliquam porta dignissim estadipiscing elit.', 'radiance-lite'),
+		'default'        => __('From 24 individuals who wanted to empower pediatric patients in a hospital setting, The Hope Project is now an accredited organization under the University of the Philippines Manila. Through play therapy, the hundred-strong volunteers of The Hope Project alleviate the conditions experienced by the kids, continuing to bring smiles and their brand of #InspireHope since 2014.', 'radiance-lite'),
 		'sanitize_callback' => 'radiance_lite_sanitize_textarea',
 	));
 	$wp_customize->add_control('about_us_content', array(
@@ -243,7 +294,7 @@ function radiance_lite_customize_register( $wp_customize ) {
 
 	
 	$wp_customize->add_setting( 'radiance_lite_fbook_link', array(
-		'default'        => '#',
+		'default'        => 'fb.com/thehopeprojectupm',
 		'sanitize_callback' => 'esc_url_raw',
 	));
 	$wp_customize->add_control('radiance_lite_fbook_link', array(
@@ -252,7 +303,7 @@ function radiance_lite_customize_register( $wp_customize ) {
 	));
 
 	$wp_customize->add_setting( 'radiance_lite_twitter_link', array(
-		'default'        => '#',
+		'default'        => 'twitter.com/hopeprojectupm',
 		'sanitize_callback' => 'esc_url_raw',
 	));
 	$wp_customize->add_control('radiance_lite_twitter_link', array(
@@ -285,11 +336,19 @@ function radiance_lite_customize_register( $wp_customize ) {
 		'section' => 'social_settings',
 	));
 	$wp_customize->add_setting( 'radiance_lite_rappler_link', array(
-		'default'        => '#',
+		'default'        => 'http://x.rappler.com/x/AjaNicdao/1472651857476-Discover-Hope-with-The-Hope-Project',
 		'sanitize_callback' => 'esc_url_raw',
 	));
 	$wp_customize->add_control('radiance_lite_rappler_link', array(
-		'label' => __('Rappler Link', 'radiance-lite'),
+		'label' => __('X Rappler Link', 'radiance-lite'),
+		'section' => 'social_settings',
+	));
+	$wp_customize->add_setting( 'radiance_lite_youtube_link', array(
+		'default'        => 'youtube.com/channel/UCOcztDmOlu9lnmVG504-aIw',
+		'sanitize_callback' => 'esc_url_raw',
+	));
+	$wp_customize->add_control('radiance_lite_youtube_link', array(
+		'label' => __('Youtube Link', 'radiance-lite'),
 		'section' => 'social_settings',
 	));
 	
@@ -362,12 +421,12 @@ function radiance_lite_customize_register( $wp_customize ) {
 		'section' => 'home_feature_settings',
 	));
 	$wp_customize->add_setting( 'radiance_lite_vision_content', array(
-		'default'        => __('Our media agency is fuelled with the elements to speed up your business marketing, PR & Promotional campaigns, Media Marketing, Internet Marketing, Email Marketing.', 'radiance-lite'),
+		'default'        => __('You can change your vision by logging in as Admin, clicking Appearance > Customizer > Home Page Settings > Featured Box Section.', 'radiance-lite'),
 		'sanitize_callback' => 'radiance_lite_sanitize_textarea',
 	));
 	$wp_customize->add_control('radiance_lite_vision_content', array(
 		'type' => 'textarea',
-		'label' => __('Featured Section Description','radiance-lite'),
+		'label' => __('Vision Content','radiance-lite'),
 		'section' => 'home_feature_settings',
 	));
 	$wp_customize->add_setting( 'radiance_lite_mission_title', array(
@@ -379,119 +438,19 @@ function radiance_lite_customize_register( $wp_customize ) {
 		'section' => 'home_feature_settings',
 	));
 	$wp_customize->add_setting( 'radiance_lite_mission_content', array(
-		'default'        => __('Our media agency is fuelled with the elements to speed up your business marketing, PR & Promotional campaigns, Media Marketing, Internet Marketing, Email Marketing.', 'radiance-lite'),
+		'default'        => __('You can change your mission by logging in as Admin, clicking Appearance > Customizer > Home Page Settings > Featured Box Section.', 'radiance-lite'),
 		'sanitize_callback' => 'radiance_lite_sanitize_textarea',
 	));
 	$wp_customize->add_control('radiance_lite_mission_content', array(
 		'type' => 'textarea',
-		'label' => __('Featured Section Description','radiance-lite'),
+		'label' => __('Mission Content','radiance-lite'),
 		'section' => 'home_feature_settings',
 	));
 	$wp_customize->add_setting( 'radiance_lite_first_feature_title', array(
 		'default'        => __('Web Development', 'radiance-lite'),
 		'sanitize_callback' => 'radiance_lite_sanitize_textarea',
 	));
-	$wp_customize->add_control('radiance_lite_first_feature_title', array(
-		'label' => __('First Featured Box Heading','radiance-lite'),
-		'section' => 'home_feature_settings',
-	));
-	$wp_customize->add_setting( 'radiance_lite_first_feature_icon', array(
-		'default'        => 'fa-desktop',
-		'sanitize_callback' => 'radiance_lite_sanitize_textarea',
-	));
-	$wp_customize->add_control('radiance_lite_first_feature_icon', array(
-		'label' => __('First Featured Box Icon Class','radiance-lite'),
-		'section' => 'home_feature_settings',
-	));
-	$wp_customize->add_setting( 'radiance_lite_first_feature_content', array(
-		'default'        => __('Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.', 'radiance-lite'),
-		'sanitize_callback' => 'radiance_lite_sanitize_textarea',
-	));
-	$wp_customize->add_control('radiance_lite_first_feature_content', array(
-		'type' => 'textarea',
-		'label' => __('First Featured Box Content','radiance-lite'),
-		'section' => 'home_feature_settings',
-	));
-	$wp_customize->add_setting( 'radiance_lite_first_feature_link', array(
-		'default'        => '#',
-		'sanitize_callback' => 'esc_url_raw',
-	));
-	$wp_customize->add_control('radiance_lite_first_feature_link', array(
-		'type' => 'url',
-		'label' => __('First Featured Box Link','radiance-lite'),
-		'section' => 'home_feature_settings',
-	));
-	// Second Feature
-	$wp_customize->add_setting( 'radiance_lite_second_feature_title', array(
-		'default'        => __('Web Design', 'radiance-lite'),
-		'sanitize_callback' => 'radiance_lite_sanitize_textarea',
-	));
-	$wp_customize->add_control('radiance_lite_second_feature_title', array(
-		'label' => __('Second Featured Box Heading','radiance-lite'),
-		'section' => 'home_feature_settings',
-	));
-	$wp_customize->add_setting( 'radiance_lite_second_feature_icon', array(
-		'default'        => 'fa-code',
-		'sanitize_callback' => 'radiance_lite_sanitize_textarea',
-	));
-	$wp_customize->add_control('radiance_lite_second_feature_icon', array(
-		'label' => __('Second Featured Box Icon Class','radiance-lite'),
-		'section' => 'home_feature_settings',
-	));
-	$wp_customize->add_setting( 'radiance_lite_second_feature_content', array(
-		'default'        => __('Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.', 'radiance-lite'),
-		'sanitize_callback' => 'radiance_lite_sanitize_textarea',
-	));
-	$wp_customize->add_control('radiance_lite_second_feature_content', array(
-		'type' => 'textarea',
-		'label' => __('Second Featured Box Content','radiance-lite'),
-		'section' => 'home_feature_settings',
-	));
-	$wp_customize->add_setting( 'radiance_lite_second_feature_link', array(
-		'default'        => '#',
-		'sanitize_callback' => 'esc_url_raw',
-	));
-	$wp_customize->add_control('radiance_lite_second_feature_link', array(
-		'type' => 'url',
-		'label' => __('Second Featured Box Link','radiance-lite'),
-		'section' => 'home_feature_settings',
-	));
-	// Third Feature
-	$wp_customize->add_setting( 'radiance_lite_third_feature_title', array(
-		'default'        => __('Theme Development', 'radiance-lite'),
-		'sanitize_callback' => 'radiance_lite_sanitize_textarea',
-	));
-	$wp_customize->add_control('radiance_lite_third_feature_title', array(
-		'label' => __('Third Featured Box Heading','radiance-lite'),
-		'section' => 'home_feature_settings',
-	));
-	$wp_customize->add_setting( 'radiance_lite_third_feature_icon', array(
-		'default'        => 'fa-cog',
-		'sanitize_callback' => 'radiance_lite_sanitize_textarea',
-	));
-	$wp_customize->add_control('radiance_lite_third_feature_icon', array(
-		'label' => __('Third Featured Box Icon Class','radiance-lite'),
-		'section' => 'home_feature_settings',
-	));
-	$wp_customize->add_setting( 'radiance_lite_third_feature_content', array(
-		'default'        => __('Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.', 'radiance-lite'),
-		'sanitize_callback' => 'radiance_lite_sanitize_textarea',
-	));
-	$wp_customize->add_control('radiance_lite_third_feature_content', array(
-		'type' => 'textarea',
-		'label' => __('Third Featured Box Content','radiance-lite'),
-		'section' => 'home_feature_settings',
-	));
-	$wp_customize->add_setting( 'radiance_lite_third_feature_link', array(
-		'default'        => '#',
-		'sanitize_callback' => 'esc_url_raw',
-	));
-	$wp_customize->add_control('radiance_lite_third_feature_link', array(
-		'type' => 'url',
-		'label' => __('Third Featured Box Link','radiance-lite'),
-		'section' => 'home_feature_settings',
-	));
-
+	
 	// ====================================
 	// = Blog Page Settings Sections
 	// ====================================

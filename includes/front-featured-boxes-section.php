@@ -6,43 +6,11 @@
 			<div class="post">
 				<div class="skepost clearfix">
 					<div class="page-section text-center">
-						<div class="top-content"><?php echo wp_kses_post( get_theme_mod('radiance_lite_vision_content', __('Our media agency is fuelled with the elements to speed up your business marketing, PR & Promotional campaigns, Media Marketing, Internet Marketing, Email Marketing.', 'radiance-lite') ) ); ?></div>
+						<div class="top-content"><?php echo wp_kses_post( get_theme_mod('radiance_lite_vision_content', __(' The Hope Project aims to promote and ensure the normal growth of a child confined in the hospital setting. It also aims to turn commiseration into action by forming its members holistically through member formation, project involvement and hospital volunteerism.
+', 'radiance-lite') ) ); ?></div>
 						
-<!-- 						<div id="featured-box" class="skt-section">
-							<ul class="mid-box-wrap">
-								<li id="radiancefeaturedbox-2" class="radiance-widget-container mid-box col-md-4 col-sm-4 col-xs-12">
- -->									<!-- Featured Box  -->
-<!-- 									<div class="featured-inner-content">
-										<div class="iconbox-icon"><i class="fa <?php echo esc_attr( get_theme_mod('radiance_lite_first_feature_icon', 'fa-desktop') ); ?>"></i></div>
-										<h4><a href="<?php echo esc_url(get_theme_mod('radiance_lite_first_feature_link', '#')); ?>"><?php echo esc_attr( get_theme_mod('radiance_lite_first_feature_title', __('Web Development', 'radiance-lite') ) ); ?></a></h4>
-										<span class="featured-style"></span>
-									</div>
-									<div class="iconbox-content"><?php echo wp_kses_post( get_theme_mod('radiance_lite_first_feature_content', __('Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.', 'radiance-lite') ) ); ?></div>          
-									<div class="clearfix"></div>        
-								</li>
-								<li id="radiancefeaturedbox-2" class="radiance-widget-container mid-box col-md-4 col-sm-4 col-xs-12">
- -->									<!-- Featured Box  -->
-<!-- 									<div class="featured-inner-content">
-										<div class="iconbox-icon"><i class="fa <?php echo esc_attr( get_theme_mod('radiance_lite_second_feature_icon', 'fa-code') ); ?>"></i></div>
-										<h4><a href="<?php echo esc_url(get_theme_mod('radiance_lite_second_feature_link', '#')); ?>"><?php echo esc_attr( get_theme_mod('radiance_lite_second_feature_title', __('Web Design', 'radiance-lite') ) ); ?></a></h4>
-										<span class="featured-style"></span>
-									</div>
-									<div class="iconbox-content"><?php echo wp_kses_post( get_theme_mod('radiance_lite_second_feature_content', __('Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.', 'radiance-lite') ) ); ?></div>          
-									<div class="clearfix"></div>        
-								</li>
-								<li id="radiancefeaturedbox-2" class="radiance-widget-container mid-box col-md-4 col-sm-4 col-xs-12">
- -->									<!-- Featured Box  -->
-<!-- 									<div class="featured-inner-content">
-										<div class="iconbox-icon"><i class="fa <?php echo esc_attr( get_theme_mod('radiance_lite_third_feature_icon', 'fa-cogs') ); ?>"></i></div>
-										<h4><a href="<?php echo esc_url(get_theme_mod('radiance_lite_third_feature_link', '#')); ?>"><?php echo esc_attr( get_theme_mod('radiance_lite_third_feature_title', __('Theme Development', 'radiance-lite') ) ); ?></a></h4>
-										<span class="featured-style"></span>
-									</div>
-									<div class="iconbox-content"><?php echo wp_kses_post( get_theme_mod('radiance_lite_third_feature_content', __('Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.', 'radiance-lite') ) ); ?></div>          
-									<div class="clearfix"></div>        
-								</li>
-								<div class="clearfix"></div>
-							</ul>
- -->					</div>
+
+ 					</div>
 					</div>
 				</div>
 			</div>
@@ -51,7 +19,8 @@
 			<div class="post">
 				<div class="skepost clearfix">
 					<div class="page-section text-center">
-						<div class="top-content"><?php echo wp_kses_post( get_theme_mod('radiance_lite_mission_content', __('Our media agency is fuelled with the elements to speed up your business marketing, PR & Promotional campaigns, Media Marketing, Internet Marketing, Email Marketing.', 'radiance-lite') ) ); ?></div>
+						<div class="top-content"><?php echo wp_kses_post( get_theme_mod('radiance_lite_mission_content', __('The primary mission of The Hope Project is to ease the situation of the pediatric patients with chronic illnesses by providing psychosocial support in the form of structured activities and charitable aid in the form of donations such as blood bags, books and the like. It is likewise the mission of the organization to equip its volunteers with the knowledge needed to achieve the goal of the organization and to mold them into compassionate and dedicated people of action.
+', 'radiance-lite') ) ); ?></div>
 					</div>
 				</div>
 			</div>

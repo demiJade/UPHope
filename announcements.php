@@ -1,6 +1,6 @@
-<div class="container">
+
 	<div class="row">
-		<div class="col-md-10">
+		<div class="col-md-7 col-md-offset-2">
 			<h1 class="text-center">ANNOUNCEMENTS</h1>
 		</div>
 	</div>
@@ -26,5 +26,5 @@
 					<?php endif; ?>
 		</div>
 	</div>
-</div>
+
 

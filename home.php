@@ -11,7 +11,7 @@
  *
  */
 if (is_user_logged_in() ){ ?>
-	<div class="container-fluid">
+	<div class="container-fluid user-page">
 		<div class="row">
 			<div class="col-md-3 side">
 				<?php get_template_part('usersidebar'); ?>

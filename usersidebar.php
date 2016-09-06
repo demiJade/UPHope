@@ -1,6 +1,8 @@
 
 <div class="sidebar">
-	<br><br><br>
+	<br>
+	<br><br>
+	<img width="150px" height="150px" class="sidebar-logo" src="http://localhost:8080/wordpress/wp-content/uploads/2016/09/sidebar-logo.png"/>
 	<div class="member-container text-center">
 		<span class="member-name"><?php global $current_user;
 				get_currentuserinfo();
@@ -106,3 +108,4 @@
 
 	</ul>
 </div>
+	

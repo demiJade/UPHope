@@ -1,3 +1,4 @@
+
 <div class="sidebar">
 	<br><br><br>
 	<div class="member-container text-center">
@@ -9,6 +10,8 @@
 		</span> <br>
 		<span class="member-member">member</span>
 	</div>
+
+
 	
 	<ul class="side-nav fixed">
 		<li class="panel-title">DASHBOARD</li>
